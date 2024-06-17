@@ -1,34 +1,13 @@
 import os
-from datetime import datetime
-from collections import defaultdict
-
-import fitz
-from nltk.tag import pos_tag
 
 import time
 from django.utils.safestring import mark_safe
-from django.db.models import Prefetch
-from django.conf import settings
-from django.contrib import messages
-from django.db import transaction
-from django.db.models.signals import post_save
-from django.dispatch import receiver
-from django.shortcuts import render, redirect, get_object_or_404
+from django.shortcuts import render
 from django.utils.safestring import mark_safe
-from rdflib import Graph, URIRef, Namespace, Literal
-from owlready2 import onto_path, get_ontology, sync_reasoner
 
-from .forms import LoginForm, UploadFileForm
 from .models import (
-    nlp_default,
-    nlp_custom,
-    merge_entities,
     Uploader,
     Documents,
-    Terms,
-    PostingLists,
-    DocDetails,
-    Refinements,
     TextProcessing,
     Ontology,
     InvertedIndex

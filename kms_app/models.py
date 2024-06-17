@@ -3,31 +3,28 @@ import spacy
 import json
 import subprocess
 import os.path
+import requests
+import fitz
+
 from django.db import models
 from django.core.validators import MinLengthValidator
 from tqdm import tqdm
-from spacy.tokens import DocBin, Doc
 from django.db import models, transaction
-from rdflib import Graph, Namespace, URIRef
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from .forms import LoginForm
-from nltk.tag import pos_tag
 from .forms import LoginForm, UploadFileForm
-import requests
-import fitz
-from nltk.tag import pos_tag
-
-import time
-from django.utils.safestring import mark_safe
-from django.db.models import Prefetch
 from django.conf import settings
 from django.contrib import messages
 from django.db import transaction
-from django.dispatch import receiver
-from django.shortcuts import render, redirect, get_object_or_404
-from rdflib import Graph, URIRef, Namespace, Literal
+from django.shortcuts import render, redirect
+from spacy.tokens import DocBin, Doc
+from rdflib import Graph, Namespace, URIRef
+from nltk.tag import pos_tag
+from nltk.tag import pos_tag
+from rdflib import Graph, URIRef, Namespace
 from owlready2 import onto_path, get_ontology, sync_reasoner
+from xml.dom.minidom import parseString
 
 nltk.download('punkt')
 nltk.download('averaged_perceptron_tagger')
@@ -515,7 +512,10 @@ class Ontology(models.Model):
                     g.add((URIRef(row['s']), URIRef(row['p']), COFFEE[answer]))
                     text_response += f"{subject_name} {predicate_name} {answer.replace('_', ' ')}. "
 
-            rdf_output = g.serialize(format='turtle')
+            rdf_output = g.serialize(format='xml')
+            dom = parseString(rdf_output)
+            rdf_output = dom.toprettyxml()
+
         else:
             rdf_output = None
         
@@ -632,7 +632,9 @@ class Ontology(models.Model):
         else:
             return None
 
-        rdf_output = g.serialize(format='turtle')
+        rdf_output = g.serialize(format='xml')
+        dom = parseString(rdf_output)
+        rdf_output = dom.toprettyxml()
 
         return rdf_output
 

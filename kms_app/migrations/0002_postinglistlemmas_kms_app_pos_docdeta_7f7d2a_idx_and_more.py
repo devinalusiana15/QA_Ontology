@@ -11,10 +11,6 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.AddIndex(
-            model_name='postinglistlemmas',
-            index=models.Index(fields=['docdetail'], name='kms_app_pos_docdeta_7f7d2a_idx'),
-        ),
-        migrations.AddIndex(
             model_name='postinglists',
             index=models.Index(fields=['docdetail'], name='kms_app_pos_docdeta_5e44dc_idx'),
         ),

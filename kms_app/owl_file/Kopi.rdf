@@ -1,2247 +1,3249 @@
-<?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.semanticweb.org/owl/owlapi/turtle#"
-     xml:base="http://www.semanticweb.org/owl/owlapi/turtle"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:coffee="http://www.semanticweb.org/ariana/coffee#">
-    <owl:Ontology rdf:about="http://www.semanticweb.org/ariana/coffee#">
-        <owl:versionIRI rdf:resource="http://www.semanticweb.org/ariana/coffee#1.0"/>
-    </owl:Ontology>
-    
+@prefix : <http://www.semanticweb.org/owl/owlapi/turtle#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix coffee: <http://www.semanticweb.org/ariana/coffee#> .
+@base <http://www.semanticweb.org/owl/owlapi/turtle#> .
 
+<http://www.semanticweb.org/ariana/coffee#> rdf:type owl:Ontology ;
+                                             owl:versionIRI <http://www.semanticweb.org/ariana/coffee#1.0> .
 
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Object Properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
+#################################################################
+#    Object Properties
+#################################################################
 
-    
+###  http://www.semanticweb.org/ariana/coffee#RAB
+coffee:RAB rdf:type owl:ObjectProperty ;
+           rdfs:domain coffee:LOC ;
+           rdfs:range coffee:BEVERAGE .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#added -->
+###  http://www.semanticweb.org/ariana/coffee#added
+coffee:added rdf:type owl:ObjectProperty ;
+             rdfs:domain coffee:PERSON ;
+             rdfs:range coffee:PRODUCT .
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ariana/coffee#added">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ariana/coffee#PERSON"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ariana/coffee#PRODUCT"/>
-    </owl:ObjectProperty>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#advances_on
+coffee:advances_on rdf:type owl:ObjectProperty ;
+                   rdfs:domain coffee:PRODUCT ;
+                   rdfs:range coffee:DATE .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#asked_by -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ariana/coffee#asked_by">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ariana/coffee#PERSON"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ariana/coffee#PERSON"/>
-    </owl:ObjectProperty>
-    
+###  http://www.semanticweb.org/ariana/coffee#affect
+coffee:affect rdf:type owl:ObjectProperty ;
+              rdfs:domain coffee:LOC ;
+              rdfs:range coffee:VERB .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#ate -->
+###  http://www.semanticweb.org/ariana/coffee#asked_by
+coffee:asked_by rdf:type owl:ObjectProperty ;
+                rdfs:domain coffee:PERSON ;
+                rdfs:range coffee:PERSON .
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ariana/coffee#ate">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ariana/coffee#PERSON"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ariana/coffee#PRODUCT"/>
-    </owl:ObjectProperty>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#ate
+coffee:ate rdf:type owl:ObjectProperty ;
+           rdfs:domain coffee:PERSON ;
+           rdfs:range coffee:PRODUCT .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#began_by -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ariana/coffee#began_by">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ariana/coffee#LOC"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ariana/coffee#PERSON"/>
-    </owl:ObjectProperty>
-    
+###  http://www.semanticweb.org/ariana/coffee#backed
+coffee:backed rdf:type owl:ObjectProperty ;
+              rdfs:domain coffee:LOC ;
+              rdfs:range coffee:VERB .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#boiled -->
+###  http://www.semanticweb.org/ariana/coffee#began_by
+coffee:began_by rdf:type owl:ObjectProperty ;
+                rdfs:domain coffee:PERSON ;
+                rdfs:range coffee:PERSON .
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ariana/coffee#boiled">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ariana/coffee#PERSON"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ariana/coffee#PRODUCT"/>
-    </owl:ObjectProperty>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#began_on
+coffee:began_on rdf:type owl:ObjectProperty ;
+                rdfs:domain coffee:LOC ;
+                rdfs:range coffee:DATE .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#brought -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ariana/coffee#brought">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ariana/coffee#NORP"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ariana/coffee#PRODUCT"/>
-    </owl:ObjectProperty>
-    
+###  http://www.semanticweb.org/ariana/coffee#bigger
+coffee:bigger rdf:type owl:ObjectProperty ;
+              rdfs:domain coffee:VARIETY ;
+              rdfs:range coffee:VERB .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#brought_by -->
+###  http://www.semanticweb.org/ariana/coffee#boiled
+coffee:boiled rdf:type owl:ObjectProperty ;
+              rdfs:domain coffee:PERSON ;
+              rdfs:range coffee:PRODUCT .
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ariana/coffee#brought_by">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ariana/coffee#PERSON"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ariana/coffee#PERSON"/>
-    </owl:ObjectProperty>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#brought
+coffee:brought rdf:type owl:ObjectProperty ;
+               rdfs:domain coffee:BEVERAGE ,
+                           coffee:PERSON ;
+               rdfs:range coffee:PRODUCT .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#called -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ariana/coffee#called">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ariana/coffee#PERSON"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ariana/coffee#BEVERAGE"/>
-    </owl:ObjectProperty>
-    
+###  http://www.semanticweb.org/ariana/coffee#brought_by
+coffee:brought_by rdf:type owl:ObjectProperty ;
+                  rdfs:domain coffee:PERSON ;
+                  rdfs:range coffee:PERSON .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#called_in -->
+###  http://www.semanticweb.org/ariana/coffee#called
+coffee:called rdf:type owl:ObjectProperty ;
+              rdfs:domain coffee:PERSON ;
+              rdfs:range coffee:BEVERAGE .
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ariana/coffee#called_in">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ariana/coffee#LOC"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ariana/coffee#PRODUCT"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ariana/coffee#LOC"/>
-    </owl:ObjectProperty>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#called_in
+coffee:called_in rdf:type owl:ObjectProperty ;
+                 rdfs:domain coffee:GPE ,
+                             coffee:LOC ,
+                             coffee:VARIETY ;
+                 rdfs:range coffee:LOC .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#came -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ariana/coffee#came">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ariana/coffee#PRODUCT"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ariana/coffee#PRODUCT"/>
-    </owl:ObjectProperty>
-    
+###  http://www.semanticweb.org/ariana/coffee#came
+coffee:came rdf:type owl:ObjectProperty ;
+            rdfs:domain coffee:PRODUCT ;
+            rdfs:range coffee:PRODUCT .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#caught_in -->
+###  http://www.semanticweb.org/ariana/coffee#caught_in
+coffee:caught_in rdf:type owl:ObjectProperty ;
+                 rdfs:domain coffee:PRODUCT ;
+                 rdfs:range coffee:LOC .
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ariana/coffee#caught_in">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ariana/coffee#PRODUCT"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ariana/coffee#LOC"/>
-    </owl:ObjectProperty>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#celebrated
+coffee:celebrated rdf:type owl:ObjectProperty ;
+                  rdfs:domain coffee:BEVERAGE ;
+                  rdfs:range coffee:VERB .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#comes_in -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ariana/coffee#comes_in">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ariana/coffee#PERSON"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ariana/coffee#LOC"/>
-    </owl:ObjectProperty>
-    
+###  http://www.semanticweb.org/ariana/coffee#central
+coffee:central rdf:type owl:ObjectProperty ;
+               rdfs:domain coffee:BEVERAGE ;
+               rdfs:range coffee:VERB .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#consuming -->
+###  http://www.semanticweb.org/ariana/coffee#changes
+coffee:changes rdf:type owl:ObjectProperty ;
+               rdfs:domain coffee:LOC ,
+                           coffee:PERSON ;
+               rdfs:range coffee:VERB .
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ariana/coffee#consuming">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ariana/coffee#PERSON"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ariana/coffee#PRODUCT"/>
-    </owl:ObjectProperty>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#comes_in
+coffee:comes_in rdf:type owl:ObjectProperty ;
+                rdfs:domain coffee:LOC ,
+                            coffee:PERSON ;
+                rdfs:range coffee:GPE ,
+                           coffee:LOC .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#created -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ariana/coffee#created">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ariana/coffee#PERSON"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ariana/coffee#METHODS"/>
-    </owl:ObjectProperty>
-    
+###  http://www.semanticweb.org/ariana/coffee#cone_shaped
+coffee:cone_shaped rdf:type owl:ObjectProperty ;
+                   rdfs:domain coffee:LOC ;
+                   rdfs:range coffee:PRODUCT .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#credited -->
+###  http://www.semanticweb.org/ariana/coffee#considered
+coffee:considered rdf:type owl:ObjectProperty ;
+                  rdfs:domain coffee:VARIETY ;
+                  rdfs:range coffee:VERB .
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ariana/coffee#credited">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ariana/coffee#PERSON"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ariana/coffee#VERB"/>
-    </owl:ObjectProperty>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#consumed
+coffee:consumed rdf:type owl:ObjectProperty ;
+                rdfs:domain coffee:PRODUCT ;
+                rdfs:range coffee:BEVERAGE .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#cultivated -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ariana/coffee#cultivated">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ariana/coffee#PERSON"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ariana/coffee#PRODUCT"/>
-    </owl:ObjectProperty>
-    
+###  http://www.semanticweb.org/ariana/coffee#consuming
+coffee:consuming rdf:type owl:ObjectProperty ;
+                 rdfs:domain coffee:PERSON ;
+                 rdfs:range coffee:PRODUCT .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#cultivation_in -->
+###  http://www.semanticweb.org/ariana/coffee#contain
+coffee:contain rdf:type owl:ObjectProperty ;
+               rdfs:domain coffee:LOC ;
+               rdfs:range coffee:VERB .
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ariana/coffee#cultivation_in">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ariana/coffee#PRODUCT"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ariana/coffee#LOC"/>
-    </owl:ObjectProperty>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#containing
+coffee:containing rdf:type owl:ObjectProperty ;
+                  rdfs:domain coffee:LOC ,
+                              coffee:PRODUCT ;
+                  rdfs:range coffee:PRODUCT ,
+                             coffee:VERB .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#discovered -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ariana/coffee#discovered">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ariana/coffee#PERSON"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ariana/coffee#PRODUCT"/>
-    </owl:ObjectProperty>
-    
+###  http://www.semanticweb.org/ariana/coffee#contains
+coffee:contains rdf:type owl:ObjectProperty ;
+                rdfs:domain coffee:PRODUCT ;
+                rdfs:range coffee:VERB .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#embraced -->
+###  http://www.semanticweb.org/ariana/coffee#created
+coffee:created rdf:type owl:ObjectProperty ;
+               rdfs:domain coffee:PERSON ;
+               rdfs:range coffee:VERB .
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ariana/coffee#embraced">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ariana/coffee#PERSON"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ariana/coffee#PRODUCT"/>
-    </owl:ObjectProperty>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#crossed_in
+coffee:crossed_in rdf:type owl:ObjectProperty ;
+                  rdfs:domain coffee:DATE ;
+                  rdfs:range coffee:LOC .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#entered -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ariana/coffee#entered">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ariana/coffee#PERSON"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ariana/coffee#PRODUCT"/>
-    </owl:ObjectProperty>
-    
+###  http://www.semanticweb.org/ariana/coffee#cultivated
+coffee:cultivated rdf:type owl:ObjectProperty ;
+                  rdfs:domain coffee:PERSON ;
+                  rdfs:range coffee:PRODUCT .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#established_in -->
+###  http://www.semanticweb.org/ariana/coffee#cultivating_on
+coffee:cultivating_on rdf:type owl:ObjectProperty ;
+                      rdfs:domain coffee:LOC ;
+                      rdfs:range coffee:DATE .
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ariana/coffee#established_in">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ariana/coffee#DATE"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ariana/coffee#LOC"/>
-    </owl:ObjectProperty>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#dating_on
+coffee:dating_on rdf:type owl:ObjectProperty ;
+                 rdfs:domain coffee:LOC ;
+                 rdfs:range coffee:DATE .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#gathered -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ariana/coffee#gathered">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ariana/coffee#PERSON"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ariana/coffee#PRODUCT"/>
-    </owl:ObjectProperty>
-    
+###  http://www.semanticweb.org/ariana/coffee#decreased
+coffee:decreased rdf:type owl:ObjectProperty ;
+                 rdfs:domain coffee:PERSON ;
+                 rdfs:range coffee:BEVERAGE .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#government -->
+###  http://www.semanticweb.org/ariana/coffee#derives_in
+coffee:derives_in rdf:type owl:ObjectProperty ;
+                  rdfs:domain coffee:LOC ;
+                  rdfs:range coffee:LOC .
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ariana/coffee#government">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ariana/coffee#LOC"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ariana/coffee#VERB"/>
-    </owl:ObjectProperty>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#developed_by
+coffee:developed_by rdf:type owl:ObjectProperty ;
+                    rdfs:domain coffee:PERSON ;
+                    rdfs:range coffee:PERSON .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#grew_in -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ariana/coffee#grew_in">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ariana/coffee#PRODUCT"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ariana/coffee#LOC"/>
-    </owl:ObjectProperty>
-    
+###  http://www.semanticweb.org/ariana/coffee#discovered
+coffee:discovered rdf:type owl:ObjectProperty ;
+                  rdfs:domain coffee:PERSON ;
+                  rdfs:range coffee:PRODUCT .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#grown_in -->
+###  http://www.semanticweb.org/ariana/coffee#dream_on
+coffee:dream_on rdf:type owl:ObjectProperty ;
+                rdfs:domain coffee:PRODUCT ;
+                rdfs:range coffee:DATE .
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ariana/coffee#grown_in">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ariana/coffee#PRODUCT"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ariana/coffee#LOC"/>
-    </owl:ObjectProperty>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#drove
+coffee:drove rdf:type owl:ObjectProperty ;
+             rdfs:domain coffee:LOC ;
+             rdfs:range coffee:VERB .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#happened -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ariana/coffee#happened">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ariana/coffee#EVENT"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ariana/coffee#ORG"/>
-    </owl:ObjectProperty>
-    
+###  http://www.semanticweb.org/ariana/coffee#embraced
+coffee:embraced rdf:type owl:ObjectProperty ;
+                rdfs:domain coffee:PERSON ;
+                rdfs:range coffee:PRODUCT .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#improved -->
+###  http://www.semanticweb.org/ariana/coffee#entered
+coffee:entered rdf:type owl:ObjectProperty ;
+               rdfs:domain coffee:PERSON ;
+               rdfs:range coffee:PRODUCT .
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ariana/coffee#improved">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ariana/coffee#PERSON"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ariana/coffee#PRODUCT"/>
-    </owl:ObjectProperty>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#established
+coffee:established rdf:type owl:ObjectProperty ;
+                   rdfs:domain coffee:PERSON ;
+                   rdfs:range coffee:VERB .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#infiltrated_in -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ariana/coffee#infiltrated_in">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ariana/coffee#PRODUCT"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ariana/coffee#LOC"/>
-    </owl:ObjectProperty>
-    
+###  http://www.semanticweb.org/ariana/coffee#established_in
+coffee:established_in rdf:type owl:ObjectProperty ;
+                      rdfs:domain coffee:DATE ;
+                      rdfs:range coffee:LOC .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#introduced -->
+###  http://www.semanticweb.org/ariana/coffee#famous
+coffee:famous rdf:type owl:ObjectProperty ;
+              rdfs:domain coffee:LOC ;
+              rdfs:range coffee:VERB .
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ariana/coffee#introduced">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ariana/coffee#PERSON"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ariana/coffee#VERB"/>
-    </owl:ObjectProperty>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#focused
+coffee:focused rdf:type owl:ObjectProperty ;
+               rdfs:domain coffee:LOC ;
+               rdfs:range coffee:VERB .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#invented -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ariana/coffee#invented">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ariana/coffee#NORP"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ariana/coffee#PERSON"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ariana/coffee#PRODUCT"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ariana/coffee#TOOLS"/>
-    </owl:ObjectProperty>
-    
+###  http://www.semanticweb.org/ariana/coffee#gathered_in
+coffee:gathered_in rdf:type owl:ObjectProperty ;
+                   rdfs:domain coffee:PERSON ;
+                   rdfs:range coffee:LOC .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#invented_by -->
+###  http://www.semanticweb.org/ariana/coffee#geography
+coffee:geography rdf:type owl:ObjectProperty ;
+                 rdfs:domain coffee:LOC ;
+                 rdfs:range coffee:PRODUCT .
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ariana/coffee#invented_by">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ariana/coffee#NORP"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ariana/coffee#PERSON"/>
-    </owl:ObjectProperty>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#gifted_by
+coffee:gifted_by rdf:type owl:ObjectProperty ;
+                 rdfs:domain coffee:GPE ;
+                 rdfs:range coffee:PERSON .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#learned -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ariana/coffee#learned">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ariana/coffee#PERSON"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ariana/coffee#VERB"/>
-    </owl:ObjectProperty>
-    
+###  http://www.semanticweb.org/ariana/coffee#greater
+coffee:greater rdf:type owl:ObjectProperty ;
+               rdfs:domain coffee:VARIETY ;
+               rdfs:range coffee:VERB .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#liked -->
+###  http://www.semanticweb.org/ariana/coffee#grew_in
+coffee:grew_in rdf:type owl:ObjectProperty ;
+               rdfs:domain coffee:PRODUCT ;
+               rdfs:range coffee:LOC .
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ariana/coffee#liked">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ariana/coffee#PERSON"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ariana/coffee#BEVERAGE"/>
-    </owl:ObjectProperty>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#grind
+coffee:grind rdf:type owl:ObjectProperty ;
+             rdfs:domain coffee:BEVERAGE ,
+                         coffee:LOC ,
+                         coffee:PERSON ;
+             rdfs:range coffee:PRODUCT ,
+                        coffee:VERB .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#live -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ariana/coffee#live">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ariana/coffee#PERSON"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ariana/coffee#PRODUCT"/>
-    </owl:ObjectProperty>
-    
+###  http://www.semanticweb.org/ariana/coffee#grind_by
+coffee:grind_by rdf:type owl:ObjectProperty ;
+                rdfs:domain coffee:PRODUCT ;
+                rdfs:range coffee:PERSON .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#met_in -->
+###  http://www.semanticweb.org/ariana/coffee#growing
+coffee:growing rdf:type owl:ObjectProperty ;
+               rdfs:domain coffee:GPE ,
+                           coffee:LOC ;
+               rdfs:range coffee:VERB .
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ariana/coffee#met_in">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ariana/coffee#PERSON"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ariana/coffee#LOC"/>
-    </owl:ObjectProperty>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#grown
+coffee:grown rdf:type owl:ObjectProperty ;
+             rdfs:domain coffee:GPE ;
+             rdfs:range coffee:PRODUCT .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#notable_by -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ariana/coffee#notable_by">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ariana/coffee#PERSON"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ariana/coffee#NORP"/>
-    </owl:ObjectProperty>
-    
+###  http://www.semanticweb.org/ariana/coffee#grown_in
+coffee:grown_in rdf:type owl:ObjectProperty ;
+                rdfs:domain coffee:PRODUCT ;
+                rdfs:range coffee:LOC .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#opened -->
+###  http://www.semanticweb.org/ariana/coffee#grows
+coffee:grows rdf:type owl:ObjectProperty ;
+             rdfs:domain coffee:VARIETY ;
+             rdfs:range coffee:VERB .
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ariana/coffee#opened">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ariana/coffee#ORG"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ariana/coffee#VERB"/>
-    </owl:ObjectProperty>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#growth
+coffee:growth rdf:type owl:ObjectProperty ;
+              rdfs:domain coffee:LOC ;
+              rdfs:range coffee:PRODUCT .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#opened_in -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ariana/coffee#opened_in">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ariana/coffee#LOC"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ariana/coffee#PERSON"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ariana/coffee#LOC"/>
-    </owl:ObjectProperty>
-    
+###  http://www.semanticweb.org/ariana/coffee#happened_by
+coffee:happened_by rdf:type owl:ObjectProperty ;
+                   rdfs:domain coffee:EVENT ;
+                   rdfs:range coffee:PERSON .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#opened_on -->
+###  http://www.semanticweb.org/ariana/coffee#hardy_in
+coffee:hardy_in rdf:type owl:ObjectProperty ;
+                rdfs:domain coffee:VARIETY ;
+                rdfs:range coffee:LOC .
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ariana/coffee#opened_on">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ariana/coffee#LOC"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ariana/coffee#DATE"/>
-    </owl:ObjectProperty>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#harvested_on
+coffee:harvested_on rdf:type owl:ObjectProperty ;
+                    rdfs:domain coffee:PRODUCT ;
+                    rdfs:range coffee:DATE .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#operated_on -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ariana/coffee#operated_on">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ariana/coffee#LOC"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ariana/coffee#DATE"/>
-    </owl:ObjectProperty>
-    
+###  http://www.semanticweb.org/ariana/coffee#harvests
+coffee:harvests rdf:type owl:ObjectProperty ;
+                rdfs:domain coffee:GPE ,
+                            coffee:LOC ,
+                            coffee:PERSON ;
+                rdfs:range coffee:PRODUCT .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#patented -->
+###  http://www.semanticweb.org/ariana/coffee#harvests_in
+coffee:harvests_in rdf:type owl:ObjectProperty ;
+                   rdfs:domain coffee:GPE ,
+                               coffee:LOC ,
+                               coffee:PERSON ;
+                   rdfs:range coffee:LOC .
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ariana/coffee#patented">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ariana/coffee#PERSON"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ariana/coffee#VERB"/>
-    </owl:ObjectProperty>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#harvests_on
+coffee:harvests_on rdf:type owl:ObjectProperty ;
+                   rdfs:domain coffee:GPE ,
+                               coffee:LOC ,
+                               coffee:PERSON ;
+                   rdfs:range coffee:DATE .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#people -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ariana/coffee#people">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ariana/coffee#DATE"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ariana/coffee#VERB"/>
-    </owl:ObjectProperty>
-    
+###  http://www.semanticweb.org/ariana/coffee#helped
+coffee:helped rdf:type owl:ObjectProperty ;
+              rdfs:domain coffee:PERSON ;
+              rdfs:range coffee:VERB .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#planted -->
+###  http://www.semanticweb.org/ariana/coffee#identify
+coffee:identify rdf:type owl:ObjectProperty ;
+                rdfs:domain coffee:LOC ;
+                rdfs:range coffee:VERB .
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ariana/coffee#planted">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ariana/coffee#PERSON"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ariana/coffee#PRODUCT"/>
-    </owl:ObjectProperty>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#improved
+coffee:improved rdf:type owl:ObjectProperty ;
+                rdfs:domain coffee:PERSON ;
+                rdfs:range coffee:PRODUCT .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#plays -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ariana/coffee#plays">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ariana/coffee#PERSON"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ariana/coffee#INSTRUMENT"/>
-    </owl:ObjectProperty>
-    
+###  http://www.semanticweb.org/ariana/coffee#includes
+coffee:includes rdf:type owl:ObjectProperty ;
+                rdfs:domain coffee:BEVERAGE ;
+                rdfs:range coffee:ORG .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#poet -->
+###  http://www.semanticweb.org/ariana/coffee#includes_by
+coffee:includes_by rdf:type owl:ObjectProperty ;
+                   rdfs:domain coffee:BEVERAGE ;
+                   rdfs:range coffee:PERSON .
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ariana/coffee#poet">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ariana/coffee#PERSON"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ariana/coffee#METHODS"/>
-    </owl:ObjectProperty>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#infiltrated_in
+coffee:infiltrated_in rdf:type owl:ObjectProperty ;
+                      rdfs:domain coffee:PRODUCT ;
+                      rdfs:range coffee:LOC .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#produces -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ariana/coffee#produces">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ariana/coffee#LOC"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ariana/coffee#PRODUCT"/>
-    </owl:ObjectProperty>
-    
+###  http://www.semanticweb.org/ariana/coffee#introduced
+coffee:introduced rdf:type owl:ObjectProperty ;
+                  rdfs:domain coffee:PERSON ;
+                  rdfs:range coffee:VERB .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#proposed -->
+###  http://www.semanticweb.org/ariana/coffee#invented
+coffee:invented rdf:type owl:ObjectProperty ;
+                rdfs:domain coffee:LOC ,
+                            coffee:PERSON ;
+                rdfs:range coffee:PRODUCT ,
+                           coffee:TOOLS ,
+                           coffee:VERB .
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ariana/coffee#proposed">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ariana/coffee#PERSON"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ariana/coffee#LAW"/>
-    </owl:ObjectProperty>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#invented_by
+coffee:invented_by rdf:type owl:ObjectProperty ;
+                   rdfs:domain coffee:NORP ;
+                   rdfs:range coffee:PERSON .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#purchased -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ariana/coffee#purchased">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ariana/coffee#PERSON"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ariana/coffee#PRODUCT"/>
-    </owl:ObjectProperty>
-    
+###  http://www.semanticweb.org/ariana/coffee#invented_in
+coffee:invented_in rdf:type owl:ObjectProperty ;
+                   rdfs:domain coffee:PERSON ;
+                   rdfs:range coffee:LOC .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#received -->
+###  http://www.semanticweb.org/ariana/coffee#invented_on
+coffee:invented_on rdf:type owl:ObjectProperty ;
+                   rdfs:domain coffee:PERSON ;
+                   rdfs:range coffee:DATE .
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ariana/coffee#received">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ariana/coffee#LOC"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ariana/coffee#BEVERAGE"/>
-    </owl:ObjectProperty>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#known
+coffee:known rdf:type owl:ObjectProperty ;
+             rdfs:domain coffee:GPE ,
+                         coffee:LOC ,
+                         coffee:PERSON ,
+                         coffee:VARIETY ;
+             rdfs:range coffee:BEVERAGE ,
+                        coffee:PRODUCT ,
+                        coffee:VERB .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#replaced -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ariana/coffee#replaced">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ariana/coffee#PRODUCT"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ariana/coffee#BEVERAGE"/>
-    </owl:ObjectProperty>
-    
+###  http://www.semanticweb.org/ariana/coffee#large
+coffee:large rdf:type owl:ObjectProperty ;
+             rdfs:domain coffee:PERSON ;
+             rdfs:range coffee:VERB .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#served -->
+###  http://www.semanticweb.org/ariana/coffee#learned
+coffee:learned rdf:type owl:ObjectProperty ;
+               rdfs:domain coffee:PERSON ;
+               rdfs:range coffee:VERB .
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ariana/coffee#served">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ariana/coffee#BEVERAGE"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ariana/coffee#VERB"/>
-    </owl:ObjectProperty>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#liked
+coffee:liked rdf:type owl:ObjectProperty ;
+             rdfs:domain coffee:PERSON ;
+             rdfs:range coffee:BEVERAGE .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#shipped_in -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ariana/coffee#shipped_in">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ariana/coffee#PRODUCT"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ariana/coffee#LOC"/>
-    </owl:ObjectProperty>
-    
+###  http://www.semanticweb.org/ariana/coffee#limited
+coffee:limited rdf:type owl:ObjectProperty ;
+               rdfs:domain coffee:PRODUCT ;
+               rdfs:range coffee:PRODUCT .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#spelled -->
+###  http://www.semanticweb.org/ariana/coffee#live
+coffee:live rdf:type owl:ObjectProperty ;
+            rdfs:domain coffee:PERSON ;
+            rdfs:range coffee:PRODUCT .
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ariana/coffee#spelled">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ariana/coffee#PRODUCT"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ariana/coffee#PRODUCT"/>
-    </owl:ObjectProperty>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#located
+coffee:located rdf:type owl:ObjectProperty ;
+               rdfs:domain coffee:PRODUCT ;
+               rdfs:range coffee:PRODUCT .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#spread_in -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ariana/coffee#spread_in">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ariana/coffee#PRODUCT"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ariana/coffee#LOC"/>
-    </owl:ObjectProperty>
-    
+###  http://www.semanticweb.org/ariana/coffee#long
+coffee:long rdf:type owl:ObjectProperty ;
+            rdfs:domain coffee:PERSON ;
+            rdfs:range coffee:VERB .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#start -->
+###  http://www.semanticweb.org/ariana/coffee#met_in
+coffee:met_in rdf:type owl:ObjectProperty ;
+              rdfs:domain coffee:PERSON ;
+              rdfs:range coffee:LOC .
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ariana/coffee#start">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ariana/coffee#PRODUCT"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ariana/coffee#PRODUCT"/>
-    </owl:ObjectProperty>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#million
+coffee:million rdf:type owl:ObjectProperty ;
+               rdfs:domain coffee:LOC ;
+               rdfs:range coffee:VERB .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#started -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ariana/coffee#started">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ariana/coffee#PERSON"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ariana/coffee#EVENT"/>
-    </owl:ObjectProperty>
-    
+###  http://www.semanticweb.org/ariana/coffee#opened
+coffee:opened rdf:type owl:ObjectProperty ;
+              rdfs:domain coffee:LOC ,
+                          coffee:ORG ;
+              rdfs:range coffee:CARDINAL ,
+                         coffee:VERB .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#started_in -->
+###  http://www.semanticweb.org/ariana/coffee#opened_in
+coffee:opened_in rdf:type owl:ObjectProperty ;
+                 rdfs:domain coffee:LOC ,
+                             coffee:PERSON ;
+                 rdfs:range coffee:LOC .
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ariana/coffee#started_in">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ariana/coffee#LOC"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ariana/coffee#LOC"/>
-    </owl:ObjectProperty>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#opened_on
+coffee:opened_on rdf:type owl:ObjectProperty ;
+                 rdfs:domain coffee:LOC ;
+                 rdfs:range coffee:DATE .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#stole -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ariana/coffee#stole">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ariana/coffee#PERSON"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ariana/coffee#CARDINAL"/>
-    </owl:ObjectProperty>
-    
+###  http://www.semanticweb.org/ariana/coffee#operated_on
+coffee:operated_on rdf:type owl:ObjectProperty ;
+                   rdfs:domain coffee:LOC ;
+                   rdfs:range coffee:DATE .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#stopped_in -->
+###  http://www.semanticweb.org/ariana/coffee#patented
+coffee:patented rdf:type owl:ObjectProperty ;
+                rdfs:domain coffee:PERSON ;
+                rdfs:range coffee:PRODUCT .
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ariana/coffee#stopped_in">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ariana/coffee#PERSON"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ariana/coffee#LOC"/>
-    </owl:ObjectProperty>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#patented_on
+coffee:patented_on rdf:type owl:ObjectProperty ;
+                   rdfs:domain coffee:PERSON ;
+                   rdfs:range coffee:DATE .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#took -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ariana/coffee#took">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ariana/coffee#PERSON"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ariana/coffee#PRODUCT"/>
-    </owl:ObjectProperty>
-    
+###  http://www.semanticweb.org/ariana/coffee#people
+coffee:people rdf:type owl:ObjectProperty ;
+              rdfs:domain coffee:DATE ;
+              rdfs:range coffee:VERB .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#transported -->
+###  http://www.semanticweb.org/ariana/coffee#percent
+coffee:percent rdf:type owl:ObjectProperty ;
+               rdfs:domain coffee:PERSON ;
+               rdfs:range coffee:VERB .
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ariana/coffee#transported">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ariana/coffee#PERSON"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ariana/coffee#PRODUCT"/>
-    </owl:ObjectProperty>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#pick
+coffee:pick rdf:type owl:ObjectProperty ;
+            rdfs:domain coffee:LOC ;
+            rdfs:range coffee:VERB .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#transported_in -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ariana/coffee#transported_in">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ariana/coffee#PRODUCT"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ariana/coffee#LOC"/>
-    </owl:ObjectProperty>
-    
+###  http://www.semanticweb.org/ariana/coffee#picked
+coffee:picked rdf:type owl:ObjectProperty ;
+              rdfs:domain coffee:LOC ;
+              rdfs:range coffee:VERB .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#turned_in -->
+###  http://www.semanticweb.org/ariana/coffee#planted
+coffee:planted rdf:type owl:ObjectProperty ;
+               rdfs:domain coffee:PERSON ;
+               rdfs:range coffee:PRODUCT .
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ariana/coffee#turned_in">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ariana/coffee#LOC"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ariana/coffee#LOC"/>
-    </owl:ObjectProperty>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#plays
+coffee:plays rdf:type owl:ObjectProperty ;
+             rdfs:domain coffee:PERSON ;
+             rdfs:range coffee:INSTRUMENT .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#went_in -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ariana/coffee#went_in">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ariana/coffee#PERSON"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ariana/coffee#LOC"/>
-    </owl:ObjectProperty>
-    
+###  http://www.semanticweb.org/ariana/coffee#poet
+coffee:poet rdf:type owl:ObjectProperty ;
+            rdfs:domain coffee:PERSON ;
+            rdfs:range coffee:VERB .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#wine_by -->
+###  http://www.semanticweb.org/ariana/coffee#produce
+coffee:produce rdf:type owl:ObjectProperty ;
+               rdfs:domain coffee:GPE ,
+                           coffee:LOC ;
+               rdfs:range coffee:PRODUCT .
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ariana/coffee#wine_by">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ariana/coffee#BEVERAGE"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ariana/coffee#NORP"/>
-    </owl:ObjectProperty>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#produces
+coffee:produces rdf:type owl:ObjectProperty ;
+                rdfs:domain coffee:LOC ;
+                rdfs:range coffee:PRODUCT ,
+                           coffee:VERB .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#worked -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ariana/coffee#worked">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ariana/coffee#PERSON"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ariana/coffee#ORG"/>
-    </owl:ObjectProperty>
-    
+###  http://www.semanticweb.org/ariana/coffee#proposed
+coffee:proposed rdf:type owl:ObjectProperty ;
+                rdfs:domain coffee:PERSON ;
+                rdfs:range coffee:LAW .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#wrote -->
+###  http://www.semanticweb.org/ariana/coffee#purchased
+coffee:purchased rdf:type owl:ObjectProperty ;
+                 rdfs:domain coffee:PERSON ;
+                 rdfs:range coffee:PRODUCT .
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ariana/coffee#wrote">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ariana/coffee#PERSON"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ariana/coffee#PRODUCT"/>
-    </owl:ObjectProperty>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#received
+coffee:received rdf:type owl:ObjectProperty ;
+                rdfs:domain coffee:LOC ;
+                rdfs:range coffee:BEVERAGE .
 
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Classes
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
 
-    
+###  http://www.semanticweb.org/ariana/coffee#recently
+coffee:recently rdf:type owl:ObjectProperty ;
+                rdfs:domain coffee:GPE ;
+                rdfs:range coffee:VERB .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#BENEFIT -->
+###  http://www.semanticweb.org/ariana/coffee#recognized
+coffee:recognized rdf:type owl:ObjectProperty ;
+                  rdfs:domain coffee:LOC ;
+                  rdfs:range coffee:VERB .
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ariana/coffee#BENEFIT"/>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#remote
+coffee:remote rdf:type owl:ObjectProperty ;
+              rdfs:domain coffee:PERSON ;
+              rdfs:range coffee:VERB .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#BEVERAGE -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ariana/coffee#BEVERAGE"/>
-    
+###  http://www.semanticweb.org/ariana/coffee#replaced
+coffee:replaced rdf:type owl:ObjectProperty ;
+                rdfs:domain coffee:PRODUCT ;
+                rdfs:range coffee:BEVERAGE .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#CARDINAL -->
+###  http://www.semanticweb.org/ariana/coffee#reputation
+coffee:reputation rdf:type owl:ObjectProperty ;
+                  rdfs:domain coffee:GPE ;
+                  rdfs:range coffee:VERB .
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ariana/coffee#CARDINAL"/>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#requiring
+coffee:requiring rdf:type owl:ObjectProperty ;
+                 rdfs:domain coffee:METHODS ;
+                 rdfs:range coffee:TOOLS .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#DATE -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ariana/coffee#DATE"/>
-    
+###  http://www.semanticweb.org/ariana/coffee#respected
+coffee:respected rdf:type owl:ObjectProperty ;
+                 rdfs:domain coffee:CARDINAL ;
+                 rdfs:range coffee:PRODUCT .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#EVENT -->
+###  http://www.semanticweb.org/ariana/coffee#roasting
+coffee:roasting rdf:type owl:ObjectProperty ;
+                rdfs:domain coffee:BEVERAGE ;
+                rdfs:range coffee:VERB .
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ariana/coffee#EVENT"/>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#seeing
+coffee:seeing rdf:type owl:ObjectProperty ;
+              rdfs:domain coffee:LOC ;
+              rdfs:range coffee:PRODUCT .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#GPE -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ariana/coffee#GPE"/>
-    
+###  http://www.semanticweb.org/ariana/coffee#seen
+coffee:seen rdf:type owl:ObjectProperty ;
+            rdfs:domain coffee:LOC ;
+            rdfs:range coffee:PRODUCT .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#INSTRUMENT -->
+###  http://www.semanticweb.org/ariana/coffee#served
+coffee:served rdf:type owl:ObjectProperty ;
+              rdfs:domain coffee:NORP ;
+              rdfs:range coffee:VERB .
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ariana/coffee#INSTRUMENT"/>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#shipped_in
+coffee:shipped_in rdf:type owl:ObjectProperty ;
+                  rdfs:domain coffee:PRODUCT ;
+                  rdfs:range coffee:LOC .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#inventors -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ariana/coffee#inventors">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://www.semanticweb.org/ariana/coffee#PERSON"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ariana/coffee#invented"/>
-                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ariana/coffee#PRODUCT"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ariana/coffee#invented"/>
-                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ariana/coffee#TOOLS"/>
-                    </owl:Restriction>
-                </owl:unionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ariana/coffee#PERSON"/>
-    </owl:Class>
-    
+###  http://www.semanticweb.org/ariana/coffee#significant
+coffee:significant rdf:type owl:ObjectProperty ;
+                   rdfs:domain coffee:LOC ;
+                   rdfs:range coffee:VERB .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#LAW -->
+###  http://www.semanticweb.org/ariana/coffee#source
+coffee:source rdf:type owl:ObjectProperty ;
+              rdfs:domain coffee:PRODUCT ;
+              rdfs:range coffee:VERB .
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ariana/coffee#LAW"/>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#speed
+coffee:speed rdf:type owl:ObjectProperty ;
+             rdfs:domain coffee:PERSON ;
+             rdfs:range coffee:BEVERAGE .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#LOC -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ariana/coffee#LOC"/>
-    
+###  http://www.semanticweb.org/ariana/coffee#spelled
+coffee:spelled rdf:type owl:ObjectProperty ;
+               rdfs:domain coffee:PRODUCT ;
+               rdfs:range coffee:PRODUCT .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#METHODS -->
+###  http://www.semanticweb.org/ariana/coffee#spread_in
+coffee:spread_in rdf:type owl:ObjectProperty ;
+                 rdfs:domain coffee:PRODUCT ;
+                 rdfs:range coffee:LOC .
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ariana/coffee#METHODS"/>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#start
+coffee:start rdf:type owl:ObjectProperty ;
+             rdfs:domain coffee:PERSON ;
+             rdfs:range coffee:PRODUCT .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#NORP -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ariana/coffee#NORP"/>
-    
+###  http://www.semanticweb.org/ariana/coffee#started
+coffee:started rdf:type owl:ObjectProperty ;
+               rdfs:domain coffee:PERSON ;
+               rdfs:range coffee:EVENT .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#ORG -->
+###  http://www.semanticweb.org/ariana/coffee#started_in
+coffee:started_in rdf:type owl:ObjectProperty ;
+                  rdfs:domain coffee:PERSON ;
+                  rdfs:range coffee:LOC .
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ariana/coffee#ORG"/>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#stole
+coffee:stole rdf:type owl:ObjectProperty ;
+             rdfs:domain coffee:PERSON ;
+             rdfs:range coffee:CARDINAL .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#PERSON -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ariana/coffee#PERSON"/>
-    
+###  http://www.semanticweb.org/ariana/coffee#stopped_in
+coffee:stopped_in rdf:type owl:ObjectProperty ;
+                  rdfs:domain coffee:PERSON ;
+                  rdfs:range coffee:LOC .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#PRODUCT -->
+###  http://www.semanticweb.org/ariana/coffee#takes
+coffee:takes rdf:type owl:ObjectProperty ;
+             rdfs:domain coffee:METHODS ;
+             rdfs:range coffee:VERB .
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ariana/coffee#PRODUCT"/>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#took
+coffee:took rdf:type owl:ObjectProperty ;
+            rdfs:domain coffee:PERSON ;
+            rdfs:range coffee:PRODUCT .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#TIME -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ariana/coffee#TIME"/>
-    
+###  http://www.semanticweb.org/ariana/coffee#transported
+coffee:transported rdf:type owl:ObjectProperty ;
+                   rdfs:domain coffee:PERSON ;
+                   rdfs:range coffee:PRODUCT .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#TOOLS -->
+###  http://www.semanticweb.org/ariana/coffee#transported_in
+coffee:transported_in rdf:type owl:ObjectProperty ;
+                      rdfs:domain coffee:PRODUCT ;
+                      rdfs:range coffee:LOC .
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ariana/coffee#TOOLS"/>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#turned_in
+coffee:turned_in rdf:type owl:ObjectProperty ;
+                 rdfs:domain coffee:LOC ;
+                 rdfs:range coffee:LOC .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#VERB -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ariana/coffee#VERB"/>
-    
+###  http://www.semanticweb.org/ariana/coffee#use
+coffee:use rdf:type owl:ObjectProperty ;
+           rdfs:domain coffee:BEVERAGE ;
+           rdfs:range coffee:VERB .
 
 
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Individuals
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
+###  http://www.semanticweb.org/ariana/coffee#uses
+coffee:uses rdf:type owl:ObjectProperty ;
+            rdfs:domain coffee:BEVERAGE ,
+                        coffee:PERSON ;
+            rdfs:range coffee:PRODUCT ,
+                       coffee:VERB .
 
-    
 
+###  http://www.semanticweb.org/ariana/coffee#went_in
+coffee:went_in rdf:type owl:ObjectProperty ;
+               rdfs:domain coffee:PERSON ;
+               rdfs:range coffee:LOC .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#Achille_Gaggia -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Achille_Gaggia">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#PERSON"/>
-        <coffee:invented rdf:resource="http://www.semanticweb.org/ariana/coffee#lever_-_driven"/>
-        <coffee:notable_by rdf:resource="http://www.semanticweb.org/ariana/coffee#Italians"/>
-    </owl:NamedIndividual>
-    
+###  http://www.semanticweb.org/ariana/coffee#wine_by
+coffee:wine_by rdf:type owl:ObjectProperty ;
+               rdfs:domain coffee:BEVERAGE ;
+               rdfs:range coffee:NORP .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#Africa -->
+###  http://www.semanticweb.org/ariana/coffee#worked
+coffee:worked rdf:type owl:ObjectProperty ;
+              rdfs:domain coffee:PERSON ;
+              rdfs:range coffee:ORG .
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Africa">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#LOC"/>
-    </owl:NamedIndividual>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#world
+coffee:world rdf:type owl:ObjectProperty ;
+             rdfs:domain coffee:GPE ;
+             rdfs:range coffee:VERB .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#America -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#America">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#GPE"/>
-    </owl:NamedIndividual>
-    
+###  http://www.semanticweb.org/ariana/coffee#wrote
+coffee:wrote rdf:type owl:ObjectProperty ;
+             rdfs:domain coffee:PERSON ;
+             rdfs:range coffee:PRODUCT .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#American -->
+#################################################################
+#    Classes
+#################################################################
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#American">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#NORP"/>
-    </owl:NamedIndividual>
-    
+###  http://www.semanticweb.org/ariana/coffee#BENEFIT
+coffee:BENEFIT rdf:type owl:Class .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#Angel -->
+###  http://www.semanticweb.org/ariana/coffee#BEVERAGE
+coffee:BEVERAGE rdf:type owl:Class .
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Angel">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#LOC"/>
-    </owl:NamedIndividual>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#CARDINAL
+coffee:CARDINAL rdf:type owl:Class .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#Angelo_Moriondo -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Angelo_Moriondo">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#PERSON"/>
-        <coffee:comes_in rdf:resource="http://www.semanticweb.org/ariana/coffee#Turin"/>
-        <coffee:credited rdf:resource="http://www.semanticweb.org/ariana/coffee#having"/>
-        <coffee:notable_by rdf:resource="http://www.semanticweb.org/ariana/coffee#Italians"/>
-    </owl:NamedIndividual>
-    
+###  http://www.semanticweb.org/ariana/coffee#DATE
+coffee:DATE rdf:type owl:Class .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#Arabia -->
+###  http://www.semanticweb.org/ariana/coffee#EVENT
+coffee:EVENT rdf:type owl:Class .
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Arabia">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#LOC"/>
-    </owl:NamedIndividual>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#GPE
+coffee:GPE rdf:type owl:Class .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#Arabia_Ethiopia -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Arabia_Ethiopia">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#LOC"/>
-    </owl:NamedIndividual>
-    
+###  http://www.semanticweb.org/ariana/coffee#INSTRUMENT
+coffee:INSTRUMENT rdf:type owl:Class .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#Arabian_physician -->
+###  http://www.semanticweb.org/ariana/coffee#LAW
+coffee:LAW rdf:type owl:Class .
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Arabian_physician">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#PERSON"/>
-        <coffee:wrote rdf:resource="http://www.semanticweb.org/ariana/coffee#coffee"/>
-    </owl:NamedIndividual>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#LOC
+coffee:LOC rdf:type owl:Class .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#Arabian_religious_leaders -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Arabian_religious_leaders">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#PERSON"/>
-    </owl:NamedIndividual>
-    
+###  http://www.semanticweb.org/ariana/coffee#METHODS
+coffee:METHODS rdf:type owl:Class .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#Austria -->
+###  http://www.semanticweb.org/ariana/coffee#NORP
+coffee:NORP rdf:type owl:Class .
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Austria">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#LOC"/>
-        <coffee:opened_in rdf:resource="http://www.semanticweb.org/ariana/coffee#coffeehouse"/>
-        <coffee:received rdf:resource="http://www.semanticweb.org/ariana/coffee#Turkish_coffee"/>
-    </owl:NamedIndividual>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#ORG
+coffee:ORG rdf:type owl:Class .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#Baba_Budan -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Baba_Budan">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#PERSON"/>
-        <coffee:called rdf:resource="http://www.semanticweb.org/ariana/coffee#quahwa"/>
-        <coffee:learned rdf:resource="http://www.semanticweb.org/ariana/coffee#protected"/>
-        <coffee:liked rdf:resource="http://www.semanticweb.org/ariana/coffee#quahwa"/>
-        <coffee:stole rdf:resource="http://www.semanticweb.org/ariana/coffee#seven"/>
-        <coffee:stopped_in rdf:resource="http://www.semanticweb.org/ariana/coffee#Yemen_port_city"/>
-        <coffee:went_in rdf:resource="http://www.semanticweb.org/ariana/coffee#Mecca"/>
-    </owl:NamedIndividual>
-    
+###  http://www.semanticweb.org/ariana/coffee#PERCENT
+coffee:PERCENT rdf:type owl:Class .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#Battle -->
+###  http://www.semanticweb.org/ariana/coffee#PERSON
+coffee:PERSON rdf:type owl:Class .
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Battle">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#LOC"/>
-    </owl:NamedIndividual>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#PRODUCT
+coffee:PRODUCT rdf:type owl:Class .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#Bezzera_patent -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Bezzera_patent">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#PRODUCT"/>
-    </owl:NamedIndividual>
-    
+###  http://www.semanticweb.org/ariana/coffee#TIME
+coffee:TIME rdf:type owl:Class .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#Boston -->
+###  http://www.semanticweb.org/ariana/coffee#TOOLS
+coffee:TOOLS rdf:type owl:Class .
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Boston">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#LOC"/>
-        <coffee:opened_in rdf:resource="http://www.semanticweb.org/ariana/coffee#coffeehouse"/>
-    </owl:NamedIndividual>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#VARIETY
+coffee:VARIETY rdf:type owl:Class .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#Brazil -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Brazil">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#LOC"/>
-        <coffee:produces rdf:resource="http://www.semanticweb.org/ariana/coffee#coffee"/>
-    </owl:NamedIndividual>
-    
+###  http://www.semanticweb.org/ariana/coffee#VERB
+coffee:VERB rdf:type owl:Class .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#Brazilian -->
+###  http://www.semanticweb.org/ariana/coffee#discoverers
+coffee:discoverers rdf:type owl:Class ;
+                   owl:equivalentClass [ owl:intersectionOf ( coffee:PERSON
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty coffee:discovered ;
+                                                                owl:hasValue coffee:coffee
+                                                              ]
+                                                            ) ;
+                                         rdf:type owl:Class
+                                       ] ;
+                   rdfs:subClassOf coffee:PERSON .
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Brazilian">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#NORP"/>
-    </owl:NamedIndividual>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#farms
+coffee:farms rdf:type owl:Class ;
+             owl:equivalentClass [ owl:intersectionOf ( coffee:LOC
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty coffee:harvests ;
+                                                          owl:hasValue coffee:coffee
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ;
+             rdfs:subClassOf coffee:LOC .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#British -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#British">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#LOC"/>
-        <coffee:government rdf:resource="http://www.semanticweb.org/ariana/coffee#backed"/>
-    </owl:NamedIndividual>
-    
+###  http://www.semanticweb.org/ariana/coffee#harvests_date
+coffee:harvests_date rdf:type owl:Class ;
+                     owl:equivalentClass [ owl:intersectionOf ( coffee:DATE
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty [ owl:inverseOf coffee:harvests_on
+                                                                                 ] ;
+                                                                  owl:someValuesFrom coffee:GPE
+                                                                ]
+                                                              ) ;
+                                           rdf:type owl:Class
+                                         ] ;
+                     rdfs:subClassOf coffee:DATE .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#Caf�_de_Procope -->
+###  http://www.semanticweb.org/ariana/coffee#inventors
+coffee:inventors rdf:type owl:Class ;
+                 owl:equivalentClass [ owl:intersectionOf ( coffee:PERSON
+                                                            [ rdf:type owl:Class ;
+                                                              owl:unionOf ( [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty coffee:invented ;
+                                                                              owl:someValuesFrom coffee:PRODUCT
+                                                                            ]
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty coffee:invented ;
+                                                                              owl:someValuesFrom coffee:TOOLS
+                                                                            ]
+                                                                          )
+                                                            ]
+                                                          ) ;
+                                       rdf:type owl:Class
+                                     ] ;
+                 rdfs:subClassOf coffee:PERSON .
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Caf�_de_Procope">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#LOC"/>
-    </owl:NamedIndividual>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#producers
+coffee:producers rdf:type owl:Class ;
+                 owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Class ;
+                                                              owl:unionOf ( coffee:GPE
+                                                                            coffee:LOC
+                                                                          )
+                                                            ]
+                                                            [ rdf:type owl:Class ;
+                                                              owl:unionOf ( [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty coffee:known ;
+                                                                              owl:hasValue coffee:coffee_production
+                                                                            ]
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty coffee:produce ;
+                                                                              owl:hasValue coffee:coffee
+                                                                            ]
+                                                                          )
+                                                            ]
+                                                          ) ;
+                                       rdf:type owl:Class
+                                     ] ;
+                 rdfs:subClassOf coffee:GPE .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#Ceylon -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Ceylon">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#LOC"/>
-    </owl:NamedIndividual>
-    
+###  http://www.semanticweb.org/ariana/coffee#spreads
+coffee:spreads rdf:type owl:Class ;
+               owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Class ;
+                                                            owl:unionOf ( coffee:GPE
+                                                                          coffee:LOC
+                                                                        )
+                                                          ]
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty [ owl:inverseOf coffee:spread_in
+                                                                           ] ;
+                                                            owl:hasValue coffee:Coffee
+                                                          ]
+                                                        ) ;
+                                     rdf:type owl:Class
+                                   ] ;
+               rdfs:subClassOf coffee:LOC .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#Coffee -->
+#################################################################
+#    Individuals
+#################################################################
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Coffee">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#PRODUCT"/>
-        <coffee:caught_in rdf:resource="http://www.semanticweb.org/ariana/coffee#Europe"/>
-        <coffee:grown_in rdf:resource="http://www.semanticweb.org/ariana/coffee#Coffee_Belt"/>
-        <coffee:infiltrated_in rdf:resource="http://www.semanticweb.org/ariana/coffee#Europe"/>
-        <coffee:replaced rdf:resource="http://www.semanticweb.org/ariana/coffee#beer"/>
-        <coffee:spread_in rdf:resource="http://www.semanticweb.org/ariana/coffee#Arabia_Ethiopia"/>
-        <coffee:spread_in rdf:resource="http://www.semanticweb.org/ariana/coffee#Germany"/>
-    </owl:NamedIndividual>
-    
+###  http://www.semanticweb.org/ariana/coffee#Aborder_dispute
+coffee:Aborder_dispute rdf:type owl:NamedIndividual ,
+                                coffee:PERSON .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#Coffee_Belt -->
+###  http://www.semanticweb.org/ariana/coffee#Achille_Gaggia
+coffee:Achille_Gaggia rdf:type owl:NamedIndividual ,
+                               coffee:PERSON ;
+                      coffee:invented coffee:lever_driven ;
+                      coffee:invented_on coffee:nearly_30_years_later .
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Coffee_Belt">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#LOC"/>
-    </owl:NamedIndividual>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#AeroPress
+coffee:AeroPress rdf:type owl:NamedIndividual ,
+                          coffee:LOC ,
+                          coffee:ORG .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#Coffee_beans -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Coffee_beans">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#PRODUCT"/>
-        <coffee:shipped_in rdf:resource="http://www.semanticweb.org/ariana/coffee#Yemen_Port_Mokha"/>
-    </owl:NamedIndividual>
-    
+###  http://www.semanticweb.org/ariana/coffee#Africa
+coffee:Africa rdf:type owl:NamedIndividual ,
+                       coffee:LOC ;
+              coffee:growth coffee:coffee .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#Coffee_milk -->
+###  http://www.semanticweb.org/ariana/coffee#Alan_Adler
+coffee:Alan_Adler rdf:type owl:NamedIndividual ,
+                           coffee:PERSON ;
+                  coffee:invented_in coffee:AeroPress .
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Coffee_milk">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#PRODUCT"/>
-        <coffee:called_in rdf:resource="http://www.semanticweb.org/ariana/coffee#caf�_au"/>
-    </owl:NamedIndividual>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#America
+coffee:America rdf:type owl:NamedIndividual ,
+                        coffee:GPE .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#Coffee_seeds -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Coffee_seeds">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#PRODUCT"/>
-        <coffee:grew_in rdf:resource="http://www.semanticweb.org/ariana/coffee#Paris"/>
-    </owl:NamedIndividual>
-    
+###  http://www.semanticweb.org/ariana/coffee#American
+coffee:American rdf:type owl:NamedIndividual ,
+                         coffee:NORP .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#Coffee_traded -->
+###  http://www.semanticweb.org/ariana/coffee#American_Revolution
+coffee:American_Revolution rdf:type owl:NamedIndividual ,
+                                    coffee:PERSON ;
+                           coffee:decreased coffee:coffee .
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Coffee_traded">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#EVENT"/>
-        <coffee:happened rdf:resource="http://www.semanticweb.org/ariana/coffee#Turkish_Empire"/>
-    </owl:NamedIndividual>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#Andes
+coffee:Andes rdf:type owl:NamedIndividual ,
+                      coffee:LOC .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#Desiderio_Pavoni -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Desiderio_Pavoni">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#PERSON"/>
-        <coffee:notable_by rdf:resource="http://www.semanticweb.org/ariana/coffee#Italians"/>
-        <coffee:purchased rdf:resource="http://www.semanticweb.org/ariana/coffee#Bezzera_patent"/>
-        <coffee:started rdf:resource="http://www.semanticweb.org/ariana/coffee#producing_machines"/>
-    </owl:NamedIndividual>
-    
+###  http://www.semanticweb.org/ariana/coffee#Angel
+coffee:Angel rdf:type owl:NamedIndividual ,
+                      coffee:LOC .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#Dutch -->
+###  http://www.semanticweb.org/ariana/coffee#Angelo_Moriondo
+coffee:Angelo_Moriondo rdf:type owl:NamedIndividual ,
+                                coffee:PERSON ;
+                       coffee:comes_in coffee:Turin .
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Dutch">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#NORP"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#PERSON"/>
-        <coffee:brought rdf:resource="http://www.semanticweb.org/ariana/coffee#coffee_plants"/>
-        <coffee:live rdf:resource="http://www.semanticweb.org/ariana/coffee#coffee_trees"/>
-    </owl:NamedIndividual>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#April
+coffee:April rdf:type owl:NamedIndividual ,
+                      coffee:DATE .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#Dutch_traders -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Dutch_traders">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#PERSON"/>
-        <coffee:stopped_in rdf:resource="http://www.semanticweb.org/ariana/coffee#Ceylon"/>
-        <coffee:transported rdf:resource="http://www.semanticweb.org/ariana/coffee#coffee_trees"/>
-    </owl:NamedIndividual>
-    
+###  http://www.semanticweb.org/ariana/coffee#Arabia
+coffee:Arabia rdf:type owl:NamedIndividual ,
+                       coffee:LOC .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#E61 -->
+###  http://www.semanticweb.org/ariana/coffee#Arabian_physician
+coffee:Arabian_physician rdf:type owl:NamedIndividual ,
+                                  coffee:PERSON ;
+                         coffee:wrote coffee:coffee .
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#E61"/>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#Arabian_religious_leaders
+coffee:Arabian_religious_leaders rdf:type owl:NamedIndividual ,
+                                          coffee:PERSON .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#E61_impressive -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#E61_impressive">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#TOOLS"/>
-    </owl:NamedIndividual>
-    
+###  http://www.semanticweb.org/ariana/coffee#Arabica
+coffee:Arabica rdf:type owl:NamedIndividual ,
+                        coffee:PERSON ;
+               coffee:known coffee:quality ;
+               coffee:percent coffee:world .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#Edward_Lloyd_coffeehouse -->
+###  http://www.semanticweb.org/ariana/coffee#Asia_Pacific_offers
+coffee:Asia_Pacific_offers rdf:type owl:NamedIndividual ,
+                                    coffee:PERSON ;
+                           coffee:remote coffee:coffee_growing .
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Edward_Lloyd_coffeehouse">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#PERSON"/>
-    </owl:NamedIndividual>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#Attilio_Calimani
+coffee:Attilio_Calimani rdf:type owl:NamedIndividual ,
+                                 coffee:PERSON ;
+                        coffee:patented_on <http://www.semanticweb.org/ariana/coffee#1929> .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#Egyptian_warehouses -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Egyptian_warehouses">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#LOC"/>
-    </owl:NamedIndividual>
-    
+###  http://www.semanticweb.org/ariana/coffee#August
+coffee:August rdf:type owl:NamedIndividual ,
+                       coffee:DATE .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#England -->
+###  http://www.semanticweb.org/ariana/coffee#Austria
+coffee:Austria rdf:type owl:NamedIndividual ,
+                        coffee:LOC ;
+               coffee:opened_in coffee:coffeehouse ;
+               coffee:received coffee:Turkish_coffee .
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#England">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#LOC"/>
-    </owl:NamedIndividual>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#Baba_Budan
+coffee:Baba_Budan rdf:type owl:NamedIndividual ,
+                           coffee:PERSON ;
+                  coffee:called coffee:quahwa ;
+                  coffee:learned coffee:protected ;
+                  coffee:liked coffee:quahwa ;
+                  coffee:stole coffee:seven ;
+                  coffee:stopped_in coffee:Yemen_port_city ;
+                  coffee:went_in coffee:Mecca .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#Ernesto_Valente -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Ernesto_Valente">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#PERSON"/>
-        <coffee:introduced rdf:resource="http://www.semanticweb.org/ariana/coffee#E61"/>
-        <coffee:notable_by rdf:resource="http://www.semanticweb.org/ariana/coffee#Italians"/>
-        <coffee:worked rdf:resource="http://www.semanticweb.org/ariana/coffee#Faema"/>
-    </owl:NamedIndividual>
-    
+###  http://www.semanticweb.org/ariana/coffee#Batian
+coffee:Batian rdf:type owl:NamedIndividual ,
+                       coffee:NORP .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#Ethiopia -->
+###  http://www.semanticweb.org/ariana/coffee#Battle
+coffee:Battle rdf:type owl:NamedIndividual ,
+                       coffee:LOC .
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Ethiopia">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#GPE"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#LOC"/>
-    </owl:NamedIndividual>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#Bezzera_patent
+coffee:Bezzera_patent rdf:type owl:NamedIndividual ,
+                               coffee:PRODUCT .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#Ethiopia_coffee -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Ethiopia_coffee">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#BEVERAGE"/>
-    </owl:NamedIndividual>
-    
+###  http://www.semanticweb.org/ariana/coffee#Blue_Mountains
+coffee:Blue_Mountains rdf:type owl:NamedIndividual ,
+                               coffee:LOC ;
+                      coffee:dating_on <http://www.semanticweb.org/ariana/coffee#1723> .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#Ethiopians -->
+###  http://www.semanticweb.org/ariana/coffee#Bolivia
+coffee:Bolivia rdf:type owl:NamedIndividual ,
+                        coffee:GPE ,
+                        coffee:PERSON ;
+               coffee:called_in coffee:Yungas_Andes_Mountains ;
+               coffee:known coffee:coffee_production ;
+               coffee:reputation coffee:output .
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Ethiopians">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#PERSON"/>
-        <coffee:ate rdf:resource="http://www.semanticweb.org/ariana/coffee#coffee_berries"/>
-        <coffee:boiled rdf:resource="http://www.semanticweb.org/ariana/coffee#berries"/>
-        <coffee:cultivated rdf:resource="http://www.semanticweb.org/ariana/coffee#coffee"/>
-    </owl:NamedIndividual>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#Boston
+coffee:Boston rdf:type owl:NamedIndividual ,
+                       coffee:LOC ;
+              coffee:opened_on <http://www.semanticweb.org/ariana/coffee#1689> .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#Europe -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Europe">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#LOC"/>
-    </owl:NamedIndividual>
-    
+###  http://www.semanticweb.org/ariana/coffee#Brazil
+coffee:Brazil rdf:type owl:NamedIndividual ,
+                       coffee:LOC ;
+              coffee:focused coffee:crops ;
+              coffee:harvests coffee:coffee ;
+              coffee:known coffee:coffee_production ;
+              coffee:produces coffee:coffee .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#Faema -->
+###  http://www.semanticweb.org/ariana/coffee#Brazil_Colombia
+coffee:Brazil_Colombia rdf:type owl:NamedIndividual ,
+                                coffee:LOC .
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Faema">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#ORG"/>
-    </owl:NamedIndividual>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#Brazilian
+coffee:Brazilian rdf:type owl:NamedIndividual ,
+                          coffee:NORP .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#France -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#France">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#GPE"/>
-    </owl:NamedIndividual>
-    
+###  http://www.semanticweb.org/ariana/coffee#Bremen_German_coffeehouses
+coffee:Bremen_German_coffeehouses rdf:type owl:NamedIndividual ,
+                                           coffee:LOC .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#Francisco_de_Melho -->
+###  http://www.semanticweb.org/ariana/coffee#Brew_method
+coffee:Brew_method rdf:type owl:NamedIndividual ,
+                            coffee:BEVERAGE ;
+                   coffee:includes coffee:Drip ;
+                   coffee:includes_by coffee:French_Press .
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Francisco_de_Melho">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#PERSON"/>
-    </owl:NamedIndividual>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#British
+coffee:British rdf:type owl:NamedIndividual ,
+                        coffee:LOC ;
+               coffee:backed coffee:taxes .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#Francisco_de_Melho_Palheta -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Francisco_de_Melho_Palheta">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#PERSON"/>
-        <coffee:planted rdf:resource="http://www.semanticweb.org/ariana/coffee#coffee_cherries"/>
-    </owl:NamedIndividual>
-    
+###  http://www.semanticweb.org/ariana/coffee#Burundi
+coffee:Burundi rdf:type owl:NamedIndividual ,
+                        coffee:LOC ;
+               coffee:produce coffee:coffee ;
+               coffee:produces coffee:unique .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#Francois_Procope -->
+###  http://www.semanticweb.org/ariana/coffee#C15
+coffee:C15 rdf:type owl:NamedIndividual ,
+                    coffee:BEVERAGE .
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Francois_Procope">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#PERSON"/>
-        <coffee:opened_in rdf:resource="http://www.semanticweb.org/ariana/coffee#Caf�_de_Procope"/>
-    </owl:NamedIndividual>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#Cafe_de_Procope
+coffee:Cafe_de_Procope rdf:type owl:NamedIndividual ,
+                                coffee:LOC .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#French -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#French">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#NORP"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#PERSON"/>
-        <coffee:created rdf:resource="http://www.semanticweb.org/ariana/coffee#infusion_-_style_brewing"/>
-    </owl:NamedIndividual>
-    
+###  http://www.semanticweb.org/ariana/coffee#Canephora
+coffee:Canephora rdf:type owl:NamedIndividual ,
+                          coffee:LOC .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#French_Venetian_merchants -->
+###  http://www.semanticweb.org/ariana/coffee#Carlos_Batres
+coffee:Carlos_Batres rdf:type owl:NamedIndividual ,
+                              coffee:LOC ;
+                     coffee:comes_in coffee:El_Salvador .
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#French_Venetian_merchants">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#PERSON"/>
-        <coffee:took rdf:resource="http://www.semanticweb.org/ariana/coffee#coffee_beans"/>
-    </owl:NamedIndividual>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#Catimor
+coffee:Catimor rdf:type owl:NamedIndividual ,
+                        coffee:NORP .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#Gabriel_Mathieu_de_Clieu -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Gabriel_Mathieu_de_Clieu">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#PERSON"/>
-        <coffee:brought_by rdf:resource="http://www.semanticweb.org/ariana/coffee#Martinique"/>
-    </owl:NamedIndividual>
-    
+###  http://www.semanticweb.org/ariana/coffee#Catuai
+coffee:Catuai rdf:type owl:NamedIndividual ,
+                       coffee:PERSON .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#Gaggia -->
+###  http://www.semanticweb.org/ariana/coffee#Caturra
+coffee:Caturra rdf:type owl:NamedIndividual ,
+                        coffee:BEVERAGE .
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Gaggia">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#GPE"/>
-    </owl:NamedIndividual>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#Central_Peru
+coffee:Central_Peru rdf:type owl:NamedIndividual ,
+                             coffee:LOC ;
+                    coffee:harvests_on coffee:July .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#Germany -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Germany">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#LOC"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#PERSON"/>
-        <coffee:entered rdf:resource="http://www.semanticweb.org/ariana/coffee#coffee"/>
-    </owl:NamedIndividual>
-    
+###  http://www.semanticweb.org/ariana/coffee#Ceylon
+coffee:Ceylon rdf:type owl:NamedIndividual ,
+                       coffee:LOC .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#Green_Dragon -->
+###  http://www.semanticweb.org/ariana/coffee#Chemex
+coffee:Chemex rdf:type owl:NamedIndividual ,
+                       coffee:PRODUCT .
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Green_Dragon">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#LOC"/>
-    </owl:NamedIndividual>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#Cherries
+coffee:Cherries rdf:type owl:NamedIndividual ,
+                         coffee:LOC ,
+                         coffee:PRODUCT ;
+                coffee:contain coffee:called ;
+                coffee:containing coffee:beans .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#Green_Dragon_coffeehouse -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Green_Dragon_coffeehouse">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#LOC"/>
-        <coffee:operated_on rdf:resource="http://www.semanticweb.org/ariana/coffee#1679_1832"/>
-    </owl:NamedIndividual>
-    
+###  http://www.semanticweb.org/ariana/coffee#Cherry
+coffee:Cherry rdf:type owl:NamedIndividual ,
+                       coffee:LOC ;
+              coffee:picked coffee:year .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#Guyana -->
+###  http://www.semanticweb.org/ariana/coffee#China
+coffee:China rdf:type owl:NamedIndividual ,
+                      coffee:GPE ,
+                      coffee:LOC ;
+             coffee:began_on coffee:late_1980s ;
+             coffee:harvests_in coffee:January ;
+             coffee:harvests_on coffee:December .
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Guyana">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#GPE"/>
-    </owl:NamedIndividual>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#Clever_brewer
+coffee:Clever_brewer rdf:type owl:NamedIndividual ,
+                              coffee:LOC .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#Guyana_Dutch -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Guyana_Dutch">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#ORG"/>
-    </owl:NamedIndividual>
-    
+###  http://www.semanticweb.org/ariana/coffee#Coarse
+coffee:Coarse rdf:type owl:NamedIndividual ,
+                       coffee:PRODUCT ;
+              coffee:grind_by coffee:French_Press .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#Guyanese_governors -->
+###  http://www.semanticweb.org/ariana/coffee#CoffeThe
+coffee:CoffeThe rdf:type owl:NamedIndividual ,
+                         coffee:ORG .
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Guyanese_governors">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#PERSON"/>
-        <coffee:asked_by rdf:resource="http://www.semanticweb.org/ariana/coffee#Francisco_de_Melho_Palheta"/>
-    </owl:NamedIndividual>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#Coffee
+coffee:Coffee rdf:type owl:NamedIndividual ,
+                       coffee:PRODUCT ;
+              coffee:caught_in coffee:Europe ;
+              coffee:consumed coffee:globally ;
+              coffee:grown_in coffee:Coffee_Belt ;
+              coffee:harvested_on coffee:annually ;
+              coffee:infiltrated_in coffee:Europe ;
+              coffee:replaced coffee:beer ;
+              coffee:spread_in coffee:Arabia ,
+                               coffee:Germany .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#Hamburg_Bremen_German_coffeehouses -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Hamburg_Bremen_German_coffeehouses">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#LOC"/>
-    </owl:NamedIndividual>
-    
+###  http://www.semanticweb.org/ariana/coffee#Coffee_Belt
+coffee:Coffee_Belt rdf:type owl:NamedIndividual ,
+                            coffee:LOC .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#Holland -->
+###  http://www.semanticweb.org/ariana/coffee#Coffee_Brewing_Institute
+coffee:Coffee_Brewing_Institute rdf:type owl:NamedIndividual ,
+                                         coffee:ORG .
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Holland">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#LOC"/>
-    </owl:NamedIndividual>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#Coffee_beans
+coffee:Coffee_beans rdf:type owl:NamedIndividual ,
+                             coffee:PRODUCT ;
+                    coffee:shipped_in coffee:Yemen_Port_Mokha .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#Honore_de_Balzac -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Honore_de_Balzac">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#PERSON"/>
-        <coffee:consuming rdf:resource="http://www.semanticweb.org/ariana/coffee#dry_ground_coffee"/>
-    </owl:NamedIndividual>
-    
+###  http://www.semanticweb.org/ariana/coffee#Coffee_producers
+coffee:Coffee_producers rdf:type owl:NamedIndividual ,
+                                 coffee:LOC ;
+                        coffee:million coffee:bags .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#India -->
+###  http://www.semanticweb.org/ariana/coffee#Coffee_seeds
+coffee:Coffee_seeds rdf:type owl:NamedIndividual ,
+                             coffee:PRODUCT ;
+                    coffee:grew_in coffee:Paris .
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#India">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#GPE"/>
-    </owl:NamedIndividual>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#Coffee_traded
+coffee:Coffee_traded rdf:type owl:NamedIndividual ,
+                              coffee:EVENT ;
+                     coffee:happened_by coffee:Turkish_Empire .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#Indonesia -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Indonesia">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#GPE"/>
-    </owl:NamedIndividual>
-    
+###  http://www.semanticweb.org/ariana/coffee#Colombia
+coffee:Colombia rdf:type owl:NamedIndividual ,
+                         coffee:LOC ;
+                coffee:famous coffee:marketing ;
+                coffee:harvests coffee:coffee ;
+                coffee:harvests_in coffee:November ;
+                coffee:known coffee:coffee_production .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#Italians -->
+###  http://www.semanticweb.org/ariana/coffee#Congo
+coffee:Congo rdf:type owl:NamedIndividual ,
+                      coffee:GPE ,
+                      coffee:PRODUCT ;
+             coffee:located coffee:produce_coffee ;
+             coffee:recently coffee:produced .
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Italians">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#NORP"/>
-        <coffee:invented rdf:resource="http://www.semanticweb.org/ariana/coffee#espresso_machines"/>
-        <coffee:invented_by rdf:resource="http://www.semanticweb.org/ariana/coffee#Angelo_Moriondo"/>
-    </owl:NamedIndividual>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#Costa_Rica
+coffee:Costa_Rica rdf:type owl:NamedIndividual ,
+                           coffee:LOC ;
+                  coffee:harvests_in coffee:December ;
+                  coffee:harvests_on coffee:January .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#Italy_street_vendors -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Italy_street_vendors">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#PERSON"/>
-        <coffee:added rdf:resource="http://www.semanticweb.org/ariana/coffee#coffee_lemonade"/>
-    </owl:NamedIndividual>
-    
+###  http://www.semanticweb.org/ariana/coffee#Cuba
+coffee:Cuba rdf:type owl:NamedIndividual ,
+                     coffee:GPE ;
+            coffee:grown coffee:coffee .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#Java_Coffee_Ethiopia_Coffee -->
+###  http://www.semanticweb.org/ariana/coffee#December
+coffee:December rdf:type owl:NamedIndividual ,
+                         coffee:DATE ,
+                         coffee:LOC .
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Java_Coffee_Ethiopia_Coffee">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#ORG"/>
-    </owl:NamedIndividual>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#Desiderio_Pavoni
+coffee:Desiderio_Pavoni rdf:type owl:NamedIndividual ,
+                                 coffee:PERSON ;
+                        coffee:purchased coffee:Bezzera_patent ;
+                        coffee:started coffee:producing_machines .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#Java_coffee -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Java_coffee">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#BEVERAGE"/>
-    </owl:NamedIndividual>
-    
+###  http://www.semanticweb.org/ariana/coffee#Dominican_Republic
+coffee:Dominican_Republic rdf:type owl:NamedIndividual ,
+                                   coffee:PERSON .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#John_Adams -->
+###  http://www.semanticweb.org/ariana/coffee#Drip
+coffee:Drip rdf:type owl:NamedIndividual ,
+                     coffee:ORG .
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#John_Adams">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#PERSON"/>
-    </owl:NamedIndividual>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#Drip_coffee
+coffee:Drip_coffee rdf:type owl:NamedIndividual ,
+                            coffee:BEVERAGE .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#John_Otis -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#John_Otis">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#PERSON"/>
-    </owl:NamedIndividual>
-    
+###  http://www.semanticweb.org/ariana/coffee#Dutch
+coffee:Dutch rdf:type owl:NamedIndividual ,
+                      coffee:NORP ,
+                      coffee:PERSON ;
+             coffee:brought coffee:coffee_plants .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#Jonathan_coffeehouse -->
+###  http://www.semanticweb.org/ariana/coffee#Dutch_acquired
+coffee:Dutch_acquired rdf:type owl:NamedIndividual ,
+                               coffee:PERSON ;
+                      coffee:live coffee:coffee_trees .
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Jonathan_coffeehouse">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#LOC"/>
-        <coffee:opened_on rdf:resource="http://www.semanticweb.org/ariana/coffee#1698"/>
-    </owl:NamedIndividual>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#Dutch_seedlings
+coffee:Dutch_seedlings rdf:type owl:NamedIndividual ,
+                                coffee:PERSON ;
+                       coffee:start coffee:coffee_cultivation .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#Kaldi -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Kaldi">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#PERSON"/>
-        <coffee:comes_in rdf:resource="http://www.semanticweb.org/ariana/coffee#Ethiopia"/>
-        <coffee:discovered rdf:resource="http://www.semanticweb.org/ariana/coffee#coffee"/>
-        <coffee:plays rdf:resource="http://www.semanticweb.org/ariana/coffee#pipe"/>
-        <coffee:poet rdf:resource="http://www.semanticweb.org/ariana/coffee#music_-_loving_goat_herder"/>
-    </owl:NamedIndividual>
-    
+###  http://www.semanticweb.org/ariana/coffee#Dutch_traders
+coffee:Dutch_traders rdf:type owl:NamedIndividual ,
+                              coffee:PERSON ;
+                     coffee:stopped_in coffee:Ceylon ;
+                     coffee:transported coffee:coffee_trees .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#King_George -->
+###  http://www.semanticweb.org/ariana/coffee#E61_espresso_machine
+coffee:E61_espresso_machine rdf:type owl:NamedIndividual ,
+                                     coffee:PERSON .
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#King_George">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#PERSON"/>
-        <coffee:proposed rdf:resource="http://www.semanticweb.org/ariana/coffee#Stamp_Act"/>
-    </owl:NamedIndividual>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#Early_roasters
+coffee:Early_roasters rdf:type owl:NamedIndividual ,
+                               coffee:PERSON ;
+                      coffee:speed coffee:efficiency .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#Lloyd_London -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Lloyd_London">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#LOC"/>
-        <coffee:began_by rdf:resource="http://www.semanticweb.org/ariana/coffee#Edward_Lloyd_coffeehouse"/>
-    </owl:NamedIndividual>
-    
+###  http://www.semanticweb.org/ariana/coffee#Ecuador
+coffee:Ecuador rdf:type owl:NamedIndividual ,
+                        coffee:GPE ,
+                        coffee:LOC ,
+                        coffee:PERSON ;
+               coffee:harvests coffee:coffee ;
+               coffee:known coffee:coffee_production .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#London -->
+###  http://www.semanticweb.org/ariana/coffee#Edward_Lloyd_coffeehouse
+coffee:Edward_Lloyd_coffeehouse rdf:type owl:NamedIndividual ,
+                                         coffee:PERSON .
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#London">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#GPE"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#LOC"/>
-        <coffee:opened_in rdf:resource="http://www.semanticweb.org/ariana/coffee#coffeehouse"/>
-    </owl:NamedIndividual>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#Efficiency
+coffee:Efficiency rdf:type owl:NamedIndividual ,
+                           coffee:LOC ;
+                  coffee:drove coffee:changes .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#London_Stock_Exchange -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#London_Stock_Exchange">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#ORG"/>
-    </owl:NamedIndividual>
-    
+###  http://www.semanticweb.org/ariana/coffee#Egyptian_warehouses
+coffee:Egyptian_warehouses rdf:type owl:NamedIndividual ,
+                                    coffee:LOC .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#London_coffeehouses -->
+###  http://www.semanticweb.org/ariana/coffee#El_Salvador
+coffee:El_Salvador rdf:type owl:NamedIndividual ,
+                            coffee:GPE ;
+                   coffee:harvests_on coffee:February ,
+                                      coffee:January .
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#London_coffeehouses">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#LOC"/>
-        <coffee:called_in rdf:resource="http://www.semanticweb.org/ariana/coffee#Penny_Universities"/>
-    </owl:NamedIndividual>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#England
+coffee:England rdf:type owl:NamedIndividual ,
+                        coffee:LOC .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#Louis_XIV -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Louis_XIV">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#PERSON"/>
-    </owl:NamedIndividual>
-    
+###  http://www.semanticweb.org/ariana/coffee#Environmental
+coffee:Environmental rdf:type owl:NamedIndividual ,
+                              coffee:LOC ;
+                     coffee:affect coffee:growth .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#Luigi_Bezzera -->
+###  http://www.semanticweb.org/ariana/coffee#Ernesto_Valente
+coffee:Ernesto_Valente rdf:type owl:NamedIndividual ,
+                                coffee:PERSON ;
+                       coffee:introduced coffee:E61_espresso_machine ;
+                       coffee:worked coffee:Faema .
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Luigi_Bezzera">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#PERSON"/>
-        <coffee:comes_in rdf:resource="http://www.semanticweb.org/ariana/coffee#Milan"/>
-        <coffee:improved rdf:resource="http://www.semanticweb.org/ariana/coffee#Moriondo_machine"/>
-        <coffee:notable_by rdf:resource="http://www.semanticweb.org/ariana/coffee#Italians"/>
-        <coffee:patented rdf:resource="http://www.semanticweb.org/ariana/coffee#single"/>
-    </owl:NamedIndividual>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#Ethiopia
+coffee:Ethiopia rdf:type owl:NamedIndividual ,
+                         coffee:GPE ,
+                         coffee:LOC ,
+                         coffee:PERSON ;
+                coffee:harvests_on coffee:November ,
+                                   coffee:September ;
+                coffee:world coffee:exotic .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#Martinique -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Martinique">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#PERSON"/>
-    </owl:NamedIndividual>
-    
+###  http://www.semanticweb.org/ariana/coffee#Ethiopia_Kenya
+coffee:Ethiopia_Kenya rdf:type owl:NamedIndividual ,
+                               coffee:LOC .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#Mecca -->
+###  http://www.semanticweb.org/ariana/coffee#Ethiopia_coffee
+coffee:Ethiopia_coffee rdf:type owl:NamedIndividual ,
+                                coffee:BEVERAGE .
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Mecca">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#LOC"/>
-    </owl:NamedIndividual>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#Ethiopians
+coffee:Ethiopians rdf:type owl:NamedIndividual ,
+                           coffee:PERSON ;
+                  coffee:ate coffee:coffee_berries ;
+                  coffee:boiled coffee:berries ;
+                  coffee:cultivated coffee:coffee .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#Milan -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Milan">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#LOC"/>
-    </owl:NamedIndividual>
-    
+###  http://www.semanticweb.org/ariana/coffee#Europe
+coffee:Europe rdf:type owl:NamedIndividual ,
+                       coffee:LOC .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#Mocha -->
+###  http://www.semanticweb.org/ariana/coffee#Exporting_seeds
+coffee:Exporting_seeds rdf:type owl:NamedIndividual ,
+                                coffee:BEVERAGE .
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Mocha">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#PRODUCT"/>
-        <coffee:came rdf:resource="http://www.semanticweb.org/ariana/coffee#Mokha"/>
-    </owl:NamedIndividual>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#Extra_coarse
+coffee:Extra_coarse rdf:type owl:NamedIndividual ,
+                             coffee:BEVERAGE ;
+                    coffee:grind coffee:brew .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#Mokha -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Mokha">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#PRODUCT"/>
-        <coffee:spelled rdf:resource="http://www.semanticweb.org/ariana/coffee#Mocha"/>
-    </owl:NamedIndividual>
-    
+###  http://www.semanticweb.org/ariana/coffee#Faema
+coffee:Faema rdf:type owl:NamedIndividual ,
+                      coffee:ORG .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#Mokha_Amsterdam -->
+###  http://www.semanticweb.org/ariana/coffee#February
+coffee:February rdf:type owl:NamedIndividual ,
+                         coffee:DATE .
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Mokha_Amsterdam">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#LOC"/>
-    </owl:NamedIndividual>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#Flowers_develop
+coffee:Flowers_develop rdf:type owl:NamedIndividual ,
+                                coffee:PERSON .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#Moriondo_machine -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Moriondo_machine">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#PRODUCT"/>
-    </owl:NamedIndividual>
-    
+###  http://www.semanticweb.org/ariana/coffee#France
+coffee:France rdf:type owl:NamedIndividual ,
+                       coffee:GPE .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#Moslem_homes -->
+###  http://www.semanticweb.org/ariana/coffee#Francisco_de_Melho_Palheta
+coffee:Francisco_de_Melho_Palheta rdf:type owl:NamedIndividual ,
+                                           coffee:PERSON ;
+                                  coffee:planted coffee:coffee_cherries .
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Moslem_homes">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#LOC"/>
-    </owl:NamedIndividual>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#Francois_Procope
+coffee:Francois_Procope rdf:type owl:NamedIndividual ,
+                                 coffee:PERSON ;
+                        coffee:opened_in coffee:Cafe_de_Procope .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#Mukha -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Mukha">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#PRODUCT"/>
-    </owl:NamedIndividual>
-    
+###  http://www.semanticweb.org/ariana/coffee#French
+coffee:French rdf:type owl:NamedIndividual ,
+                       coffee:NORP ,
+                       coffee:PERSON ;
+              coffee:created coffee:infusion_style .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#Mysore -->
+###  http://www.semanticweb.org/ariana/coffee#French_King_Louis_XV
+coffee:French_King_Louis_XV rdf:type owl:NamedIndividual ,
+                                     coffee:PERSON .
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Mysore">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#PERSON"/>
-    </owl:NamedIndividual>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#French_Press
+coffee:French_Press rdf:type owl:NamedIndividual ,
+                             coffee:PERSON ;
+                    coffee:uses coffee:specific .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#Netherlands -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Netherlands">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#GPE"/>
-    </owl:NamedIndividual>
-    
+###  http://www.semanticweb.org/ariana/coffee#French_Press_popular
+coffee:French_Press_popular rdf:type owl:NamedIndividual ,
+                                     coffee:PERSON .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#Oxford -->
+###  http://www.semanticweb.org/ariana/coffee#French_Venetian_merchants
+coffee:French_Venetian_merchants rdf:type owl:NamedIndividual ,
+                                          coffee:PERSON ;
+                                 coffee:took coffee:coffee_beans .
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Oxford">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#ORG"/>
-        <coffee:opened rdf:resource="http://www.semanticweb.org/ariana/coffee#called"/>
-    </owl:NamedIndividual>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#Gabriel_Mathieu_de_Clieu
+coffee:Gabriel_Mathieu_de_Clieu rdf:type owl:NamedIndividual ,
+                                         coffee:PERSON ;
+                                coffee:brought_by coffee:Martinique .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#Paris -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Paris">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#LOC"/>
-    </owl:NamedIndividual>
-    
+###  http://www.semanticweb.org/ariana/coffee#Gaggia
+coffee:Gaggia rdf:type owl:NamedIndividual ,
+                       coffee:GPE .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#Parisians -->
+###  http://www.semanticweb.org/ariana/coffee#Germany
+coffee:Germany rdf:type owl:NamedIndividual ,
+                        coffee:LOC ,
+                        coffee:PERSON ;
+               coffee:entered coffee:coffee .
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Parisians">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#NORP"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#PERSON"/>
-        <coffee:embraced rdf:resource="http://www.semanticweb.org/ariana/coffee#coffeehouse"/>
-    </owl:NamedIndividual>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#Giulio
+coffee:Giulio rdf:type owl:NamedIndividual ,
+                       coffee:LOC .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#Pasqua_Rosee -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Pasqua_Rosee">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#LOC"/>
-    </owl:NamedIndividual>
-    
+###  http://www.semanticweb.org/ariana/coffee#Giulio_Moneta
+coffee:Giulio_Moneta rdf:type owl:NamedIndividual ,
+                              coffee:PERSON ;
+                     coffee:patented coffee:press .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#Penny_Universities -->
+###  http://www.semanticweb.org/ariana/coffee#Green_Dragon
+coffee:Green_Dragon rdf:type owl:NamedIndividual ,
+                             coffee:LOC .
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Penny_Universities">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#LOC"/>
-    </owl:NamedIndividual>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#Green_Dragon_coffeehouse
+coffee:Green_Dragon_coffeehouse rdf:type owl:NamedIndividual ,
+                                         coffee:LOC ;
+                                coffee:operated_on <http://www.semanticweb.org/ariana/coffee#1679_1832> .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#Penny_universities -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Penny_universities">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#LOC"/>
-        <coffee:turned_in rdf:resource="http://www.semanticweb.org/ariana/coffee#private_clubs"/>
-    </owl:NamedIndividual>
-    
+###  http://www.semanticweb.org/ariana/coffee#Guatemala
+coffee:Guatemala rdf:type owl:NamedIndividual ,
+                          coffee:LOC ;
+                 coffee:harvests_in coffee:January ;
+                 coffee:harvests_on coffee:February .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#People -->
+###  http://www.semanticweb.org/ariana/coffee#Guinea
+coffee:Guinea rdf:type owl:NamedIndividual ,
+                       coffee:LOC .
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#People">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#PERSON"/>
-        <coffee:gathered rdf:resource="http://www.semanticweb.org/ariana/coffee#coffeehouses"/>
-    </owl:NamedIndividual>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#Guyana
+coffee:Guyana rdf:type owl:NamedIndividual ,
+                       coffee:GPE .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#Portuguese -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Portuguese">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#NORP"/>
-    </owl:NamedIndividual>
-    
+###  http://www.semanticweb.org/ariana/coffee#Guyana_Dutch
+coffee:Guyana_Dutch rdf:type owl:NamedIndividual ,
+                             coffee:ORG .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#Public -->
+###  http://www.semanticweb.org/ariana/coffee#Guyanese_governors
+coffee:Guyanese_governors rdf:type owl:NamedIndividual ,
+                                   coffee:PERSON ;
+                          coffee:asked_by coffee:Francisco_de_Melho_Palheta .
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Public">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#LOC"/>
-    </owl:NamedIndividual>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#Hamburg
+coffee:Hamburg rdf:type owl:NamedIndividual ,
+                        coffee:LOC .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#Rebellion_leaders -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Rebellion_leaders">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#PERSON"/>
-        <coffee:met_in rdf:resource="http://www.semanticweb.org/ariana/coffee#Green_Dragon"/>
-    </owl:NamedIndividual>
-    
+###  http://www.semanticweb.org/ariana/coffee#Hario
+coffee:Hario rdf:type owl:NamedIndividual ,
+                      coffee:PERSON ;
+             coffee:invented coffee:pour_over_method .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#Rhazes -->
+###  http://www.semanticweb.org/ariana/coffee#Holland
+coffee:Holland rdf:type owl:NamedIndividual ,
+                        coffee:LOC .
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Rhazes">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#PERSON"/>
-        <coffee:wrote rdf:resource="http://www.semanticweb.org/ariana/coffee#coffee"/>
-    </owl:NamedIndividual>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#Honore_de_Balzac
+coffee:Honore_de_Balzac rdf:type owl:NamedIndividual ,
+                                 coffee:PERSON ;
+                        coffee:consuming coffee:dry_ground_coffee .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#Rhazes_Arabian_physician -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Rhazes_Arabian_physician">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#PERSON"/>
-    </owl:NamedIndividual>
-    
+###  http://www.semanticweb.org/ariana/coffee#India
+coffee:India rdf:type owl:NamedIndividual ,
+                      coffee:GPE ;
+             coffee:produce coffee:coffee .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#Seedlings -->
+###  http://www.semanticweb.org/ariana/coffee#Indonesia
+coffee:Indonesia rdf:type owl:NamedIndividual ,
+                          coffee:GPE ;
+                 coffee:harvests coffee:coffee ;
+                 coffee:harvests_in coffee:October ;
+                 coffee:harvests_on coffee:November .
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Seedlings">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#PRODUCT"/>
-        <coffee:transported_in rdf:resource="http://www.semanticweb.org/ariana/coffee#Mokha_Amsterdam"/>
-    </owl:NamedIndividual>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#Italian_Designers
+coffee:Italian_Designers rdf:type owl:NamedIndividual ,
+                                  coffee:PERSON .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#Sotheby_Christie -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Sotheby_Christie">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#LOC"/>
-        <coffee:started_in rdf:resource="http://www.semanticweb.org/ariana/coffee#coffeehouses"/>
-    </owl:NamedIndividual>
-    
+###  http://www.semanticweb.org/ariana/coffee#Italians
+coffee:Italians rdf:type owl:NamedIndividual ,
+                         coffee:NORP ;
+                coffee:invented_by coffee:Angelo_Moriondo .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#Stamp_Act -->
+###  http://www.semanticweb.org/ariana/coffee#Italy
+coffee:Italy rdf:type owl:NamedIndividual ,
+                      coffee:GPE .
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Stamp_Act">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#LAW"/>
-    </owl:NamedIndividual>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#Italy_street_vendors
+coffee:Italy_street_vendors rdf:type owl:NamedIndividual ,
+                                     coffee:PERSON ;
+                            coffee:added coffee:coffee .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#Turin -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Turin">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#LOC"/>
-    </owl:NamedIndividual>
-    
+###  http://www.semanticweb.org/ariana/coffee#Jamaica
+coffee:Jamaica rdf:type owl:NamedIndividual ,
+                        coffee:GPE ;
+               coffee:gifted_by coffee:French_King_Louis_XV .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#Turkish_Empire -->
+###  http://www.semanticweb.org/ariana/coffee#Jamaican_Blue_Mountains
+coffee:Jamaican_Blue_Mountains rdf:type owl:NamedIndividual ,
+                                        coffee:NORP .
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Turkish_Empire">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#ORG"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#PERSON"/>
-    </owl:NamedIndividual>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#January
+coffee:January rdf:type owl:NamedIndividual ,
+                        coffee:DATE ,
+                        coffee:LOC .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#Turkish_coffee -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Turkish_coffee">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#BEVERAGE"/>
-        <coffee:served rdf:resource="http://www.semanticweb.org/ariana/coffee#sugar"/>
-    </owl:NamedIndividual>
-    
+###  http://www.semanticweb.org/ariana/coffee#Java_Coffee
+coffee:Java_Coffee rdf:type owl:NamedIndividual ,
+                            coffee:PERSON .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#Typica -->
+###  http://www.semanticweb.org/ariana/coffee#Java_coffee
+coffee:Java_coffee rdf:type owl:NamedIndividual ,
+                            coffee:BEVERAGE ;
+                   coffee:brought coffee:coffee .
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Typica">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#PERSON"/>
-    </owl:NamedIndividual>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#John_Adams
+coffee:John_Adams rdf:type owl:NamedIndividual ,
+                           coffee:PERSON .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#Venice -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Venice">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#LOC"/>
-    </owl:NamedIndividual>
-    
+###  http://www.semanticweb.org/ariana/coffee#John_Otis
+coffee:John_Otis rdf:type owl:NamedIndividual ,
+                          coffee:PERSON .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#Viennese -->
+###  http://www.semanticweb.org/ariana/coffee#Jonathan_coffeehouse
+coffee:Jonathan_coffeehouse rdf:type owl:NamedIndividual ,
+                                     coffee:LOC ;
+                            coffee:opened <http://www.semanticweb.org/ariana/coffee#1698> .
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Viennese">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#LOC"/>
-    </owl:NamedIndividual>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#July
+coffee:July rdf:type owl:NamedIndividual ,
+                     coffee:DATE .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#Yemen_Port_Mokha -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Yemen_Port_Mokha">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#LOC"/>
-    </owl:NamedIndividual>
-    
+###  http://www.semanticweb.org/ariana/coffee#June
+coffee:June rdf:type owl:NamedIndividual ,
+                     coffee:DATE .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#Yemen_port_city -->
+###  http://www.semanticweb.org/ariana/coffee#Kaldi
+coffee:Kaldi rdf:type owl:NamedIndividual ,
+                      coffee:PERSON ;
+             coffee:comes_in coffee:Ethiopia ;
+             coffee:discovered coffee:coffee ;
+             coffee:plays coffee:pipe ;
+             coffee:poet coffee:goat .
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Yemen_port_city">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#LOC"/>
-    </owl:NamedIndividual>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#Kenya
+coffee:Kenya rdf:type owl:NamedIndividual ,
+                      coffee:LOC ;
+             coffee:harvests_on coffee:November .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#americano -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#americano">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#BEVERAGE"/>
-    </owl:NamedIndividual>
-    
+###  http://www.semanticweb.org/ariana/coffee#Kenya_coffees
+coffee:Kenya_coffees rdf:type owl:NamedIndividual ,
+                              coffee:BEVERAGE ;
+                     coffee:celebrated coffee:unique .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#backed -->
+###  http://www.semanticweb.org/ariana/coffee#King_George
+coffee:King_George rdf:type owl:NamedIndividual ,
+                            coffee:PERSON ;
+                   coffee:proposed coffee:Stamp_Act .
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#backed"/>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#Lloyd_London
+coffee:Lloyd_London rdf:type owl:NamedIndividual ,
+                             coffee:PERSON ;
+                    coffee:began_by coffee:Edward_Lloyd_coffeehouse .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#beer -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#beer">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#BEVERAGE"/>
-        <coffee:wine_by rdf:resource="http://www.semanticweb.org/ariana/coffee#American"/>
-    </owl:NamedIndividual>
-    
+###  http://www.semanticweb.org/ariana/coffee#Lockhart
+coffee:Lockhart rdf:type owl:NamedIndividual ,
+                         coffee:LOC .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#berries -->
+###  http://www.semanticweb.org/ariana/coffee#Loeff
+coffee:Loeff rdf:type owl:NamedIndividual ,
+                      coffee:LOC ;
+             coffee:invented coffee:siphon .
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#berries">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#PRODUCT"/>
-    </owl:NamedIndividual>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#London
+coffee:London rdf:type owl:NamedIndividual ,
+                       coffee:LOC ;
+              coffee:opened_in coffee:coffeehouse .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#caf�_au -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#caf�_au">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#LOC"/>
-    </owl:NamedIndividual>
-    
+###  http://www.semanticweb.org/ariana/coffee#London_Stock_Exchange
+coffee:London_Stock_Exchange rdf:type owl:NamedIndividual ,
+                                      coffee:ORG .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#called -->
+###  http://www.semanticweb.org/ariana/coffee#London_coffeehouses
+coffee:London_coffeehouses rdf:type owl:NamedIndividual ,
+                                    coffee:LOC ;
+                           coffee:called_in coffee:Penny_Universities .
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#called"/>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#Louis_XIV
+coffee:Louis_XIV rdf:type owl:NamedIndividual ,
+                          coffee:PERSON .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#coffee -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#coffee">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#BEVERAGE"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#PRODUCT"/>
-        <coffee:cultivation_in rdf:resource="http://www.semanticweb.org/ariana/coffee#Ceylon"/>
-    </owl:NamedIndividual>
-    
+###  http://www.semanticweb.org/ariana/coffee#Luigi_Bezzera
+coffee:Luigi_Bezzera rdf:type owl:NamedIndividual ,
+                              coffee:PERSON ;
+                     coffee:comes_in coffee:Milan ;
+                     coffee:improved coffee:Moriondo_machine ;
+                     coffee:patented_on <http://www.semanticweb.org/ariana/coffee#1902> .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#coffee_beans -->
+###  http://www.semanticweb.org/ariana/coffee#Martinique
+coffee:Martinique rdf:type owl:NamedIndividual ,
+                           coffee:PERSON .
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#coffee_beans">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#PRODUCT"/>
-    </owl:NamedIndividual>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#Mary_Williams
+coffee:Mary_Williams rdf:type owl:NamedIndividual ,
+                              coffee:LOC ;
+                     coffee:seeing coffee:coffee_trees .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#coffee_berries -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#coffee_berries">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#PRODUCT"/>
-    </owl:NamedIndividual>
-    
+###  http://www.semanticweb.org/ariana/coffee#Mecca
+coffee:Mecca rdf:type owl:NamedIndividual ,
+                      coffee:LOC .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#coffee_cherries -->
+###  http://www.semanticweb.org/ariana/coffee#Medium
+coffee:Medium rdf:type owl:NamedIndividual ,
+                       coffee:LOC ,
+                       coffee:PERSON ;
+              coffee:cone_shaped coffee:pour_over_brewers ;
+              coffee:grind coffee:Chemex ,
+                           coffee:drip .
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#coffee_cherries">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#PRODUCT"/>
-    </owl:NamedIndividual>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#Melitta_Bentz
+coffee:Melitta_Bentz rdf:type owl:NamedIndividual ,
+                              coffee:LOC ;
+                     coffee:invented coffee:pour_over_method .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#coffee_lemonade -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#coffee_lemonade">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#PRODUCT"/>
-    </owl:NamedIndividual>
-    
+###  http://www.semanticweb.org/ariana/coffee#Mexico
+coffee:Mexico rdf:type owl:NamedIndividual ,
+                       coffee:LOC ;
+              coffee:harvests coffee:coffee ;
+              coffee:harvests_in coffee:coffee_December .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#coffee_plants -->
+###  http://www.semanticweb.org/ariana/coffee#Milan
+coffee:Milan rdf:type owl:NamedIndividual ,
+                      coffee:LOC .
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#coffee_plants">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#PRODUCT"/>
-    </owl:NamedIndividual>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#Mocha
+coffee:Mocha rdf:type owl:NamedIndividual ,
+                      coffee:PRODUCT ;
+             coffee:came coffee:Mokha .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#coffee_trees -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#coffee_trees">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#PRODUCT"/>
-    </owl:NamedIndividual>
-    
+###  http://www.semanticweb.org/ariana/coffee#Modern
+coffee:Modern rdf:type owl:NamedIndividual ,
+                       coffee:LOC ;
+              coffee:derives_in coffee:Lockhart .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#coffeehouse -->
+###  http://www.semanticweb.org/ariana/coffee#Mokha
+coffee:Mokha rdf:type owl:NamedIndividual ,
+                      coffee:PRODUCT ;
+             coffee:spelled coffee:Mocha .
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#coffeehouse">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#LOC"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#PRODUCT"/>
-    </owl:NamedIndividual>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#Mokha_Amsterdam
+coffee:Mokha_Amsterdam rdf:type owl:NamedIndividual ,
+                                coffee:LOC .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#coffeehouse_1672 -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#coffeehouse_1672">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#BEVERAGE"/>
-    </owl:NamedIndividual>
-    
+###  http://www.semanticweb.org/ariana/coffee#Moriondo_machine
+coffee:Moriondo_machine rdf:type owl:NamedIndividual ,
+                                 coffee:PRODUCT .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#coffeehouses -->
+###  http://www.semanticweb.org/ariana/coffee#Moslem_homes
+coffee:Moslem_homes rdf:type owl:NamedIndividual ,
+                             coffee:LOC .
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#coffeehouses">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#LOC"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#PRODUCT"/>
-    </owl:NamedIndividual>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#National_Coffee_Association_commissioned_Professor_Lockhart
+coffee:National_Coffee_Association_commissioned_Professor_Lockhart rdf:type owl:NamedIndividual ,
+                                                                            coffee:LOC .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#consumed -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#consumed"/>
-    
+###  http://www.semanticweb.org/ariana/coffee#Natural_processing
+coffee:Natural_processing rdf:type owl:NamedIndividual ,
+                                   coffee:BEVERAGE ;
+                          coffee:uses coffee:water .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#cortado -->
+###  http://www.semanticweb.org/ariana/coffee#Netherlands
+coffee:Netherlands rdf:type owl:NamedIndividual ,
+                            coffee:GPE .
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#cortado">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#BEVERAGE"/>
-    </owl:NamedIndividual>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#New_Guinea
+coffee:New_Guinea rdf:type owl:NamedIndividual ,
+                           coffee:GPE .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#doppio -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#doppio">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#BEVERAGE"/>
-    </owl:NamedIndividual>
-    
+###  http://www.semanticweb.org/ariana/coffee#Nicaragua
+coffee:Nicaragua rdf:type owl:NamedIndividual ,
+                          coffee:PERSON ;
+                 coffee:harvests coffee:coffee ;
+                 coffee:harvests_in coffee:coffee_December .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#dry_ground_coffee -->
+###  http://www.semanticweb.org/ariana/coffee#Northen_DR_Congo
+coffee:Northen_DR_Congo rdf:type owl:NamedIndividual ,
+                                 coffee:PERSON ;
+                        coffee:harvests_on coffee:October .
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#dry_ground_coffee">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#PRODUCT"/>
-    </owl:NamedIndividual>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#Northen_Peru
+coffee:Northen_Peru rdf:type owl:NamedIndividual ,
+                             coffee:PERSON ;
+                    coffee:harvests_on coffee:September .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#early_1600s -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#early_1600s">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#DATE"/>
-    </owl:NamedIndividual>
-    
+###  http://www.semanticweb.org/ariana/coffee#Northern_Colombia
+coffee:Northern_Colombia rdf:type owl:NamedIndividual ,
+                                  coffee:PERSON ;
+                         coffee:harvests coffee:coffee .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#early_1700s -->
+###  http://www.semanticweb.org/ariana/coffee#Northern_Peru
+coffee:Northern_Peru rdf:type owl:NamedIndividual ,
+                              coffee:PERSON ;
+                     coffee:harvests coffee:coffee .
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#early_1700s">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#DATE"/>
-        <coffee:established_in rdf:resource="http://www.semanticweb.org/ariana/coffee#Africa"/>
-    </owl:NamedIndividual>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#November
+coffee:November rdf:type owl:NamedIndividual ,
+                         coffee:DATE ,
+                         coffee:LOC .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#espresso_machine -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#espresso_machine">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#LOC"/>
-    </owl:NamedIndividual>
-    
+###  http://www.semanticweb.org/ariana/coffee#October
+coffee:October rdf:type owl:NamedIndividual ,
+                        coffee:DATE ,
+                        coffee:LOC .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#espresso_machines -->
+###  http://www.semanticweb.org/ariana/coffee#Oxford
+coffee:Oxford rdf:type owl:NamedIndividual ,
+                       coffee:ORG ;
+              coffee:opened coffee:called .
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#espresso_machines">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#PRODUCT"/>
-    </owl:NamedIndividual>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#Panama
+coffee:Panama rdf:type owl:NamedIndividual ,
+                       coffee:LOC ;
+              coffee:harvests_on coffee:February ,
+                                 coffee:January .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#flat_white -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#flat_white">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#BEVERAGE"/>
-    </owl:NamedIndividual>
-    
+###  http://www.semanticweb.org/ariana/coffee#Paolini_Ugo
+coffee:Paolini_Ugo rdf:type owl:NamedIndividual ,
+                            coffee:PERSON ;
+                   coffee:invented coffee:idea .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#having -->
+###  http://www.semanticweb.org/ariana/coffee#Papua
+coffee:Papua rdf:type owl:NamedIndividual ,
+                      coffee:LOC ;
+             coffee:harvests coffee:coffee ;
+             coffee:harvests_in coffee:coffee_December .
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#having"/>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#Paris
+coffee:Paris rdf:type owl:NamedIndividual ,
+                      coffee:LOC .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#hundreds_years -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#hundreds_years">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#DATE"/>
-    </owl:NamedIndividual>
-    
+###  http://www.semanticweb.org/ariana/coffee#Parisians
+coffee:Parisians rdf:type owl:NamedIndividual ,
+                          coffee:PERSON ;
+                 coffee:embraced coffee:coffeehouse .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#infusion_-_style_brewing -->
+###  http://www.semanticweb.org/ariana/coffee#Pasqua_Rosee
+coffee:Pasqua_Rosee rdf:type owl:NamedIndividual ,
+                             coffee:LOC .
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#infusion_-_style_brewing">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#METHODS"/>
-    </owl:NamedIndividual>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#Paul_Revere
+coffee:Paul_Revere rdf:type owl:NamedIndividual ,
+                            coffee:PERSON .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#late_1500s -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#late_1500s">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#DATE"/>
-    </owl:NamedIndividual>
-    
+###  http://www.semanticweb.org/ariana/coffee#Peaberry
+coffee:Peaberry rdf:type owl:NamedIndividual ,
+                         coffee:LOC ;
+                coffee:containing coffee:bean .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#late_1600s -->
+###  http://www.semanticweb.org/ariana/coffee#Penny_Universities
+coffee:Penny_Universities rdf:type owl:NamedIndividual ,
+                                   coffee:LOC .
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#late_1600s">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#DATE"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#TIME"/>
-    </owl:NamedIndividual>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#Penny_universities
+coffee:Penny_universities rdf:type owl:NamedIndividual ,
+                                   coffee:LOC ;
+                          coffee:turned_in coffee:private_clubs .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#latte -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#latte">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#BEVERAGE"/>
-    </owl:NamedIndividual>
-    
+###  http://www.semanticweb.org/ariana/coffee#People
+coffee:People rdf:type owl:NamedIndividual ,
+                       coffee:PERSON ;
+              coffee:gathered_in coffee:coffeehouses .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#lever_-_driven -->
+###  http://www.semanticweb.org/ariana/coffee#Peru
+coffee:Peru rdf:type owl:NamedIndividual ,
+                     coffee:GPE ;
+            coffee:growing coffee:regions ;
+            coffee:known coffee:coffee_production .
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#lever_-_driven">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#TOOLS"/>
-    </owl:NamedIndividual>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#Peter_Schlumbohm
+coffee:Peter_Schlumbohm rdf:type owl:NamedIndividual ,
+                                 coffee:LOC ;
+                        coffee:invented coffee:pour_over_method .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#lungo -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#lungo">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#BEVERAGE"/>
-    </owl:NamedIndividual>
-    
+###  http://www.semanticweb.org/ariana/coffee#Pickers
+coffee:Pickers rdf:type owl:NamedIndividual ,
+                        coffee:LOC ;
+               coffee:identify coffee:ripe ;
+               coffee:pick coffee:ripe .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#macchiato -->
+###  http://www.semanticweb.org/ariana/coffee#Portuguese
+coffee:Portuguese rdf:type owl:NamedIndividual ,
+                           coffee:NORP .
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#macchiato">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#BEVERAGE"/>
-    </owl:NamedIndividual>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#Professor_Lockhart
+coffee:Professor_Lockhart rdf:type owl:NamedIndividual ,
+                                   coffee:PERSON ;
+                          coffee:established coffee:United ;
+                          coffee:helped coffee:define .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#mid-1600s -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#mid-1600s">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#DATE"/>
-        <coffee:people rdf:resource="http://www.semanticweb.org/ariana/coffee#consumed"/>
-    </owl:NamedIndividual>
-    
+###  http://www.semanticweb.org/ariana/coffee#Public
+coffee:Public rdf:type owl:NamedIndividual ,
+                       coffee:LOC .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#mocha -->
+###  http://www.semanticweb.org/ariana/coffee#Quantity_drove
+coffee:Quantity_drove rdf:type owl:NamedIndividual ,
+                               coffee:PERSON ;
+                      coffee:changes coffee:roasting .
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#mocha">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#BEVERAGE"/>
-    </owl:NamedIndividual>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#Rebellion_leaders
+coffee:Rebellion_leaders rdf:type owl:NamedIndividual ,
+                                  coffee:PERSON ;
+                         coffee:met_in coffee:Green_Dragon .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#music_-_loving_goat_herder -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#music_-_loving_goat_herder">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#METHODS"/>
-    </owl:NamedIndividual>
-    
+###  http://www.semanticweb.org/ariana/coffee#Republic
+coffee:Republic rdf:type owl:NamedIndividual ,
+                         coffee:PERSON ;
+                coffee:long coffee:history .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#nearly_30_years_later -->
+###  http://www.semanticweb.org/ariana/coffee#Rhazes
+coffee:Rhazes rdf:type owl:NamedIndividual ,
+                       coffee:PERSON ;
+              coffee:wrote coffee:coffee .
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#nearly_30_years_later">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#DATE"/>
-    </owl:NamedIndividual>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#Roasting
+coffee:Roasting rdf:type owl:NamedIndividual ,
+                         coffee:LOC ;
+                coffee:seen coffee:incredible_technical .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#pipe -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#pipe">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#INSTRUMENT"/>
-    </owl:NamedIndividual>
-    
+###  http://www.semanticweb.org/ariana/coffee#Roasting_coffee
+coffee:Roasting_coffee rdf:type owl:NamedIndividual ,
+                                coffee:BEVERAGE ;
+                       coffee:central coffee:journey .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#private_clubs -->
+###  http://www.semanticweb.org/ariana/coffee#Roasting_process
+coffee:Roasting_process rdf:type owl:NamedIndividual ,
+                                 coffee:METHODS ;
+                        coffee:requiring coffee:numerous_decisions ;
+                        coffee:takes coffee:minutes .
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#private_clubs">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#LOC"/>
-    </owl:NamedIndividual>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#Robusta
+coffee:Robusta rdf:type owl:NamedIndividual ,
+                        coffee:VARIETY ;
+               coffee:bigger coffee:yield ;
+               coffee:called_in coffee:Canephora ;
+               coffee:considered coffee:gourmet ;
+               coffee:greater coffee:yield ;
+               coffee:grows coffee:elevation ;
+               coffee:hardy_in coffee:plant ;
+               coffee:known coffee:harsh .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#producing_machines -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#producing_machines">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#EVENT"/>
-    </owl:NamedIndividual>
-    
+###  http://www.semanticweb.org/ariana/coffee#Rwanda
+coffee:Rwanda rdf:type owl:NamedIndividual ,
+                       coffee:LOC ;
+              coffee:harvests coffee:coffee ;
+              coffee:known coffee:excellent .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#protected -->
+###  http://www.semanticweb.org/ariana/coffee#Rwanda_produce
+coffee:Rwanda_produce rdf:type owl:NamedIndividual ,
+                               coffee:EVENT .
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#protected"/>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#S
+coffee:S rdf:type owl:NamedIndividual ,
+                  coffee:PRODUCT .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#quahwa -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#quahwa">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#BEVERAGE"/>
-    </owl:NamedIndividual>
-    
+###  http://www.semanticweb.org/ariana/coffee#Sarchmor
+coffee:Sarchmor rdf:type owl:NamedIndividual ,
+                         coffee:GPE .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#ristretto -->
+###  http://www.semanticweb.org/ariana/coffee#Seedlings
+coffee:Seedlings rdf:type owl:NamedIndividual ,
+                          coffee:PRODUCT ;
+                 coffee:transported_in coffee:Mokha_Amsterdam .
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#ristretto">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#BEVERAGE"/>
-    </owl:NamedIndividual>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#Seeds
+coffee:Seeds rdf:type owl:NamedIndividual ,
+                      coffee:PERSON ;
+             coffee:developed_by coffee:Typica .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#seedlings -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#seedlings">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#PRODUCT"/>
-        <coffee:start rdf:resource="http://www.semanticweb.org/ariana/coffee#coffee"/>
-    </owl:NamedIndividual>
-    
+###  http://www.semanticweb.org/ariana/coffee#September
+coffee:September rdf:type owl:NamedIndividual ,
+                          coffee:DATE .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#seeds -->
+###  http://www.semanticweb.org/ariana/coffee#Sotheby_Christie
+coffee:Sotheby_Christie rdf:type owl:NamedIndividual ,
+                                 coffee:PERSON ;
+                        coffee:started_in coffee:coffeehouses .
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#seeds">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#PRODUCT"/>
-    </owl:NamedIndividual>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#South_America
+coffee:South_America rdf:type owl:NamedIndividual ,
+                              coffee:LOC ;
+                     coffee:cultivating_on <http://www.semanticweb.org/ariana/coffee#1700s> .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#seven -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#seven">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#CARDINAL"/>
-    </owl:NamedIndividual>
-    
+###  http://www.semanticweb.org/ariana/coffee#Southern_Africa
+coffee:Southern_Africa rdf:type owl:NamedIndividual ,
+                                coffee:LOC ;
+                       coffee:significant coffee:marked .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#single -->
+###  http://www.semanticweb.org/ariana/coffee#Southern_Brazil
+coffee:Southern_Brazil rdf:type owl:NamedIndividual ,
+                                coffee:LOC ;
+                       coffee:harvests_on coffee:June .
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#single"/>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#Southern_DR_Congo
+coffee:Southern_DR_Congo rdf:type owl:NamedIndividual ,
+                                  coffee:LOC ,
+                                  coffee:PERSON ;
+                         coffee:harvests coffee:coffee ;
+                         coffee:harvests_on coffee:September .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#single_cups -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#single_cups">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#TOOLS"/>
-    </owl:NamedIndividual>
-    
+###  http://www.semanticweb.org/ariana/coffee#Speed
+coffee:Speed rdf:type owl:NamedIndividual ,
+                      coffee:LOC ;
+             coffee:changes coffee:roasting .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#sugar -->
+###  http://www.semanticweb.org/ariana/coffee#Stamp_Act
+coffee:Stamp_Act rdf:type owl:NamedIndividual ,
+                          coffee:LAW .
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#sugar"/>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#Swanda
+coffee:Swanda rdf:type owl:NamedIndividual ,
+                       coffee:LOC .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#-_portion -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#-_portion">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#BENEFIT"/>
-    </owl:NamedIndividual>
-    
+###  http://www.semanticweb.org/ariana/coffee#Tanzania
+coffee:Tanzania rdf:type owl:NamedIndividual ,
+                         coffee:LOC ,
+                         coffee:PERSON ;
+                coffee:harvests_on coffee:August ;
+                coffee:produces coffee:highly .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#-_strength -->
+###  http://www.semanticweb.org/ariana/coffee#Timor_Hybrid
+coffee:Timor_Hybrid rdf:type owl:NamedIndividual ,
+                             coffee:PERSON .
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#-_strength">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#LOC"/>
-    </owl:NamedIndividual>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#Today
+coffee:Today rdf:type owl:NamedIndividual ,
+                      coffee:LOC .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#10th_century -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#10th_century">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#DATE"/>
-    </owl:NamedIndividual>
-    
+###  http://www.semanticweb.org/ariana/coffee#Trees
+coffee:Trees rdf:type owl:NamedIndividual ,
+                      coffee:PRODUCT .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#1536 -->
+###  http://www.semanticweb.org/ariana/coffee#Turin
+coffee:Turin rdf:type owl:NamedIndividual ,
+                      coffee:LOC .
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#1536">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#DATE"/>
-    </owl:NamedIndividual>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#Turkish
+coffee:Turkish rdf:type owl:NamedIndividual ,
+                        coffee:BEVERAGE ,
+                        coffee:LOC ,
+                        coffee:NORP ;
+               coffee:served coffee:sugar .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#1616 -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#1616">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#DATE"/>
-    </owl:NamedIndividual>
-    
+###  http://www.semanticweb.org/ariana/coffee#Turkish_Empire
+coffee:Turkish_Empire rdf:type owl:NamedIndividual ,
+                               coffee:PERSON .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#1652 -->
+###  http://www.semanticweb.org/ariana/coffee#Turkish_coffee
+coffee:Turkish_coffee rdf:type owl:NamedIndividual ,
+                               coffee:BEVERAGE .
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#1652">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#DATE"/>
-    </owl:NamedIndividual>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#Typica
+coffee:Typica rdf:type owl:NamedIndividual ,
+                       coffee:GPE ,
+                       coffee:PERSON .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#1679_1832 -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#1679_1832">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#DATE"/>
-    </owl:NamedIndividual>
-    
+###  http://www.semanticweb.org/ariana/coffee#Uganda
+coffee:Uganda rdf:type owl:NamedIndividual ,
+                       coffee:LOC ;
+              coffee:harvests_in coffee:coffee_December ;
+              coffee:harvests_on coffee:November ,
+                                 coffee:September .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#1683 -->
+###  http://www.semanticweb.org/ariana/coffee#United
+coffee:United rdf:type owl:NamedIndividual .
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#1683">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#DATE"/>
-    </owl:NamedIndividual>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#Venezuela
+coffee:Venezuela rdf:type owl:NamedIndividual ,
+                          coffee:LOC ;
+                 coffee:known coffee:coffee_production .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#1689 -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#1689">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#DATE"/>
-    </owl:NamedIndividual>
-    
+###  http://www.semanticweb.org/ariana/coffee#Venezuela_coffee
+coffee:Venezuela_coffee rdf:type owl:NamedIndividual ,
+                                 coffee:BEVERAGE .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#1698 -->
+###  http://www.semanticweb.org/ariana/coffee#Venice
+coffee:Venice rdf:type owl:NamedIndividual ,
+                       coffee:LOC .
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#1698">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#DATE"/>
-    </owl:NamedIndividual>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#Viennese
+coffee:Viennese rdf:type owl:NamedIndividual ,
+                         coffee:LOC .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#1700s -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#1700s">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#DATE"/>
-    </owl:NamedIndividual>
-    
+###  http://www.semanticweb.org/ariana/coffee#Vietnam
+coffee:Vietnam rdf:type owl:NamedIndividual ,
+                        coffee:LOC ;
+               coffee:harvests_in coffee:coffee_December ;
+               coffee:recognized coffee:quality ,
+                                 coffee:quantity .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#1773 -->
+###  http://www.semanticweb.org/ariana/coffee#Washed_processing_uses
+coffee:Washed_processing_uses rdf:type owl:NamedIndividual ,
+                                       coffee:PERSON ;
+                              coffee:large coffee:quantities .
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#1773">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#DATE"/>
-    </owl:NamedIndividual>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#Water
+coffee:Water rdf:type owl:NamedIndividual ,
+                      coffee:PRODUCT ;
+             coffee:contains coffee:calcium .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#1902 -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#1902">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#DATE"/>
-    </owl:NamedIndividual>
-    
+###  http://www.semanticweb.org/ariana/coffee#Yemen
+coffee:Yemen rdf:type owl:NamedIndividual ,
+                      coffee:GPE ;
+             coffee:harvests_on coffee:November ;
+             coffee:known coffee:coffee .
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#2,000_coffeehouses -->
+###  http://www.semanticweb.org/ariana/coffee#Yemen_Arabia
+coffee:Yemen_Arabia rdf:type owl:NamedIndividual ,
+                             coffee:LOC .
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#2,000_coffeehouses">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#LOC"/>
-    </owl:NamedIndividual>
-    
 
+###  http://www.semanticweb.org/ariana/coffee#Yemen_Port_Mokha
+coffee:Yemen_Port_Mokha rdf:type owl:NamedIndividual ,
+                                 coffee:LOC .
 
-    <!-- http://www.semanticweb.org/ariana/coffee#30_years -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#30_years">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#DATE"/>
-    </owl:NamedIndividual>
-</rdf:RDF>
+###  http://www.semanticweb.org/ariana/coffee#Yemen_port_city
+coffee:Yemen_port_city rdf:type owl:NamedIndividual ,
+                                coffee:LOC .
 
 
+###  http://www.semanticweb.org/ariana/coffee#Yungas
+coffee:Yungas rdf:type owl:NamedIndividual ,
+                       coffee:NORP .
 
-<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
 
+###  http://www.semanticweb.org/ariana/coffee#Yungas_Andes_Mountains
+coffee:Yungas_Andes_Mountains rdf:type owl:NamedIndividual ,
+                                       coffee:LOC .
+
+
+###  http://www.semanticweb.org/ariana/coffee#Zambia
+coffee:Zambia rdf:type owl:NamedIndividual ,
+                       coffee:LOC ;
+              coffee:growing coffee:interest ;
+              coffee:produce coffee:coffee .
+
+
+###  http://www.semanticweb.org/ariana/coffee#americano
+coffee:americano rdf:type owl:NamedIndividual ,
+                          coffee:BEVERAGE .
+
+
+###  http://www.semanticweb.org/ariana/coffee#annually
+coffee:annually rdf:type owl:NamedIndividual ,
+                         coffee:DATE .
+
+
+###  http://www.semanticweb.org/ariana/coffee#bags
+coffee:bags rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/ariana/coffee#bean
+coffee:bean rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/ariana/coffee#beans
+coffee:beans rdf:type owl:NamedIndividual ,
+                      coffee:PRODUCT .
+
+
+###  http://www.semanticweb.org/ariana/coffee#beautiful
+coffee:beautiful rdf:type owl:NamedIndividual ,
+                          coffee:BEVERAGE .
+
+
+###  http://www.semanticweb.org/ariana/coffee#beautiful_coffees
+coffee:beautiful_coffees rdf:type owl:NamedIndividual ,
+                                  coffee:PRODUCT .
+
+
+###  http://www.semanticweb.org/ariana/coffee#beer
+coffee:beer rdf:type owl:NamedIndividual ,
+                     coffee:BEVERAGE ;
+            coffee:wine_by coffee:American .
+
+
+###  http://www.semanticweb.org/ariana/coffee#berries
+coffee:berries rdf:type owl:NamedIndividual ,
+                        coffee:PRODUCT .
+
+
+###  http://www.semanticweb.org/ariana/coffee#brew
+coffee:brew rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/ariana/coffee#calcium
+coffee:calcium rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/ariana/coffee#called
+coffee:called rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/ariana/coffee#cargo
+coffee:cargo rdf:type owl:NamedIndividual ,
+                      coffee:BEVERAGE .
+
+
+###  http://www.semanticweb.org/ariana/coffee#changes
+coffee:changes rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/ariana/coffee#cherries
+coffee:cherries rdf:type owl:NamedIndividual ,
+                         coffee:PRODUCT .
+
+
+###  http://www.semanticweb.org/ariana/coffee#coffee
+coffee:coffee rdf:type owl:NamedIndividual ,
+                       coffee:BEVERAGE ,
+                       coffee:PRODUCT ;
+              coffee:source coffee:spurred .
+
+
+###  http://www.semanticweb.org/ariana/coffee#coffee_December
+coffee:coffee_December rdf:type owl:NamedIndividual ,
+                                coffee:LOC .
+
+
+###  http://www.semanticweb.org/ariana/coffee#coffee_Mount_Kilimanjaro_Mount_Meru
+coffee:coffee_Mount_Kilimanjaro_Mount_Meru rdf:type owl:NamedIndividual ,
+                                                    coffee:LOC .
+
+
+###  http://www.semanticweb.org/ariana/coffee#coffee_beans
+coffee:coffee_beans rdf:type owl:NamedIndividual ,
+                             coffee:PRODUCT .
+
+
+###  http://www.semanticweb.org/ariana/coffee#coffee_berries
+coffee:coffee_berries rdf:type owl:NamedIndividual ,
+                               coffee:PRODUCT .
+
+
+###  http://www.semanticweb.org/ariana/coffee#coffee_cherries
+coffee:coffee_cherries rdf:type owl:NamedIndividual ,
+                                coffee:PRODUCT .
+
+
+###  http://www.semanticweb.org/ariana/coffee#coffee_cowboy
+coffee:coffee_cowboy rdf:type owl:NamedIndividual ,
+                              coffee:PRODUCT .
+
+
+###  http://www.semanticweb.org/ariana/coffee#coffee_cultivation
+coffee:coffee_cultivation rdf:type owl:NamedIndividual ,
+                                   coffee:PRODUCT .
+
+
+###  http://www.semanticweb.org/ariana/coffee#coffee_growing
+coffee:coffee_growing rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/ariana/coffee#coffee_plants
+coffee:coffee_plants rdf:type owl:NamedIndividual ,
+                              coffee:PRODUCT .
+
+
+###  http://www.semanticweb.org/ariana/coffee#coffee_production
+coffee:coffee_production rdf:type owl:NamedIndividual ,
+                                  coffee:PRODUCT .
+
+
+###  http://www.semanticweb.org/ariana/coffee#coffee_requires
+coffee:coffee_requires rdf:type owl:NamedIndividual ,
+                                coffee:PRODUCT .
+
+
+###  http://www.semanticweb.org/ariana/coffee#coffee_trees
+coffee:coffee_trees rdf:type owl:NamedIndividual ,
+                             coffee:PRODUCT .
+
+
+###  http://www.semanticweb.org/ariana/coffee#coffee_varieties
+coffee:coffee_varieties rdf:type owl:NamedIndividual ,
+                                 coffee:PRODUCT .
+
+
+###  http://www.semanticweb.org/ariana/coffee#coffeehouse
+coffee:coffeehouse rdf:type owl:NamedIndividual ,
+                            coffee:LOC ,
+                            coffee:PRODUCT .
+
+
+###  http://www.semanticweb.org/ariana/coffee#coffeehouses
+coffee:coffeehouses rdf:type owl:NamedIndividual ,
+                             coffee:LOC .
+
+
+###  http://www.semanticweb.org/ariana/coffee#coffees
+coffee:coffees rdf:type owl:NamedIndividual ,
+                        coffee:PRODUCT .
+
+
+###  http://www.semanticweb.org/ariana/coffee#complexities
+coffee:complexities rdf:type owl:NamedIndividual ,
+                             coffee:PRODUCT .
+
+
+###  http://www.semanticweb.org/ariana/coffee#complexity
+coffee:complexity rdf:type owl:NamedIndividual ,
+                           coffee:BEVERAGE .
+
+
+###  http://www.semanticweb.org/ariana/coffee#connection
+coffee:connection rdf:type owl:NamedIndividual ,
+                           coffee:BEVERAGE .
+
+
+###  http://www.semanticweb.org/ariana/coffee#consumed
+coffee:consumed rdf:type owl:NamedIndividual ,
+                         coffee:BEVERAGE .
+
+
+###  http://www.semanticweb.org/ariana/coffee#cortado
+coffee:cortado rdf:type owl:NamedIndividual ,
+                        coffee:BEVERAGE .
+
+
+###  http://www.semanticweb.org/ariana/coffee#craft
+coffee:craft rdf:type owl:NamedIndividual ,
+                      coffee:BEVERAGE ;
+             coffee:roasting coffee:taste .
+
+
+###  http://www.semanticweb.org/ariana/coffee#crops
+coffee:crops rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/ariana/coffee#cuppers
+coffee:cuppers rdf:type owl:NamedIndividual ,
+                        coffee:ORG .
+
+
+###  http://www.semanticweb.org/ariana/coffee#define
+coffee:define rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/ariana/coffee#doppio
+coffee:doppio rdf:type owl:NamedIndividual ,
+                       coffee:BEVERAGE .
+
+
+###  http://www.semanticweb.org/ariana/coffee#drip
+coffee:drip rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/ariana/coffee#dry_ground_coffee
+coffee:dry_ground_coffee rdf:type owl:NamedIndividual ,
+                                  coffee:PRODUCT .
+
+
+###  http://www.semanticweb.org/ariana/coffee#early_1600s
+coffee:early_1600s rdf:type owl:NamedIndividual ,
+                            coffee:DATE .
+
+
+###  http://www.semanticweb.org/ariana/coffee#early_1700s
+coffee:early_1700s rdf:type owl:NamedIndividual ,
+                            coffee:DATE ;
+                   coffee:established_in coffee:Africa .
+
+
+###  http://www.semanticweb.org/ariana/coffee#early_1900s
+coffee:early_1900s rdf:type owl:NamedIndividual ,
+                            coffee:DATE .
+
+
+###  http://www.semanticweb.org/ariana/coffee#economics
+coffee:economics rdf:type owl:NamedIndividual ,
+                          coffee:BEVERAGE .
+
+
+###  http://www.semanticweb.org/ariana/coffee#efficiency
+coffee:efficiency rdf:type owl:NamedIndividual ,
+                           coffee:BEVERAGE .
+
+
+###  http://www.semanticweb.org/ariana/coffee#elevation
+coffee:elevation rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/ariana/coffee#excellent
+coffee:excellent rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/ariana/coffee#exotic
+coffee:exotic rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/ariana/coffee#flat_white
+coffee:flat_white rdf:type owl:NamedIndividual ,
+                           coffee:BEVERAGE .
+
+
+###  http://www.semanticweb.org/ariana/coffee#focusing
+coffee:focusing rdf:type owl:NamedIndividual ,
+                         coffee:BEVERAGE ;
+                coffee:use coffee:fuel .
+
+
+###  http://www.semanticweb.org/ariana/coffee#frying_pan_open
+coffee:frying_pan_open rdf:type owl:NamedIndividual ,
+                                coffee:TOOLS .
+
+
+###  http://www.semanticweb.org/ariana/coffee#fuel
+coffee:fuel rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/ariana/coffee#globally
+coffee:globally rdf:type owl:NamedIndividual ,
+                         coffee:BEVERAGE .
+
+
+###  http://www.semanticweb.org/ariana/coffee#goat
+coffee:goat rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/ariana/coffee#gourmet
+coffee:gourmet rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/ariana/coffee#growth
+coffee:growth rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/ariana/coffee#harsh
+coffee:harsh rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/ariana/coffee#highly
+coffee:highly rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/ariana/coffee#history
+coffee:history rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/ariana/coffee#hundreds_years
+coffee:hundreds_years rdf:type owl:NamedIndividual ,
+                               coffee:DATE .
+
+
+###  http://www.semanticweb.org/ariana/coffee#idea
+coffee:idea rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/ariana/coffee#incredible_technical
+coffee:incredible_technical rdf:type owl:NamedIndividual ,
+                                     coffee:PRODUCT ;
+                            coffee:advances_on coffee:past_century .
+
+
+###  http://www.semanticweb.org/ariana/coffee#infusion_style
+coffee:infusion_style rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/ariana/coffee#interest
+coffee:interest rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/ariana/coffee#journey
+coffee:journey rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/ariana/coffee#late_1500s
+coffee:late_1500s rdf:type owl:NamedIndividual ,
+                           coffee:DATE .
+
+
+###  http://www.semanticweb.org/ariana/coffee#late_1600s
+coffee:late_1600s rdf:type owl:NamedIndividual ,
+                           coffee:DATE ,
+                           coffee:TIME .
+
+
+###  http://www.semanticweb.org/ariana/coffee#late_1960s
+coffee:late_1960s rdf:type owl:NamedIndividual ,
+                           coffee:DATE .
+
+
+###  http://www.semanticweb.org/ariana/coffee#late_1980s
+coffee:late_1980s rdf:type owl:NamedIndividual ,
+                           coffee:DATE .
+
+
+###  http://www.semanticweb.org/ariana/coffee#latte
+coffee:latte rdf:type owl:NamedIndividual ,
+                      coffee:BEVERAGE .
+
+
+###  http://www.semanticweb.org/ariana/coffee#lemonade
+coffee:lemonade rdf:type owl:NamedIndividual ,
+                         coffee:PRODUCT .
+
+
+###  http://www.semanticweb.org/ariana/coffee#lever_driven
+coffee:lever_driven rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/ariana/coffee#lungo
+coffee:lungo rdf:type owl:NamedIndividual ,
+                      coffee:BEVERAGE .
+
+
+###  http://www.semanticweb.org/ariana/coffee#macchiato
+coffee:macchiato rdf:type owl:NamedIndividual ,
+                          coffee:BEVERAGE .
+
+
+###  http://www.semanticweb.org/ariana/coffee#marked
+coffee:marked rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/ariana/coffee#marketing
+coffee:marketing rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/ariana/coffee#medicinal_benefits
+coffee:medicinal_benefits rdf:type owl:NamedIndividual ,
+                                   coffee:BENEFIT .
+
+
+###  http://www.semanticweb.org/ariana/coffee#mid_1600s
+coffee:mid_1600s rdf:type owl:NamedIndividual ,
+                          coffee:DATE ;
+                 coffee:people coffee:consumed .
+
+
+###  http://www.semanticweb.org/ariana/coffee#mid_18th_century
+coffee:mid_18th_century rdf:type owl:NamedIndividual ,
+                                 coffee:DATE .
+
+
+###  http://www.semanticweb.org/ariana/coffee#millions
+coffee:millions rdf:type owl:NamedIndividual ,
+                         coffee:CARDINAL .
+
+
+###  http://www.semanticweb.org/ariana/coffee#minutes
+coffee:minutes rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/ariana/coffee#mocha
+coffee:mocha rdf:type owl:NamedIndividual ,
+                      coffee:BEVERAGE .
+
+
+###  http://www.semanticweb.org/ariana/coffee#nearly_30_years_later
+coffee:nearly_30_years_later rdf:type owl:NamedIndividual ,
+                                      coffee:DATE .
+
+
+###  http://www.semanticweb.org/ariana/coffee#numerous_decisions
+coffee:numerous_decisions rdf:type owl:NamedIndividual ,
+                                   coffee:TOOLS .
+
+
+###  http://www.semanticweb.org/ariana/coffee#origin
+coffee:origin rdf:type owl:NamedIndividual ,
+                       coffee:BEVERAGE .
+
+
+###  http://www.semanticweb.org/ariana/coffee#output
+coffee:output rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/ariana/coffee#past_century
+coffee:past_century rdf:type owl:NamedIndividual ,
+                             coffee:DATE .
+
+
+###  http://www.semanticweb.org/ariana/coffee#pea_shaped
+coffee:pea_shaped rdf:type owl:NamedIndividual ,
+                           coffee:PRODUCT .
+
+
+###  http://www.semanticweb.org/ariana/coffee#peaberry
+coffee:peaberry rdf:type owl:NamedIndividual ,
+                         coffee:ORG .
+
+
+###  http://www.semanticweb.org/ariana/coffee#people
+coffee:people rdf:type owl:NamedIndividual ,
+                       coffee:PERSON .
+
+
+###  http://www.semanticweb.org/ariana/coffee#pipe
+coffee:pipe rdf:type owl:NamedIndividual ,
+                     coffee:INSTRUMENT .
+
+
+###  http://www.semanticweb.org/ariana/coffee#place_coffee
+coffee:place_coffee rdf:type owl:NamedIndividual ,
+                             coffee:PRODUCT .
+
+
+###  http://www.semanticweb.org/ariana/coffee#plant
+coffee:plant rdf:type owl:NamedIndividual ,
+                      coffee:LOC .
+
+
+###  http://www.semanticweb.org/ariana/coffee#potassium
+coffee:potassium rdf:type owl:NamedIndividual ,
+                          coffee:BEVERAGE .
+
+
+###  http://www.semanticweb.org/ariana/coffee#pour_over_brewers
+coffee:pour_over_brewers rdf:type owl:NamedIndividual ,
+                                  coffee:PRODUCT .
+
+
+###  http://www.semanticweb.org/ariana/coffee#pour_over_method
+coffee:pour_over_method rdf:type owl:NamedIndividual ,
+                                 coffee:PRODUCT .
+
+
+###  http://www.semanticweb.org/ariana/coffee#practices
+coffee:practices rdf:type owl:NamedIndividual ,
+                          coffee:BEVERAGE .
+
+
+###  http://www.semanticweb.org/ariana/coffee#press
+coffee:press rdf:type owl:NamedIndividual ,
+                      coffee:PRODUCT .
+
+
+###  http://www.semanticweb.org/ariana/coffee#presses
+coffee:presses rdf:type owl:NamedIndividual ,
+                        coffee:LOC .
+
+
+###  http://www.semanticweb.org/ariana/coffee#presses_French_Press
+coffee:presses_French_Press rdf:type owl:NamedIndividual ,
+                                     coffee:PERSON .
+
+
+###  http://www.semanticweb.org/ariana/coffee#private_clubs
+coffee:private_clubs rdf:type owl:NamedIndividual ,
+                              coffee:LOC .
+
+
+###  http://www.semanticweb.org/ariana/coffee#processed
+coffee:processed rdf:type owl:NamedIndividual ,
+                          coffee:BEVERAGE .
+
+
+###  http://www.semanticweb.org/ariana/coffee#produce
+coffee:produce rdf:type owl:NamedIndividual ,
+                        coffee:PRODUCT ;
+               coffee:limited coffee:quantities_coffee .
+
+
+###  http://www.semanticweb.org/ariana/coffee#produce_coffee
+coffee:produce_coffee rdf:type owl:NamedIndividual ,
+                               coffee:PRODUCT .
+
+
+###  http://www.semanticweb.org/ariana/coffee#produced
+coffee:produced rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/ariana/coffee#producing_machines
+coffee:producing_machines rdf:type owl:NamedIndividual ,
+                                   coffee:EVENT .
+
+
+###  http://www.semanticweb.org/ariana/coffee#production
+coffee:production rdf:type owl:NamedIndividual ,
+                           coffee:BEVERAGE .
+
+
+###  http://www.semanticweb.org/ariana/coffee#production_countries
+coffee:production_countries rdf:type owl:NamedIndividual ,
+                                     coffee:PRODUCT .
+
+
+###  http://www.semanticweb.org/ariana/coffee#profiles
+coffee:profiles rdf:type owl:NamedIndividual ,
+                         coffee:LOC .
+
+
+###  http://www.semanticweb.org/ariana/coffee#protected
+coffee:protected rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/ariana/coffee#quahwa
+coffee:quahwa rdf:type owl:NamedIndividual ,
+                       coffee:BEVERAGE .
+
+
+###  http://www.semanticweb.org/ariana/coffee#quality
+coffee:quality rdf:type owl:NamedIndividual ,
+                        coffee:BEVERAGE .
+
+
+###  http://www.semanticweb.org/ariana/coffee#quantities
+coffee:quantities rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/ariana/coffee#quantities_coffee
+coffee:quantities_coffee rdf:type owl:NamedIndividual ,
+                                  coffee:PRODUCT .
+
+
+###  http://www.semanticweb.org/ariana/coffee#quantity
+coffee:quantity rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/ariana/coffee#regions
+coffee:regions rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/ariana/coffee#ripe
+coffee:ripe rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/ariana/coffee#ristretto
+coffee:ristretto rdf:type owl:NamedIndividual ,
+                          coffee:BEVERAGE .
+
+
+###  http://www.semanticweb.org/ariana/coffee#roasting
+coffee:roasting rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/ariana/coffee#seeds
+coffee:seeds rdf:type owl:NamedIndividual ,
+                      coffee:PRODUCT .
+
+
+###  http://www.semanticweb.org/ariana/coffee#seven
+coffee:seven rdf:type owl:NamedIndividual ,
+                      coffee:CARDINAL .
+
+
+###  http://www.semanticweb.org/ariana/coffee#single_cups
+coffee:single_cups rdf:type owl:NamedIndividual ,
+                            coffee:TOOLS .
+
+
+###  http://www.semanticweb.org/ariana/coffee#single_seed
+coffee:single_seed rdf:type owl:NamedIndividual ,
+                            coffee:TOOLS .
+
+
+###  http://www.semanticweb.org/ariana/coffee#siphon
+coffee:siphon rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/ariana/coffee#specific
+coffee:specific rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/ariana/coffee#spurred
+coffee:spurred rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/ariana/coffee#sugar
+coffee:sugar rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/ariana/coffee#taste
+coffee:taste rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/ariana/coffee#taxes
+coffee:taxes rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/ariana/coffee#thousands
+coffee:thousands rdf:type owl:NamedIndividual ,
+                          coffee:CARDINAL ;
+                 coffee:respected coffee:place_coffee .
+
+
+###  http://www.semanticweb.org/ariana/coffee#unique
+coffee:unique rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/ariana/coffee#uses
+coffee:uses rdf:type owl:NamedIndividual ,
+                     coffee:PRODUCT .
+
+
+###  http://www.semanticweb.org/ariana/coffee#ventures
+coffee:ventures rdf:type owl:NamedIndividual ,
+                         coffee:BEVERAGE .
+
+
+###  http://www.semanticweb.org/ariana/coffee#vision
+coffee:vision rdf:type owl:NamedIndividual ,
+                       coffee:PRODUCT ;
+              coffee:dream_on coffee:late_1960s .
+
+
+###  http://www.semanticweb.org/ariana/coffee#water
+coffee:water rdf:type owl:NamedIndividual ,
+                      coffee:PRODUCT .
+
+
+###  http://www.semanticweb.org/ariana/coffee#world
+coffee:world rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/ariana/coffee#year
+coffee:year rdf:type owl:NamedIndividual ,
+                     coffee:BEVERAGE .
+
+
+###  http://www.semanticweb.org/ariana/coffee#yield
+coffee:yield rdf:type owl:NamedIndividual ,
+                      coffee:BEVERAGE .
+
+
+###  http://www.semanticweb.org/ariana/coffee#10th_century
+<http://www.semanticweb.org/ariana/coffee#10th_century> rdf:type owl:NamedIndividual ,
+                                                                 coffee:DATE .
+
+
+###  http://www.semanticweb.org/ariana/coffee#1536
+<http://www.semanticweb.org/ariana/coffee#1536> rdf:type owl:NamedIndividual ,
+                                                         coffee:DATE .
+
+
+###  http://www.semanticweb.org/ariana/coffee#1616
+<http://www.semanticweb.org/ariana/coffee#1616> rdf:type owl:NamedIndividual ,
+                                                         coffee:DATE .
+
+
+###  http://www.semanticweb.org/ariana/coffee#1652
+<http://www.semanticweb.org/ariana/coffee#1652> rdf:type owl:NamedIndividual ,
+                                                         coffee:DATE .
+
+
+###  http://www.semanticweb.org/ariana/coffee#1672
+<http://www.semanticweb.org/ariana/coffee#1672> rdf:type owl:NamedIndividual ,
+                                                         coffee:DATE .
+
+
+###  http://www.semanticweb.org/ariana/coffee#1679_1832
+<http://www.semanticweb.org/ariana/coffee#1679_1832> rdf:type owl:NamedIndividual ,
+                                                              coffee:DATE .
+
+
+###  http://www.semanticweb.org/ariana/coffee#1683
+<http://www.semanticweb.org/ariana/coffee#1683> rdf:type owl:NamedIndividual ,
+                                                         coffee:DATE .
+
+
+###  http://www.semanticweb.org/ariana/coffee#1689
+<http://www.semanticweb.org/ariana/coffee#1689> rdf:type owl:NamedIndividual ,
+                                                         coffee:DATE .
+
+
+###  http://www.semanticweb.org/ariana/coffee#1698
+<http://www.semanticweb.org/ariana/coffee#1698> rdf:type owl:NamedIndividual ,
+                                                         coffee:CARDINAL .
+
+
+###  http://www.semanticweb.org/ariana/coffee#17th_century
+<http://www.semanticweb.org/ariana/coffee#17th_century> rdf:type owl:NamedIndividual ,
+                                                                 coffee:DATE ;
+                                                        coffee:crossed_in coffee:Ethiopia .
+
+
+###  http://www.semanticweb.org/ariana/coffee#1700s
+<http://www.semanticweb.org/ariana/coffee#1700s> rdf:type owl:NamedIndividual ,
+                                                          coffee:DATE .
+
+
+###  http://www.semanticweb.org/ariana/coffee#1723
+<http://www.semanticweb.org/ariana/coffee#1723> rdf:type owl:NamedIndividual ,
+                                                         coffee:DATE .
+
+
+###  http://www.semanticweb.org/ariana/coffee#1765
+<http://www.semanticweb.org/ariana/coffee#1765> rdf:type owl:NamedIndividual ,
+                                                         coffee:DATE .
+
+
+###  http://www.semanticweb.org/ariana/coffee#1773
+<http://www.semanticweb.org/ariana/coffee#1773> rdf:type owl:NamedIndividual ,
+                                                         coffee:DATE .
+
+
+###  http://www.semanticweb.org/ariana/coffee#1902
+<http://www.semanticweb.org/ariana/coffee#1902> rdf:type owl:NamedIndividual ,
+                                                         coffee:DATE .
+
+
+###  http://www.semanticweb.org/ariana/coffee#1920s
+<http://www.semanticweb.org/ariana/coffee#1920s> rdf:type owl:NamedIndividual ,
+                                                          coffee:DATE .
+
+
+###  http://www.semanticweb.org/ariana/coffee#1929
+<http://www.semanticweb.org/ariana/coffee#1929> rdf:type owl:NamedIndividual ,
+                                                         coffee:DATE .
+
+
+###  http://www.semanticweb.org/ariana/coffee#2019
+<http://www.semanticweb.org/ariana/coffee#2019> rdf:type owl:NamedIndividual ,
+                                                         coffee:CARDINAL .
+
+
+###  http://www.semanticweb.org/ariana/coffee#2020
+<http://www.semanticweb.org/ariana/coffee#2020> rdf:type owl:NamedIndividual ,
+                                                         coffee:DATE .
+
+
+###  http://www.semanticweb.org/ariana/coffee#25_30_percent
+<http://www.semanticweb.org/ariana/coffee#25_30_percent> rdf:type owl:NamedIndividual ,
+                                                                  coffee:PERCENT .
+
+
+###  http://www.semanticweb.org/ariana/coffee#30_years
+<http://www.semanticweb.org/ariana/coffee#30_years> rdf:type owl:NamedIndividual ,
+                                                             coffee:DATE .
+
+
+###  http://www.semanticweb.org/ariana/coffee#6th_century
+<http://www.semanticweb.org/ariana/coffee#6th_century> rdf:type owl:NamedIndividual ,
+                                                                coffee:DATE .
+
+
+###  http://www.semanticweb.org/ariana/coffee#70_percent
+<http://www.semanticweb.org/ariana/coffee#70_percent> rdf:type owl:NamedIndividual ,
+                                                               coffee:BEVERAGE .
+
+
+###  http://www.semanticweb.org/ariana/coffee#Costa_Rica_95_,
+<http://www.semanticweb.org/ariana/coffee#Costa_Rica_95_,> rdf:type owl:NamedIndividual ,
+                                                                    coffee:LOC .
+
+
+###  http://www.semanticweb.org/ariana/coffee#Great_Rift_Valley_,_Mount_Kenya_Ethiopian_Highlands
+<http://www.semanticweb.org/ariana/coffee#Great_Rift_Valley_,_Mount_Kenya_Ethiopian_Highlands> rdf:type owl:NamedIndividual ,
+                                                                                                        coffee:LOC ;
+                                                                                               coffee:geography coffee:production_countries .
+
+
+###  http://www.semanticweb.org/ariana/coffee#Lempira_,
+<http://www.semanticweb.org/ariana/coffee#Lempira_,> rdf:type owl:NamedIndividual ,
+                                                              coffee:LOC ;
+                                                     coffee:RAB coffee:C15 .
+
+
+###  http://www.semanticweb.org/ariana/coffee#London_2,000_coffeehouses
+<http://www.semanticweb.org/ariana/coffee#London_2,000_coffeehouses> rdf:type owl:NamedIndividual ,
+                                                                              coffee:LOC .
+
+
+###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi

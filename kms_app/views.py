@@ -32,7 +32,7 @@ def articles_view(request):
 
         article_data = {
             'doc_name': os.path.splitext(document.document_name)[0],
-            'context': truncated_text + '...',
+            'context': truncated_text.replace('_', '-') + '...',
             'full_path': document.document_path,
             'id': document.document_id
         }
@@ -48,7 +48,7 @@ def detail_article_view(request, document_id):
 
     article_data = {
         'doc_name': os.path.splitext(document.document_name)[0],
-        'full_text': extracted_text
+        'full_text': extracted_text.replace('_', '-')
     }
 
     return render(request, 'pages/detailArticle.html', {'article': article_data})
@@ -63,17 +63,16 @@ def home(request):
     if request.method == 'POST':
         start_time = time.time()  
         search_query = request.POST.get('question')
-        print({"Pertanyaan: ", search_query})
         answer_types = TextProcessing.find_answer_type(search_query)
-        print(answer_types)
         annotation_types = ['definition', 'direction']
         if 'axiom' in answer_types:
             keyword_noun = TextProcessing.pos_tagging_and_extract_nouns(search_query)
             print(keyword_noun)
-            answer = Ontology.get_instances(keyword_noun)
+            answer, rdf_output = Ontology.get_instances(keyword_noun)
             context = {
                 'question': search_query,
                 'answer': mark_safe(answer),
+                'rdf_output': rdf_output
             }
         elif not any(answer_type in annotation_types for answer_type in answer_types):
             answer_context, related_articles, extra_info, rdf_output = InvertedIndex.get_answer(search_query)
@@ -85,13 +84,13 @@ def home(request):
                 'rdf_output': rdf_output
             }
         else:
-            answer = Ontology.get_annotation(search_query, answer_types)
+            answer, rdf_output = Ontology.get_annotation(search_query, answer_types)
             context = {
                 'question': search_query,
                 'answer': mark_safe(answer),
                 'related_articles': None,
                 'extra_info': None,
-                'rdf_output': None
+                'rdf_output': rdf_output
             }
         end_time = time.time()
         response_time = end_time - start_time
@@ -102,9 +101,3 @@ def home(request):
         return render(request, 'Home.html', context)
     else:
         return render(request, 'Home.html', {'related_articles': []})
-
-
-
-
-
-

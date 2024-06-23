@@ -47,16 +47,6 @@ class Migration(migrations.Migration):
             ],
         ),
         migrations.CreateModel(
-            name='TermLemmas',
-            fields=[
-                ('termlemma_id', models.AutoField(primary_key=True, serialize=False)),
-                ('termlemma', models.CharField(max_length=255, unique=True)),
-            ],
-            options={
-                'indexes': [models.Index(fields=['termlemma'], name='kms_app_ter_termlem_f70d2f_idx')],
-            },
-        ),
-        migrations.CreateModel(
             name='Terms',
             fields=[
                 ('term_id', models.AutoField(primary_key=True, serialize=False)),
@@ -64,17 +54,6 @@ class Migration(migrations.Migration):
             ],
             options={
                 'indexes': [models.Index(fields=['term'], name='kms_app_ter_term_873f61_idx')],
-            },
-        ),
-        migrations.CreateModel(
-            name='PostingListLemmas',
-            fields=[
-                ('postlistlemma_id', models.AutoField(primary_key=True, serialize=False)),
-                ('docdetail', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='kms_app.docdetails')),
-                ('termlemma', models.ForeignKey(db_column='termlemma', on_delete=django.db.models.deletion.CASCADE, to='kms_app.termlemmas', to_field='termlemma')),
-            ],
-            options={
-                'indexes': [models.Index(fields=['termlemma'], name='kms_app_pos_termlem_6343e7_idx')],
             },
         ),
         migrations.CreateModel(

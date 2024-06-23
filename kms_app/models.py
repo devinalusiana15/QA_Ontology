@@ -19,10 +19,8 @@ from django.contrib import messages
 from django.db import transaction
 from django.shortcuts import render, redirect
 from spacy.tokens import DocBin, Doc
-from rdflib import Graph, Namespace, URIRef
 from nltk.tag import pos_tag
-from nltk.tag import pos_tag
-from rdflib import Graph, URIRef, Namespace
+from rdflib import Graph, URIRef, Namespace, Literal, RDF
 from owlready2 import onto_path, get_ontology, sync_reasoner
 from xml.dom.minidom import parseString
 
@@ -219,10 +217,10 @@ class InvertedIndex(models.Model):
         
         answer = "Tidak ada informasi yang ditemukan."
         
-        search_result, relevant_sentences = Terms.retrieve_documents(keywords=keywords_verbs)
+        search_result, relevant_sentences = InvertedIndex.retrieve_documents(keywords=keywords_verbs)
         
         if not search_result:
-            search_result_nouns, relevant_sentences_nouns = Terms.retrieve_documents(nouns=keywords_nouns)
+            search_result_nouns, relevant_sentences_nouns = InvertedIndex.retrieve_documents(nouns=keywords_nouns)
             search_result.extend(search_result_nouns)
             relevant_sentences.extend(relevant_sentences_nouns)
         
@@ -230,10 +228,10 @@ class InvertedIndex(models.Model):
             lemmatized_verbs = TextProcessing.lemmatization(' '.join(keywords_verbs))
             lemmatized_nouns = TextProcessing.lemmatization(' '.join(keywords_nouns))
 
-            search_result_lemmas, relevant_sentences_lemmas = Terms.retrieve_documents(keywords=lemmatized_verbs)
+            search_result_lemmas, relevant_sentences_lemmas = InvertedIndex.retrieve_documents(keywords=lemmatized_verbs)
             
             if not search_result_lemmas:
-                search_result_lemmas_nouns, relevant_sentences_lemmas_nouns = Terms.retrieve_documents(nouns=lemmatized_nouns)
+                search_result_lemmas_nouns, relevant_sentences_lemmas_nouns = InvertedIndex.retrieve_documents(nouns=lemmatized_nouns)
                 search_result_lemmas.extend(search_result_lemmas_nouns)
                 relevant_sentences_lemmas.extend(relevant_sentences_lemmas_nouns)
 
@@ -385,7 +383,7 @@ class Ontology(models.Model):
 
     @staticmethod   
     def get_fuseki_data(query_string):
-        endpoint = "http://localhost:3030/Kopi/query"
+        endpoint = "http://localhost:3030/kopiOntology/query"
 
         # send SPARQL query
         r = requests.get(endpoint, params={'query': query_string})
@@ -474,7 +472,7 @@ class Ontology(models.Model):
     @staticmethod
     def save_ontology(ontology):
         owl_directory = os.path.join(settings.BASE_DIR, 'kms_app/owl_file')
-        file_path = os.path.join(owl_directory, "Kopi.owl")
+        file_path = os.path.join(owl_directory, "Kopi.rdf")
         with open(file_path, "a") as output_file:
             output_file.write(ontology)
 
@@ -529,6 +527,9 @@ class Ontology(models.Model):
 
     @staticmethod
     def get_annotation(question,annotation):
+        COFFEE = Namespace("http://www.semanticweb.org/ariana/coffee#")
+        g = Graph()
+        g.bind("coffee", COFFEE)
 
         keywords_nouns = TextProcessing.pos_tagging_and_extract_nouns_ontology(question)
 
@@ -554,30 +555,40 @@ class Ontology(models.Model):
         if results:
             for row in results:
                 response = row['s'].replace("\n", "<br>")
+                g.add((COFFEE[noun], URIRef(f"http://www.w3.org/2000/01/rdf-schema#{annotation[0]}"), Literal(row['s'])))
         else:
             response = "Tidak ada jawaban"
+        
+        rdf_output = g.serialize(format='xml')
+        dom = parseString(rdf_output)
+        rdf_output = dom.toprettyxml()
 
-        return response
+        return response, rdf_output
 
     @staticmethod
     def get_instances(noun):
+        COFFEE = Namespace("http://www.semanticweb.org/ariana/coffee#")
+        g = Graph()
+        g.bind("coffee", COFFEE)
+
         onto_path.append(os.path.join(settings.BASE_DIR, 'kms_app/owl_file'))
-        onto = get_ontology("Kopi.rdf").load()
+        onto = get_ontology("kopi_final.rdf").load()
+
+        # Noun sebagai class yang dicari
+        keyword_noun = " ".join(noun).replace(' ', '_')
+        print(f'INI KEYWORD NOUN: {keyword_noun}')
 
         # Mengaktifkan reasoner
         sync_reasoner()
 
-        # Noun sebagai class yang dicari
-        keyword_noun = "".join(noun)
-
         # Mencari kelas berdasarkan kata kunci
         cls = onto[keyword_noun]
         if not cls:
-            return "Class not found"
+            return "Answer not found"
 
         instances = list(cls.instances())
 
-        response = f"<br>These are the {keyword_noun}:"
+        response = f"<br>These are the {keyword_noun.replace('_', ' ')}:"
 
         if instances:
             # Mendapatkan properti yang sama pada setiap instance
@@ -591,7 +602,7 @@ class Ontology(models.Model):
                     common_properties = instance_properties
                 else:
                     common_properties = common_properties.intersection(instance_properties)
-
+                    
             # Menampilkan instance - common_properties - value
             if common_properties:
                 for prop_name in common_properties:
@@ -600,10 +611,20 @@ class Ontology(models.Model):
                             if prop.name == prop_name:
                                 for value in prop[instance]:
                                     response += f"<br>- {instance.name.replace('_', ' ')} {prop.name} {value.name.replace('_', ' ')} "
+                                    g.add((COFFEE[instance.name], COFFEE[prop.name], COFFEE[value.name] ))
+            else:
+                
+                for instance in instances:
+                    response += f"<br>- {instance.name.replace('_', ' ')}"
+                    g.add((COFFEE[instance.name], RDF.type, COFFEE[keyword_noun] ))
         else:
-            response += "No instances found."
+            response += "Answer not found"
 
-        return response
+        rdf_output = g.serialize(format='xml')
+        dom = parseString(rdf_output)
+        rdf_output = dom.toprettyxml()    
+
+        return response, rdf_output
     
     @staticmethod
     def get_rdf_answer(predicate):

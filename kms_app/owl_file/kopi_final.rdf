@@ -2935,8 +2935,16 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Mocha">
         <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#PRODUCT"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/ariana/coffee#mocha"/>
         <coffee:came rdf:resource="http://www.semanticweb.org/ariana/coffee#Mokha"/>
+        <rdfs:definition>Mocha is a beverage that is made by adding chocolate syrup to espresso and steamed milk.</rdfs:definition>
     </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ariana/coffee#mocha -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/ariana/coffee#mocha"/>
     
 
 
@@ -3668,6 +3676,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#americano">
         <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#BEVERAGE"/>
+        <rdfs:definition>Americano is a beverage originating from American soldiers stationed in Italy during World War II. It is essentially an espresso with hot water added, created to mimic the brewed coffee experience familiar to the soldiers from home, in contrast to the espresso prevalent in Italy.</rdfs:definition>
     </owl:NamedIndividual>
     
 
@@ -4085,6 +4094,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#flat_white">
         <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#BEVERAGE"/>
+        <rdfs:definition>The flat white is a beverage originating in New Zealand or possibly Australia. It has gained global recognition due to the widespread presence of cafés and increasing consumer awareness. Essentially, a flat white can be defined as a variation of a latte, typically smaller in size and characterized by well-steamed milk with minimal foam, occasionally accompanied by a small amount of foam on top.</rdfs:definition>
     </owl:NamedIndividual>
     
 
@@ -4234,6 +4244,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#latte">
         <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#BEVERAGE"/>
+        <rdfs:definition>A latte is a beverage, popular among espresso coffee drinkers worldwide, characterized by the addition of steamed milk to espresso to temper its strong and bitter taste. Originating not from Italy but from the preference of coffee enthusiasts, it is often considered more akin to a lightly coffee-flavored milk drink. In Italy, ordering a latte without specifying &quot;caffé&quot; will result in receiving only milk. Variations of the latte may include adding extra shots of espresso to enhance the coffee flavor.</rdfs:definition>
     </owl:NamedIndividual>
     
 
@@ -4258,6 +4269,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#lungo">
         <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#BEVERAGE"/>
+        <rdfs:definition>A lungo is a long-pulled espresso. It involves using a bit more water, so it ends up a bit weaker. Sometimes afficionados look down on this drink, but with the right grind — often a lighter-roasted espresso coffee, ground slightly coarser — this can be a delicious beverage.</rdfs:definition>
     </owl:NamedIndividual>
     
 
@@ -4266,6 +4278,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#macchiato">
         <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#BEVERAGE"/>
+        <rdfs:definition>Macchiato is a type of espresso marked with a small amount of milk. Originally, it had just a dollop of milk, but recent trends involve adding more milk.</rdfs:definition>
     </owl:NamedIndividual>
     
 
@@ -4611,6 +4624,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#ristretto">
         <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#BEVERAGE"/>
+        <rdfs:definition>A ristretto is a type of espresso shot that is smaller and stronger than a regular espresso. It is made using less brewing water and a slightly finer grind to ensure the extraction time is adequate.</rdfs:definition>
     </owl:NamedIndividual>
     
 
@@ -4744,11 +4758,11 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#washed_processing">
         <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#METHODS"/>
         <coffee:large rdf:resource="http://www.semanticweb.org/ariana/coffee#quantities"/>
-        <rdfs:definition>Steps in washed processing:
+        <rdfs:direction>Steps in washed processing:
 1. Collected cherries are fed into a machine called a pulper or depulper. A pulper, or depulper removes the skin, leaving thin layers of fruit/mucilage and the seed. The machine actually rips the layers off the underlying stronger layers and seed. 
 2. After the pulped beans are skinless but with some thin layer of mucilage and the parchment skin layer, they’re carried in water channels to a tank where they rest for a time sitting in clean water. 
 3. The wet beans are then dried in the sun or in a mechanical dryer; sometimes a combination of a drying patio, table, and the mechanical dryer is used. They must be raked often to ensure even drying. Sometimes a mechanical dryer is used.
-4. The beans are stored for 6 to 10 weeks. The end result of this processing is also referred to as parchment dried because the cherries’ remaining layer on the bean is the parchment skin covering the underlying bean. The parchment skin provides a kind of protection or covering, and it remains on the bean for weeks as the beans are stored and rest, reposa in Spanish. This parchment will be dry milled off the rested green beans just prior to them being bagged and shipped.</rdfs:definition>
+4. The beans are stored for 6 to 10 weeks. The end result of this processing is also referred to as parchment dried because the cherries’ remaining layer on the bean is the parchment skin covering the underlying bean. The parchment skin provides a kind of protection or covering, and it remains on the bean for weeks as the beans are stored and rest, reposa in Spanish. This parchment will be dry milled off the rested green beans just prior to them being bagged and shipped.</rdfs:direction>
     </owl:NamedIndividual>
     
 

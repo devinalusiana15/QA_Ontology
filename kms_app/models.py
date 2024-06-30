@@ -111,7 +111,9 @@ class TextProcessing(models.Model):
 
         question_keywords = ['what', 'when', 'where', 'who', 'why', 'how']
 
-        if question[1] == "are" and question[0] in question_keywords:
+        if question[0] == "Is" or "is" and question[0] not in question_keywords:
+            return ['confirmation']
+        elif question[1] == "are" and question[0] in question_keywords:
             return ['axiom']
         elif question[0] in question_keywords:
             if 'where' in question:
@@ -392,11 +394,16 @@ class Ontology(models.Model):
         results = []
         if r.status_code == 200:
             response = r.json()
-            for result in response['results']['bindings']:
-                formatted_result = {}
-                for key in result.keys():
-                    formatted_result[key] = result[key]['value']
-                results.append(formatted_result)
+            # Handle ASK query response
+            if 'boolean' in response:
+                return response['boolean']  # Return True or False based on ASK query result
+            elif 'results' in response and 'bindings' in response['results']:
+                results = []
+                for result in response['results']['bindings']:
+                    formatted_result = {}
+                    for key in result.keys():
+                        formatted_result[key] = result[key]['value']
+                    results.append(formatted_result)
 
         return results
 
@@ -658,6 +665,41 @@ class Ontology(models.Model):
         rdf_output = dom.toprettyxml()
 
         return rdf_output
+    
+    @staticmethod
+    def confirmation(question):
+        # Process the question with custom NLP pipeline
+        doc = merge_entities(nlp_custom(question))
+        
+        # Initialize variables to store subject, predicate, and object
+        subject = None
+        predicate = None
+        object = None
+
+        # Iterate over entities in the document to find VERB, subject, and object
+        for i, ent in enumerate(doc.ents):
+            if ent.label_ == "VERB":
+                predicate = ent.text.replace(' ', '_')
+                # Determine Subject
+                if i > 0:
+                    subject = doc.ents[i-1].text.replace(' ', '_')
+                # Determine Object
+                if i < len(doc.ents) - 1:
+                    object = doc.ents[i+1].text.replace(' ', '_')
+
+        COFFEE = Namespace("http://www.semanticweb.org/ariana/coffee#")
+        g = Graph()
+        g.bind("coffee", COFFEE)
+
+        query = f""" 
+        PREFIX coffee: <http://www.semanticweb.org/ariana/coffee#>
+        ASK WHERE {{
+        coffee:{subject} coffee:{predicate} coffee:{object}.
+        }}
+        """
+        result = Ontology.get_fuseki_data(query)
+
+        return result
 
 # Model NER Default
 nlp_default = spacy.load("en_core_web_sm")

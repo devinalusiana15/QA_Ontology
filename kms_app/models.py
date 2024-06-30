@@ -106,28 +106,30 @@ class TextProcessing(models.Model):
 
     @staticmethod
     def find_answer_type(question):
-
-        question = question.lower().split()
+        question_lower = question.lower()
 
         question_keywords = ['what', 'when', 'where', 'who', 'why', 'how']
 
-        if question[0] == "Is" or "is" and question[0] not in question_keywords:
+        if ',' in question_lower:
             return ['confirmation']
-        elif question[1] == "are" and question[0] in question_keywords:
+        
+        question_split = question_lower.split()
+
+        if question_split[1] == "are" and question_split[0] in question_keywords:
             return ['axiom']
-        elif question[0] in question_keywords:
-            if 'where' in question:
+        elif question_split[0] in question_keywords:
+            if 'where' in question_split:
                 return ['LOC', 'GPE', 'CONTINENT', 'LOCATION']
-            elif 'who' in question:
+            elif 'who' in question_split:
                 return ['NORP', 'PERSON','NATIONALITY']
-            elif 'when' in question:
+            elif 'when' in question_split:
                 return ['DATE', 'TIME']
-            elif 'what' in question:
-                if 'definition' in question:
+            elif 'what' in question_split:
+                if 'definition' in question_split:
                     return ['definition']
                 else:
                     return ['PERCENT', 'PRODUCT', 'VARIETY', 'METHODS', 'BEVERAGE', 'QUANTITY']
-            elif 'how' in question:
+            elif 'how' in question_split:
                 return ['direction']
         else:
             return "Pertanyaan tidak valid"
@@ -668,24 +670,23 @@ class Ontology(models.Model):
     
     @staticmethod
     def confirmation(question):
-        # Process the question with custom NLP pipeline
         doc = merge_entities(nlp_custom(question))
-        
-        # Initialize variables to store subject, predicate, and object
+
         subject = None
         predicate = None
         object = None
+        result_text = ""
+        ents = [ent for ent in doc.ents if ent.label_ != 'VERB' or ent.text != '?']
 
-        # Iterate over entities in the document to find VERB, subject, and object
-        for i, ent in enumerate(doc.ents):
+        for i, ent in enumerate(ents):
             if ent.label_ == "VERB":
                 predicate = ent.text.replace(' ', '_')
-                # Determine Subject
-                if i > 0:
-                    subject = doc.ents[i-1].text.replace(' ', '_')
-                # Determine Object
+                # Menentukan Object
                 if i < len(doc.ents) - 1:
                     object = doc.ents[i+1].text.replace(' ', '_')
+                # Menentukan Subject
+                if i+1 < len(doc.ents) - 1:
+                    subject = doc.ents[i+2].text.replace(' ', '_')
 
         COFFEE = Namespace("http://www.semanticweb.org/ariana/coffee#")
         g = Graph()
@@ -697,9 +698,34 @@ class Ontology(models.Model):
         coffee:{subject} coffee:{predicate} coffee:{object}.
         }}
         """
+
         result = Ontology.get_fuseki_data(query)
 
-        return result
+        if result == True:
+            result_text += f"True. {subject.replace('_', ' ')} {predicate.replace('_', ' ')} {object.replace('_', ' ')}."
+            g.add((COFFEE[subject], COFFEE[predicate], COFFEE[object]))
+        else:
+            query_false = f""" 
+            PREFIX coffee: <http://www.semanticweb.org/ariana/coffee#>
+            SELECT ?s WHERE {{
+            ?s coffee:{predicate} coffee:{object}.
+            }}
+            """
+            result_false = Ontology.get_fuseki_data(query_false)
+            if result_false:
+                for row in result_false:
+                    subject_name = row.get('s', '').split('#')[-1].replace("_", " ") if row.get('s') else None
+                    if subject_name:
+                        result_text += f"False. {subject_name.replace('_', ' ')} {predicate.replace('_', ' ')} {object.replace('_', ' ')}. "
+                        g.add((URIRef(row['s']), COFFEE[predicate], COFFEE[object]))
+            else:
+                result_text += "Answer Not Found"
+        
+        rdf_output = g.serialize(format='xml')
+        dom = parseString(rdf_output)
+        rdf_output = dom.toprettyxml()
+
+        return result_text, rdf_output
 
 # Model NER Default
 nlp_default = spacy.load("en_core_web_sm")

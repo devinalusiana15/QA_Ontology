@@ -69,7 +69,6 @@ def home(request):
         print(answer_types)
         annotation_types = ['definition', 'direction']
         if 'axiom' in answer_types:
-            print('MASUK ATAS')
             keyword_noun = TextProcessing.pos_tagging_and_extract_nouns(search_query)
             print(keyword_noun)
             answer, rdf_output = Ontology.get_instances(keyword_noun)
@@ -79,14 +78,13 @@ def home(request):
                 'rdf_output': rdf_output
             }
         elif 'confirmation' in answer_types:
-            print("MASUK ATAS 2")
-            confirmation = Ontology.confirmation(search_query)
+            confirmation, rdf_output = Ontology.confirmation(search_query)
             context = {
                 'question': search_query,
-                'answer': confirmation
+                'answer': confirmation,
+                'rdf_output': rdf_output
             }
         elif not any(answer_type in annotation_types for answer_type in answer_types):
-            print("MASUK ATAS 3")
             answer_context, related_articles, extra_info, rdf_output = InvertedIndex.get_answer(search_query)
             context = {
                 'question': search_query,
@@ -96,7 +94,6 @@ def home(request):
                 'rdf_output': rdf_output
             }
         else:
-            print("MASUK BAWAH")
             answer, rdf_output = Ontology.get_annotation(search_query, answer_types)
             context = {
                 'question': search_query,

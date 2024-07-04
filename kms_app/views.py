@@ -63,9 +63,31 @@ def upload_knowledge_view(request):
 
 def home(request):
     if request.method == 'POST':
-        start_time = time.time()  
+        start_time = time.time()
         search_query = request.POST.get('question')
-        answer_types = TextProcessing.find_answer_type(search_query)
+
+        if not search_query.endswith('?'):
+            context = {
+                'question': search_query,
+                'answer': 'Not the type of question. Please enter the question again.',
+                'related_articles': None,
+                'extra_info': None,
+                'rdf_output': None
+            }
+            return render(request, 'Home.html', context)
+
+        try:
+            answer_types = TextProcessing.find_answer_type(search_query)
+        except IndexError:
+            context = {
+                'question': search_query,
+                'answer': 'Not the type of question. Please enter the question again.',
+                'related_articles': None,
+                'extra_info': None,
+                'rdf_output': None
+            }
+            return render(request, 'Home.html', context)
+
         print(answer_types)
         annotation_types = ['definition', 'direction']
         if 'axiom' in answer_types:
@@ -102,6 +124,7 @@ def home(request):
                 'extra_info': None,
                 'rdf_output': rdf_output
             }
+        
         end_time = time.time()
         response_time = end_time - start_time
         response_time = round(response_time, 2)

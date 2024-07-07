@@ -1609,8 +1609,7 @@
     <!-- http://www.semanticweb.org/ariana/coffee#AeroPress -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#AeroPress">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#LOC"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#ORG"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#PRODUCT"/>
         <rdfs:definition>The AeroPress is an increasingly popular device for brewing. Coffee steeps for a brief amount of time (about 10 to 50 seconds) and then is forced through a filter (paper or metal) by pressing the plunger through the tube.</rdfs:definition>
     </owl:NamedIndividual>
     
@@ -2878,7 +2877,7 @@
     <!-- http://www.semanticweb.org/ariana/coffee#Mary_Williams -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Mary_Williams">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#LOC"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#PERSON"/>
         <coffee:seeing rdf:resource="http://www.semanticweb.org/ariana/coffee#coffee_trees"/>
     </owl:NamedIndividual>
     
@@ -2907,7 +2906,7 @@
     <!-- http://www.semanticweb.org/ariana/coffee#Melitta_Bentz -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Melitta_Bentz">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#LOC"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#PERSON"/>
         <coffee:invented rdf:resource="http://www.semanticweb.org/ariana/coffee#pour_over_method"/>
     </owl:NamedIndividual>
     

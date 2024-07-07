@@ -88,9 +88,8 @@ def home(request):
             }
             return render(request, 'Home.html', context)
 
-        print(answer_types)
         annotation_types = ['definition', 'direction']
-        if 'axiom' in answer_types:
+        if answer_types == 'axiom':
             keyword_noun = TextProcessing.pos_tagging_and_extract_nouns(search_query)
             print(keyword_noun)
             answer, rdf_output = Ontology.get_instances(keyword_noun)
@@ -99,29 +98,28 @@ def home(request):
                 'answer': mark_safe(answer),
                 'rdf_output': rdf_output
             }
-        elif 'confirmation' in answer_types:
+        elif answer_types == 'confirmation':
             confirmation, rdf_output = Ontology.confirmation(search_query)
             context = {
                 'question': search_query,
                 'answer': confirmation,
                 'rdf_output': rdf_output
             }
-        elif not any(answer_type in annotation_types for answer_type in answer_types):
-            answer_context, related_articles, extra_info, rdf_output = InvertedIndex.get_answer(search_query)
-            context = {
-                'question': search_query,
-                'answer': answer_context,
-                'related_articles': related_articles,
-                'extra_info': extra_info,
-                'rdf_output': rdf_output
-            }
-        else:
+        elif answer_types in annotation_types:
             answer, rdf_output = Ontology.get_annotation(search_query, answer_types)
             context = {
                 'question': search_query,
                 'answer': mark_safe(answer),
                 'related_articles': None,
                 'extra_info': None,
+                'rdf_output': rdf_output
+            }
+        else:
+            answer, rdf_output, extra_info = Ontology.get_answer_ontology(search_query, answer_types)            
+            context = {
+                'question': search_query,
+                'answer': answer,
+                'extra_info': extra_info,
                 'rdf_output': rdf_output
             }
         

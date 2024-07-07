@@ -111,26 +111,26 @@ class TextProcessing(models.Model):
         question_keywords = ['what', 'when', 'where', 'who', 'why', 'how']
 
         if ',' in question_lower:
-            return ['confirmation']
+            return 'confirmation'
         
         question_split = question_lower.split()
 
         if question_split[1] == "are" and question_split[0] in question_keywords:
-            return ['axiom']
+            return 'axiom'
         elif question_split[0] in question_keywords:
             if 'where' in question_split:
-                return ['LOC', 'GPE', 'CONTINENT', 'LOCATION']
+                return 'in'
             elif 'who' in question_split:
-                return ['NORP', 'PERSON','NATIONALITY']
+                return 'by'
             elif 'when' in question_split:
-                return ['DATE', 'TIME']
+                return 'on'
             elif 'what' in question_split:
                 if 'definition' in question_split:
-                    return ['definition']
+                    return 'definition'
                 else:
-                    return ['PERCENT', 'PRODUCT', 'VARIETY', 'METHODS', 'BEVERAGE', 'QUANTITY']
+                    return ''
             elif 'how' in question_split:
-                return ['direction']
+                return 'direction'
         else:
             return "Pertanyaan tidak valid"
 
@@ -551,7 +551,7 @@ class Ontology(models.Model):
         PREFIX coffee: <http://www.semanticweb.org/ariana/coffee#>
         PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
         SELECT ?s WHERE {{
-        coffee:{noun} rdfs:{annotation[0]} ?s
+        coffee:{noun} rdfs:{annotation} ?s
         }}
         """
 
@@ -564,7 +564,7 @@ class Ontology(models.Model):
         if results:
             for row in results:
                 response = row['s'].replace("\n", "<br>")
-                g.add((COFFEE[noun], URIRef(f"http://www.w3.org/2000/01/rdf-schema#{annotation[0]}"), Literal(row['s'])))
+                g.add((COFFEE[noun], URIRef(f"http://www.w3.org/2000/01/rdf-schema#{annotation}"), Literal(row['s'])))
         else:
             response = "Tidak ada jawaban"
         
@@ -670,6 +670,7 @@ class Ontology(models.Model):
     
     @staticmethod
     def confirmation(question):
+        
         doc = merge_entities(nlp_custom(question))
 
         subject = None
@@ -726,6 +727,94 @@ class Ontology(models.Model):
         rdf_output = dom.toprettyxml()
 
         return result_text, rdf_output
+    
+    def get_answer_ontology(question, answer_type):
+        doc = merge_entities(nlp_custom(question))
+        rdf_output = None
+        keyword_noun = None
+        keyword_verb = None
+        result_text = ""
+        extra_info = None
+        ents = [ent for ent in doc.ents if ent.label_ != 'VERB' or ent.text != '?']
+
+        for i, ent in enumerate(ents):
+            if ent.label_ == "VERB":
+                keyword_verb = ent.text.replace(' ', '_')
+                # Determine Subject
+                if i > 0:
+                    keyword_noun = ents[i-1].text.replace(' ', '_')
+                # Determine Object
+                if i < len(ents) - 1:
+                    keyword_noun = ents[i+1].text.replace(' ', '_')
+
+        # If keywords are not found using spaCy, use NLTK
+        if keyword_verb is None or keyword_noun is None:
+            tokens = nltk.word_tokenize(question)
+            tagged = nltk.pos_tag(tokens)
+            
+            # Extract noun and verb using NLTK
+            for i, (word, tag) in enumerate(tagged):
+                if keyword_verb is None and tag.startswith('VB'):
+                    keyword_verb = word.replace(' ', '_')
+                if keyword_noun is None and tag.startswith('NN'):
+                    keyword_noun = word.replace(' ', '_')
+                if keyword_verb and keyword_noun:
+                    break
+
+        if keyword_verb is None or keyword_noun is None:
+            return "Unable to determine keywords from the question.", None, None
+
+        print(f"Keyword Noun: {keyword_noun}")
+        print(f"Keyword Verb: {keyword_verb}")
+        
+        COFFEE = Namespace("http://www.semanticweb.org/ariana/coffee#")
+        g = Graph()
+        g.bind("coffee", COFFEE)
+        
+        query = f"""
+            PREFIX coffee: <http://www.semanticweb.org/ariana/coffee#>
+            SELECT ?o ?s WHERE {{
+            {{ coffee:{keyword_noun} coffee:{keyword_verb} ?o. }}
+            UNION
+            {{ ?s coffee:{keyword_verb} coffee:{keyword_noun}. }}
+            }}
+        """
+
+        results = Ontology.get_fuseki_data(query)
+
+        if not results:  # Check for both None and empty list
+            keyword_verb = f"{keyword_verb}_{answer_type}"
+            query = f"""
+                PREFIX coffee: <http://www.semanticweb.org/ariana/coffee#>
+                SELECT ?o ?s WHERE {{
+                {{ coffee:{keyword_noun} coffee:{keyword_verb} ?o. }}
+                UNION
+                {{ ?s coffee:{keyword_verb} coffee:{keyword_noun}. }}
+                }}
+            """
+            results = Ontology.get_fuseki_data(query)
+
+        if results:
+            for row in results:
+                object_name = row.get('o', '').split('#')[-1].replace("_", " ") if row.get('o') else None
+                subject_name = row.get('s', '').split('#')[-1].replace("_", " ") if row.get('s') else None
+
+                if object_name:
+                    g.add((COFFEE[keyword_noun], COFFEE[keyword_verb], COFFEE[object_name.replace(" ", "_")]))
+                    result_text += f"{keyword_noun.replace('_', ' ')} {keyword_verb.replace('_', ' ')} {object_name.replace('_', ' ')}. "
+                    extra_info = Ontology.get_extra_information(object_name)
+                if subject_name:
+                    g.add((COFFEE[subject_name.replace(" ", "_")], COFFEE[keyword_verb], COFFEE[keyword_noun]))
+                    result_text += f"{subject_name.replace('_', ' ')} {keyword_verb.replace('_', ' ')} {keyword_noun.replace('_', ' ')}. "
+                    extra_info = Ontology.get_extra_information(subject_name)
+            
+            rdf_output = g.serialize(format='xml')
+            dom = parseString(rdf_output)
+            rdf_output = dom.toprettyxml()
+        else:
+            result_text += "Answer not found"
+
+        return result_text, rdf_output, extra_info
 
 # Model NER Default
 nlp_default = spacy.load("en_core_web_sm")

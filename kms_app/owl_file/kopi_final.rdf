@@ -1307,6 +1307,23 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ariana/coffee#name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ariana/coffee#name"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Classes
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -1705,6 +1722,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#Arabian_physician">
         <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#PERSON"/>
         <coffee:wrote rdf:resource="http://www.semanticweb.org/ariana/coffee#coffee"/>
+        <coffee:name>Rhazes</coffee:name>
     </owl:NamedIndividual>
     
 
@@ -2693,7 +2711,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#January">
         <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#DATE"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#LOC"/>
     </owl:NamedIndividual>
     
 
@@ -3942,14 +3959,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/ariana/coffee#consumed -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#consumed">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#BEVERAGE"/>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.semanticweb.org/ariana/coffee#cortado -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#cortado">
@@ -4306,7 +4315,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ariana/coffee#mid_1600s">
         <rdf:type rdf:resource="http://www.semanticweb.org/ariana/coffee#DATE"/>
-        <coffee:people rdf:resource="http://www.semanticweb.org/ariana/coffee#consumed"/>
     </owl:NamedIndividual>
     
 

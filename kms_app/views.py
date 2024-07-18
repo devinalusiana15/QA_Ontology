@@ -61,7 +61,7 @@ def add_knowledge_view(request):
 def upload_knowledge_view(request):
     return Documents.upload_knowledge(request)
 
-def home(request):
+def home_ontology(request):
     if request.method == 'POST':
         start_time = time.time()
         search_query = request.POST.get('question')
@@ -90,20 +90,14 @@ def home(request):
 
         annotation_types = ['definition', 'direction']
         if answer_types == 'axiom':
-            keyword_noun = TextProcessing.pos_tagging_and_extract_nouns(search_query)
+            keyword_nouns = TextProcessing.pos_tagging_and_extract_nouns(search_query)
+            # Noun sebagai class yang dicari
+            keyword_noun = "_".join(keyword_nouns)
             print(keyword_noun)
-            answer, rdf_output = Ontology.get_instances(keyword_noun)
+            answer = Ontology.get_instances(keyword_noun)
             context = {
                 'question': search_query,
-                'answer': mark_safe(answer),
-                'rdf_output': rdf_output
-            }
-        elif answer_types == 'confirmation':
-            confirmation, rdf_output = Ontology.confirmation(search_query)
-            context = {
-                'question': search_query,
-                'answer': confirmation,
-                'rdf_output': rdf_output
+                'answer': mark_safe(answer)
             }
         elif answer_types in annotation_types:
             answer, rdf_output = Ontology.get_annotation(search_query, answer_types)
@@ -115,12 +109,67 @@ def home(request):
                 'rdf_output': rdf_output
             }
         else:
-            answer, rdf_output, extra_info = Ontology.get_answer_ontology(search_query, answer_types)            
+            answer = Ontology.get_answer_ontology(search_query, answer_types)            
+            context = {
+                'question': search_query,
+                'answer': answer
+            }
+        
+        end_time = time.time()
+        response_time = end_time - start_time
+        response_time = round(response_time, 2)
+        
+        context['response_time'] = response_time
+
+        return render(request, 'Home.html', context)
+    else:
+        return render(request, 'Home.html', {'related_articles': []})
+    
+def home_inverted(request):
+    if request.method == 'POST':
+        start_time = time.time()
+        search_query = request.POST.get('question')
+
+        if not search_query.endswith('?'):
+            context = {
+                'question': search_query,
+                'answer': 'Not the type of question. Please enter the question again.',
+                'related_articles': None,
+                'extra_info': None,
+                'rdf_output': None
+            }
+            return render(request, 'Home.html', context)
+
+        try:
+            answer_types = TextProcessing.find_answer_type(search_query)
+        except IndexError:
+            context = {
+                'question': search_query,
+                'answer': 'Not the type of question. Please enter the question again.',
+                'related_articles': None,
+                'extra_info': None,
+                'rdf_output': None
+            }
+            return render(request, 'Home.html', context)
+
+        annotation_types = ['definition', 'direction']
+        if answer_types == 'axiom':
+            answer = InvertedIndex.axiom_inverted(search_query)
+            context = {
+                'question': search_query,
+                'answer': mark_safe(answer)
+            }
+        elif answer_types in annotation_types:
+            answer = InvertedIndex.get_definition_direction(search_query)
+            context = {
+                'question': search_query,
+                'answer': mark_safe(answer),
+            }
+        else:
+            answer = InvertedIndex.get_answer_inverted(search_query)            
             context = {
                 'question': search_query,
                 'answer': answer,
-                'extra_info': extra_info,
-                'rdf_output': rdf_output
             }
         
         end_time = time.time()

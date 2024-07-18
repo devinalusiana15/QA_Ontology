@@ -77,7 +77,7 @@ WSGI_APPLICATION = "kms_kopi.wsgi.application"
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'kms_db_final',
+        'NAME': 'qa_ontology',
         'USER': 'root',
         'PASSWORD': '',
         'HOST': 'localhost',

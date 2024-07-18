@@ -1,0 +1,1142 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77/"
+     xml:base="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-77="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#definition -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#definition"/>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#direction -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#direction"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#appear_after -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#appear_after">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#PRODUCT"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#DATE"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#appear_on -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#appear_on">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#PRODUCT"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#PRODUCT"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#appears_after -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#appears_after">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#PRODUCT"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#DATE"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#called -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#called">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#VARIETY"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#VARIETY"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#comes_from -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#comes_from">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#PERSON"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#GPE"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#containing -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#containing">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#PRODUCT"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#PRODUCT"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#contains -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#contains">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#PRODUCT"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#PRODUCT"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#develop_into -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#develop_into"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#grow -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#grow">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#VARIETY"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#ADJECTIVE"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#harvests -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#harvests">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#PERSON"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#PRODUCT"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#harvests_in -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#harvests_in">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#GPE"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#DATE"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#has -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#has">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#PRODUCT"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#ADJECTIVE"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#has_color -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#has_color">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#PRODUCT"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#ADJECTIVE"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#has_scent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#has_scent">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#PRODUCT"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#ADJECTIVE"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#has_shape -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#has_shape">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#PRODUCT"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#ADJECTIVE"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#has_type -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#has_type"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#is_a -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#is_a">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#VARIETY"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#ADJECTIVE"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#known_for -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#known_for">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#VARIETY"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#ADJECTIVE"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#leaving -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#leaving">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#JOB"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#PRODUCT"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#made -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#made">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#PERSON"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#PRODUCT"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#mixed_with -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#mixed_with">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#PRODUCT"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#PRODUCT"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#pick -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#pick">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#JOB"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#PRODUCT"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#produces -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#produces">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#PERSON"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#PRODUCT"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#production -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#production"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#shared -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#shared">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#PERSON"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#speaks_about -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#speaks_about">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#PERSON"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#PRODUCT"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#spoke -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#spoke">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#PERSON"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#PRODUCT"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#tastes -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#tastes">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#PRODUCT"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#ADJECTIVE"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#uses -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#uses"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#called -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#called"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#color -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#color"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#has_type -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#has_type"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#known_for -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#known_for"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#scent -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#scent"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#shape -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#shape"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#tastes -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#tastes"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#ADJECTIVE -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#ADJECTIVE"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#ADVERB -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#ADVERB"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#BEVERAGE -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#BEVERAGE"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#DATE -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#DATE"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#GPE -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#GPE"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#JOB -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#JOB"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#LOC -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#LOC"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#METHODS -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#METHODS"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#NORP -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#NORP"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#ORG -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#ORG"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#PERSON -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#PERSON"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#PRODUCT -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#PRODUCT"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#TOOLS -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#TOOLS"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#VARIETY -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#VARIETY"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#April -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#April">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#DATE"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#Arabica -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#Arabica">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#VARIETY"/>
+        <untitled-ontology-77:has_type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#Bourbon"/>
+        <untitled-ontology-77:has_type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#Catuai"/>
+        <untitled-ontology-77:has_type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#Caturra"/>
+        <untitled-ontology-77:has_type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#Typica"/>
+        <untitled-ontology-77:known_for>quality, sweetness, complexity, fruitness</untitled-ontology-77:known_for>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#August -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#August">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#DATE"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#Bourbon -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#Bourbon">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#VARIETY"/>
+        <rdfs:definition>Bourbon is a lower-yielding coffee. It’s tougher to grow but has led to subspecies like Caturra.</rdfs:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#Brazil -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#Brazil">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#GPE"/>
+        <untitled-ontology-77:harvests_in rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#July"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#Carlos_Bartes -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#Carlos_Bartes">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#PERSON"/>
+        <untitled-ontology-77:comes_from rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#El_Salvador"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#Catuai -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#Catuai">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#VARIETY"/>
+        <rdfs:definition>Catuai is also high yield coffee and sturdy with compact trees.</rdfs:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#Caturra -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#Caturra">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#VARIETY"/>
+        <rdfs:definition>Caturra is a high-yield coffee with a unique compact tree, making management and harvesting easier.</rdfs:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#Central_Peru -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#Central_Peru">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#GPE"/>
+        <untitled-ontology-77:harvests_in rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#July"/>
+        <untitled-ontology-77:harvests_in rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#June"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#China -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#China">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#GPE"/>
+        <untitled-ontology-77:harvests_in rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#December"/>
+        <untitled-ontology-77:harvests_in rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#January"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#Colombia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#Colombia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#GPE"/>
+        <untitled-ontology-77:harvests_in rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#June"/>
+        <untitled-ontology-77:harvests_in rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#November"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#Costa_Rica -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#Costa_Rica">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#GPE"/>
+        <untitled-ontology-77:harvests_in rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#December"/>
+        <untitled-ontology-77:harvests_in rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#January"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#December -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#December">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#DATE"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#Ecuador -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#Ecuador">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#GPE"/>
+        <untitled-ontology-77:harvests_in rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#June"/>
+        <untitled-ontology-77:harvests_in rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#May"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#El_Salvador -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#El_Salvador">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#GPE"/>
+        <untitled-ontology-77:harvests_in rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#February"/>
+        <untitled-ontology-77:harvests_in rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#January"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#Ethiopia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#Ethiopia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#GPE"/>
+        <untitled-ontology-77:harvests_in rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#December"/>
+        <untitled-ontology-77:harvests_in rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#November"/>
+        <untitled-ontology-77:harvests_in rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#September"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#February -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#February">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#DATE"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#Guatemala -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#Guatemala">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#GPE"/>
+        <untitled-ontology-77:harvests_in rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#February"/>
+        <untitled-ontology-77:harvests_in rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#January"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#Indonesia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#Indonesia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#GPE"/>
+        <untitled-ontology-77:harvests_in rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#April"/>
+        <untitled-ontology-77:harvests_in rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#November"/>
+        <untitled-ontology-77:harvests_in rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#October"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#Jamaica -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#Jamaica">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#GPE"/>
+        <untitled-ontology-77:harvests_in rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#December"/>
+        <untitled-ontology-77:harvests_in rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#November"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#January -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#January">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#DATE"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#July -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#July">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#DATE"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#June -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#June">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#DATE"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#Kenya -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#Kenya">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#GPE"/>
+        <untitled-ontology-77:harvests_in rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#November"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#Marry_Williams -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#Marry_Williams">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#PERSON"/>
+        <untitled-ontology-77:spoke rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#coffee_trees"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#May -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#May">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#DATE"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#Mexico -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#Mexico">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#GPE"/>
+        <untitled-ontology-77:harvests_in rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#December"/>
+        <untitled-ontology-77:harvests_in rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#January"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#Nicaragua -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#Nicaragua">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#GPE"/>
+        <untitled-ontology-77:harvests_in rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#December"/>
+        <untitled-ontology-77:harvests_in rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#January"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#Northern_Colombia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#Northern_Colombia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#GPE"/>
+        <untitled-ontology-77:harvests_in rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#April"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#Northern_DR_Congo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#Northern_DR_Congo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#GPE"/>
+        <untitled-ontology-77:harvests_in rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#October"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#Northern_Peru -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#Northern_Peru">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#GPE"/>
+        <untitled-ontology-77:harvests_in rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#August"/>
+        <untitled-ontology-77:harvests_in rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#September"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#November -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#November">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#DATE"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#October -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#October">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#DATE"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#Panama -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#Panama">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#GPE"/>
+        <untitled-ontology-77:harvests_in rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#February"/>
+        <untitled-ontology-77:harvests_in rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#January"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#Papua_New_Guinea -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#Papua_New_Guinea">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#GPE"/>
+        <untitled-ontology-77:harvests_in rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#December"/>
+        <untitled-ontology-77:harvests_in rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#June"/>
+        <untitled-ontology-77:harvests_in rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#May"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#Robusta -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#Robusta">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#VARIETY"/>
+        <untitled-ontology-77:called>Canephora</untitled-ontology-77:called>
+        <untitled-ontology-77:tastes>harsher</untitled-ontology-77:tastes>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#Rwanda -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#Rwanda">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#GPE"/>
+        <untitled-ontology-77:harvests_in rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#June"/>
+        <untitled-ontology-77:harvests_in rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#May"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#September -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#September">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#DATE"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#Southern_Brazil -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#Southern_Brazil">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#GPE"/>
+        <untitled-ontology-77:harvests_in rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#June"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#Southern_DR_Congo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#Southern_DR_Congo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#GPE"/>
+        <untitled-ontology-77:harvests_in rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#April"/>
+        <untitled-ontology-77:harvests_in rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#May"/>
+        <untitled-ontology-77:harvests_in rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#September"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#Swanda -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#Swanda">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#GPE"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#Tanzania -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#Tanzania">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#GPE"/>
+        <untitled-ontology-77:harvests_in rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#August"/>
+        <untitled-ontology-77:harvests_in rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#September"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#Typica -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#Typica">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#VARIETY"/>
+        <rdfs:definition>Typica is the most prominent and is the genetic parent to many of the common Arabicas. It’s high yield and generally has excellent cup profiles or tastes. Even better, it’s quite susceptible to pests and disease.</rdfs:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#Uganda -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#Uganda">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#GPE"/>
+        <untitled-ontology-77:harvests_in rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#December"/>
+        <untitled-ontology-77:harvests_in rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#November"/>
+        <untitled-ontology-77:harvests_in rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#September"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#Vietnam -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#Vietnam">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#GPE"/>
+        <untitled-ontology-77:harvests_in rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#December"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#Yemen -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#Yemen">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#GPE"/>
+        <untitled-ontology-77:harvests_in rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#November"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#cherries -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#cherries">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#PRODUCT"/>
+        <untitled-ontology-77:containing rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#coffee_beans"/>
+        <untitled-ontology-77:tastes>sweet</untitled-ontology-77:tastes>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#coffee -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#coffee">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#PRODUCT"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#coffee_beans -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#coffee_beans">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#PRODUCT"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#coffee_flower -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#coffee_flower">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#PRODUCT"/>
+        <untitled-ontology-77:appear_after rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#rainy_season"/>
+        <untitled-ontology-77:appear_on rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#coffee_tree_branches"/>
+        <untitled-ontology-77:develop_into rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#cherries"/>
+        <untitled-ontology-77:color>white color</untitled-ontology-77:color>
+        <untitled-ontology-77:scent>jasmine scent</untitled-ontology-77:scent>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#coffee_producers -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#coffee_producers">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#PERSON"/>
+        <untitled-ontology-77:made rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#171_million_bags_of_coffee"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#coffee_production -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#coffee_production">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#PRODUCT"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#coffee_tree_branches -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#coffee_tree_branches">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#PRODUCT"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#coffee_trees -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#coffee_trees">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#PRODUCT"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#heavy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#heavy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#ADJECTIVE"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#large_water -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#large_water">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#PRODUCT"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#less_ripe_cherries -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#less_ripe_cherries">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#PRODUCT"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#natural_processing -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#natural_processing">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#METHODS"/>
+        <untitled-ontology-77:uses rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#no_water"/>
+        <rdfs:direction>Steps in natural processing:
+1.The cherries go directly from harvesting to drying, and the outer layers aren’t removed until they have been dried out to the consistency of a raisin.
+2. The beans are laid out in the sun either on patios or drying tables, and they must be moved frequently to foster even drying.</rdfs:direction>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#no_water -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#no_water">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#PRODUCT"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#one_bean -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#one_bean">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#PRODUCT"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#pea_shaped -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#pea_shaped">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#ADJECTIVE"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#peaberry -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#peaberry">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#PRODUCT"/>
+        <untitled-ontology-77:containing rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#one_bean"/>
+        <untitled-ontology-77:mixed_with rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#regular_beans"/>
+        <untitled-ontology-77:shape>rounder and pea-shaped</untitled-ontology-77:shape>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#pickers -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#pickers">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#JOB"/>
+        <untitled-ontology-77:leaving rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#less_ripe_cherries"/>
+        <untitled-ontology-77:pick rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#ripe_cherries"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#rainy_season -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#rainy_season">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#DATE"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#regular_beans -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#regular_beans">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#PRODUCT"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#ripe_cherries -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#ripe_cherries">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#PRODUCT"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#semiwashed_processing -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#semiwashed_processing">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#METHODS"/>
+        <untitled-ontology-77:uses rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#some_water"/>
+        <rdfs:direction>Steps in semi-washed processing:
+1. The picked cherries are depulped immediately.
+2. The depulped beans are gently rinsed, often by hand in buckets.
+3. The beans are then partially dried overnight before they’re transported to a larger facility.
+4. The beans, still wet, are hulled, stripping off the parchment layer.
+5. The beans are then dried so that they can be stored and later shipped.</rdfs:direction>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#some_water -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#some_water">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#PRODUCT"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#striking_white_color -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#striking_white_color">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#ADJECTIVE"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#sweet -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#sweet">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#ADJECTIVE"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#varies -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#varies">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#ADVERB"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#washed_processing -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#washed_processing">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#METHODS"/>
+        <untitled-ontology-77:uses rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#large_water"/>
+        <rdfs:direction>Steps in washed processing:
+1. Collected cherries are fed into a machine called a pulper or depulper. A pulper, or depulper (both terms describe the same machine and are used widely and synonymously), removes the skin, leaving thin layers of fruit/mucilage and the seed. The machine actually rips the layers off the underlying stronger layers and seed. Think of the layers of a seeded grape or Bing cherry to get an idea, although the skin and fleshy layers of coffee cherry are much thinner. The machines can vary a great deal in size and configuration and often large facilities like you might find at a large coffee cooperative mill will have multiple depulpers. The smallest facilities are often called micro mills. They’re often part of fully integrated farm operations where all steps prior to and after are carried out on an individual farm.
+2. After the pulped beans are skinless but with some thin layer of mucilage and the parchment skin layer, they’re carried in water channels to a tank where they rest for a time sitting in clean water. This fermentation step ensures that the remaining bits of material — the mucilage — are more thoroughly removed.
+3. The wet beans are then dried in the sun or in a mechanical dryer; sometimes a combination of a drying patio, table, and the mechanical dryer is used. They must be raked often to ensure even drying. Sometimes a mechanical dryer is used.
+4. The beans are stored for 6 to 10 weeks. The end result of this processing is also referred to as parchment dried because the cherries’ remaining layer on the bean is the parchment skin covering the underlying bean. The parchment skin provides a kind of protection or covering, and it remains on the bean for weeks as the beans are stored and rest, reposa in Spanish. This parchment will be dry milled off the rested green beans just prior to them being bagged and shipped.</rdfs:direction>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#171_million_bags_of_coffee -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#171_million_bags_of_coffee">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#PRODUCT"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#2019_until_2020 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#2019_until_2020">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#DATE"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+

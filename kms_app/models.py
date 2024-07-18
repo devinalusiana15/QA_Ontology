@@ -81,13 +81,13 @@ class TextProcessing(models.Model):
         verbs = [word for word, pos in pos_tags if pos.startswith('VB') and word.lower() not in stop_words]
         return verbs
 
+
     @staticmethod
     def pos_tagging_and_extract_nouns(text):
-        not_include = "coffee"
         doc = nlp_default(text)
         tokens = [token.text for token in doc]
         pos_tags = pos_tag(tokens)
-        nouns = [word for word, pos in pos_tags if pos.startswith('NN') and word != not_include]
+        nouns = [word for word, pos in pos_tags if pos.startswith('NN')]
         return nouns
 
     @staticmethod
@@ -119,11 +119,11 @@ class TextProcessing(models.Model):
             return 'axiom'
         elif question_split[0] in question_keywords:
             if 'where' in question_split:
-                return 'in'
+                return 'from'
             elif 'who' in question_split:
                 return 'by'
             elif 'when' in question_split:
-                return 'on'
+                return 'in'
             elif 'what' in question_split:
                 if 'definition' in question_split:
                     return 'definition'
@@ -134,6 +134,36 @@ class TextProcessing(models.Model):
         else:
             return "Pertanyaan tidak valid"
 
+    @staticmethod
+    def find_answer_type_inverted(question):
+        question_lower = question.lower()
+
+        question_keywords = ['what', 'when', 'where', 'who', 'why', 'how']
+
+        if ',' in question_lower:
+            return ['confirmation']
+        
+        question_split = question_lower.split()
+
+        if question_split[1] == "are" and question_split[0] in question_keywords:
+            return ['axiom']
+        elif question_split[0] in question_keywords:
+            if 'where' in question_split:
+                return ['LOC', 'GPE', 'CONTINENT', 'LOCATION']
+            elif 'who' in question_split:
+                return ['NORP', 'PERSON','NATIONALITY']
+            elif 'when' in question_split:
+                return ['DATE', 'TIME']
+            elif 'what' in question_split:
+                if 'definition' in question_split:
+                    return ['definition']
+                else:
+                    return ['PERCENT', 'PRODUCT', 'VARIETY', 'METHODS', 'BEVERAGE', 'QUANTITY']
+            elif 'how' in question_split:
+                return ['direction']
+        else:
+            return "Pertanyaan tidak valid"
+        
     @staticmethod
     def find_answer(answer_types, entities):
         answer_types_mapping = {
@@ -182,18 +212,16 @@ class InvertedIndex(models.Model):
                     PostingLists.objects.create(term=term, docdetail=doc_details)
 
     @staticmethod
-    def retrieve_documents(keywords=None, nouns=None):
+    def retrieve_documents(keywords=None):
         relevant_documents = []
         relevant_sentences = []
         
-        if keywords is None and nouns is None:
+        if keywords is None:
             return relevant_documents, relevant_sentences
 
         terms = Terms.objects.none()
         if keywords is not None:
-            terms = Terms.objects.filter(term__in=keywords) | Terms.objects.filter(lemma__in=keywords)
-        if nouns is not None:
-            terms = terms | Terms.objects.filter(term__in=nouns) | Terms.objects.filter(lemma__in=nouns)
+            terms = Terms.objects.filter(term__in=keywords)
 
         if terms.exists():
             posting_entries = PostingLists.objects.filter(term__in=terms)
@@ -205,7 +233,6 @@ class InvertedIndex(models.Model):
                 relevant_documents.append({
                     'detail': entry.docdetail.docdetail_id,
                     'document_name': entry.docdetail.document_id,
-                    'context': document_content,
                     'relevant_sentence': relevant_sentence,
                     'url': f'/document/{doc_detail.document_id}'
                 })
@@ -215,8 +242,24 @@ class InvertedIndex(models.Model):
     
     @staticmethod
     def get_answer(question):
-        keywords_verbs = TextProcessing.pos_tagging_and_extract_verbs(question)
-        keywords_nouns = TextProcessing.pos_tagging_and_extract_nouns(question)
+        doc = merge_entities(nlp_custom(question))
+        keywords_nouns = []
+        keywords_verbs = []
+        question_words = ['what', 'when', 'who', 'where', 'how']
+        ents = [ent for ent in doc.ents if ((ent.text != '?') and (ent.text not in question_words))]
+        print(f'ini ents: {ents}')
+        for i, ent in enumerate(ents):
+            if ent.label_ == "VERB":
+                keywords_verbs.append(ent.text)
+                # Determine Subject
+                if i > 0:
+                    keywords_nouns.append(ents[i-1].text)
+                # Determine Object
+                if i < len(ents) - 1 and keywords_nouns is None:
+                    keywords_nouns.append(ents[i+1].text)
+
+        print(f'keyword noun : {keywords_nouns}')
+        print(f'keyword verb : {keywords_verbs}')
         response_text = f"Pertanyaan asli: {question}<br>Keywords (Verbs): {keywords_verbs}<br>Keywords (Nouns): {keywords_nouns}<br>"
         
         answer = "Tidak ada informasi yang ditemukan."
@@ -227,20 +270,6 @@ class InvertedIndex(models.Model):
             search_result_nouns, relevant_sentences_nouns = InvertedIndex.retrieve_documents(nouns=keywords_nouns)
             search_result.extend(search_result_nouns)
             relevant_sentences.extend(relevant_sentences_nouns)
-        
-        if not search_result:
-            lemmatized_verbs = TextProcessing.lemmatization(' '.join(keywords_verbs))
-            lemmatized_nouns = TextProcessing.lemmatization(' '.join(keywords_nouns))
-
-            search_result_lemmas, relevant_sentences_lemmas = InvertedIndex.retrieve_documents(keywords=lemmatized_verbs)
-            
-            if not search_result_lemmas:
-                search_result_lemmas_nouns, relevant_sentences_lemmas_nouns = InvertedIndex.retrieve_documents(nouns=lemmatized_nouns)
-                search_result_lemmas.extend(search_result_lemmas_nouns)
-                relevant_sentences_lemmas.extend(relevant_sentences_lemmas_nouns)
-
-            search_result.extend(search_result_lemmas)
-            relevant_sentences.extend(relevant_sentences_lemmas)
 
         if search_result:
             for i, result in enumerate(search_result):
@@ -248,7 +277,7 @@ class InvertedIndex(models.Model):
                 doc_entities = merge_entities(nlp_default(doc_content)).ents
                 print(f"Entities in document {result['document_name']}: {doc_entities}")
 
-                answer_types = TextProcessing.find_answer_type(question)
+                answer_types = TextProcessing.find_answer_type_inverted(question)
                 print(f"Answer types: {answer_types}")
 
                 answer = TextProcessing.find_answer(answer_types, [(ent.text, ent.label_) for ent in doc_entities])
@@ -266,15 +295,145 @@ class InvertedIndex(models.Model):
             response_text += "<br>Dokumen yang relevan tidak ditemukan."
             refine = Refinements(question=question, answer=answer)
             refine.save()
-        
-        
-        predicate = keywords_verbs
-        rdf_output = Ontology.get_rdf_answer(predicate)
 
         context = {'response_text': response_text, 'related_articles': relevant_sentences}
         print(context)
-        extra_info = Ontology.get_extra_information(answer.replace(" ", "_"))
-        return answer, search_result, extra_info, rdf_output
+        return answer, search_result
+
+    @staticmethod
+    def axiom_inverted(question):
+        keywords_nouns = TextProcessing.pos_tagging_and_extract_nouns(question)
+        keyword = "_".join(keywords_nouns)
+        
+        print(f'keywords_nouns: {keywords_nouns}')
+        print(f'keyword: {keyword}')
+        
+        answer = "Tidak ada informasi yang ditemukan."
+        response_text = ""
+
+        search_result_nouns = []
+
+        if "benefits" in keywords_nouns:
+            search_result_nouns, _ = InvertedIndex.retrieve_documents(keywords=['benefits'])
+
+        if keyword == "varieties_coffee_benefits_General_Health":
+            search_result_filtered = []
+            for result in search_result_nouns:
+                relevant_sentence = result['relevant_sentence']
+                if ("coffee" in relevant_sentence and
+                    "aids in respiratory health1" in relevant_sentence or
+                    "boosts mood1" in relevant_sentence or
+                    "enhances cognitive function1" in relevant_sentence or
+                    "enhances cognitive performance1" in relevant_sentence or
+                    "enhances mood1" in relevant_sentence or
+                    "improves brain function1" in relevant_sentence or
+                    "improves memory1" in relevant_sentence or
+                    "improves skin health1" in relevant_sentence or
+                    "increases energy1" in relevant_sentence or
+                    "lowers blood pressure1" in relevant_sentence or
+                    "prevents gallstones1" in relevant_sentence or
+                    "promotes weight loss1" in relevant_sentence or
+                    "reduces inflammation1" in relevant_sentence or
+                    "strengthens the immune system1" in relevant_sentence or
+                    "supports digestion1" in relevant_sentence or
+                    "supports liver function1" in relevant_sentence):
+                    search_result_filtered.append(result)
+            search_result_nouns = search_result_filtered
+        elif keyword == "varieties_coffee_benefits_Cardiovascular":
+            search_result_filtered = []
+            for result in search_result_nouns:
+                relevant_sentence = result['relevant_sentence']
+                if ("coffee" in relevant_sentence and
+                    "aids in muscle recovery" in relevant_sentence and
+                    "enhances vascular function" in relevant_sentence and
+                    "improves blood circulation" in relevant_sentence and
+                    "lowers cholesterol levels" in relevant_sentence and
+                    "promotes gut health" in relevant_sentence):
+                    search_result_filtered.append(result)
+            search_result_nouns = search_result_filtered
+ 
+        if search_result_nouns:
+            for result in search_result_nouns:
+                response_text += f"<br>{result['relevant_sentence']}"
+        else:
+            response_text += "<br>Tidak ada kata kunci yang relevan ditemukan."
+            context = {'response_text': response_text, 'related_articles': []}
+            print(context)
+            return answer, search_result_nouns
+        
+        return response_text
+
+    
+    @staticmethod
+    def get_definition_direction(question):
+        keywords_noun = TextProcessing.pos_tagging_and_extract_nouns(question)
+        response_text = ""
+        if keywords_noun:
+            search_result, relevant_sentences = InvertedIndex.retrieve_documents(keywords_noun)
+        else:
+            response_text += "<br>Tidak ada kata kunci yang relevan ditemukan."
+        if search_result and len(keywords_noun)>1:
+            for result in search_result:
+                relevant_sentence = result['relevant_sentence']
+                if (keywords_noun[1] in relevant_sentence):
+                    response_text += f"{relevant_sentence}"
+        else:
+            response_text += f"{search_result['relevant_sentence']}"
+        
+        return response_text
+
+    @staticmethod
+    def get_answer_inverted(question):
+        keywords_verbs = TextProcessing.pos_tagging_and_extract_verbs(question)
+        keywords_nouns = TextProcessing.pos_tagging_and_extract_nouns(question)
+
+        print(f'keyword noun : {keywords_nouns}')
+        print(f'keyword verb : {keywords_verbs}')
+        response_text = f"Pertanyaan asli: {question}<br>Keywords (Verbs): {keywords_verbs}<br>Keywords (Nouns): {keywords_nouns}<br>"
+        
+        answer = "Tidak ada informasi yang ditemukan."
+        search_result = []
+
+        search_result_verbs, relevant_sentences_verbs = InvertedIndex.retrieve_documents(keywords=keywords_verbs)
+        search_result.extend(search_result_verbs)
+        relevant_sentences = relevant_sentences_verbs
+
+        if search_result:
+            search_result_filtered = []
+            for result in search_result:
+                doc_content = result['relevant_sentence']
+                if any(keyword in doc_content for keyword in keywords_nouns):
+                    search_result_filtered.append(result)
+            search_result = search_result_filtered
+
+        if search_result:
+            for i, result in enumerate(search_result):
+                doc_content = result['relevant_sentence']
+                doc_entities = merge_entities(nlp_default(doc_content)).ents
+                print(f"Entities in document {result['document_name']}: {doc_entities}")
+
+                answer_types = TextProcessing.find_answer_type_inverted(question)
+                print(f"Answer types: {answer_types}")
+
+                answer = TextProcessing.find_answer(answer_types, [(ent.text, ent.label_) for ent in doc_entities])
+                print(f"Answer found: {answer}")
+
+                if answer != "Tidak ada informasi yang ditemukan.":
+                    response_text += f"<br>Jawaban: {answer}"
+                    break
+                else:
+                    response_text += f"<br>Jawaban tidak ditemukan dalam dokumen: {result['document_name']}"
+                    refine = Refinements(question=question, answer=answer)
+                    refine.save()
+                    answer = "Tidak ada informasi yang ditemukan."
+        else:
+            response_text += "<br>Dokumen yang relevan tidak ditemukan."
+            refine = Refinements(question=question, answer=answer)
+            refine.save()
+
+        context = {'response_text': response_text, 'related_articles': relevant_sentences}
+        print(context)
+        return answer
 
 class Documents(models.Model):
     document_id = models.AutoField(primary_key=True)  # ID unik untuk setiap dokumen
@@ -306,12 +465,6 @@ class Documents(models.Model):
 
                         Documents.handle_uploaded_file(uploaded_file)
                         InvertedIndex.create_and_save_inverted_index(new_document)
-
-                        text = Documents.extract_text_from_pdf(new_document.document_path)
-                        document = [merge_entities(nlp_custom(sentence)) for sentence in text.split('.') if sentence.strip()]
-
-                        ontology = Ontology.generate_ontology(document)
-                        Ontology.save_ontology(ontology)
 
                         messages.success(request, 'New knowledge is added successfully')
                         return render(request, 'pages/uploaders/uploadersAddKnowledge.html')
@@ -387,18 +540,17 @@ class Ontology(models.Model):
 
     @staticmethod   
     def get_fuseki_data(query_string):
-        endpoint = "http://localhost:3030/kopiOntology/query"
+        endpoint = "http://localhost:3030/QAOntology/query"
 
-        # send SPARQL query
         r = requests.get(endpoint, params={'query': query_string})
         
         # get query results
         results = []
         if r.status_code == 200:
             response = r.json()
-            # Handle ASK query response
+            # Handle ASK query 
             if 'boolean' in response:
-                return response['boolean']  # Return True or False based on ASK query result
+                return response['boolean']
             elif 'results' in response and 'bindings' in response['results']:
                 results = []
                 for result in response['results']['bindings']:
@@ -453,15 +605,15 @@ class Ontology(models.Model):
 
                                 # Penentuan Domain
                                 ontology += f"""
-                                <http://www.semanticweb.org/ariana/coffee#{obj_prop}> rdfs:domain <http://www.semanticweb.org/ariana/coffee#{prev_entity.label_}> .
+                                <http://www.semanticweb.org/qa_ontology/coffee#{obj_prop}> rdfs:domain <http://www.semanticweb.org/qa_ontology/coffee#{prev_entity.label_}> .
                                 """
                                 # Penentuan Range
                                 ontology += f"""
-                                    <http://www.semanticweb.org/ariana/coffee#{obj_prop}> rdfs:range <http://www.semanticweb.org/ariana/coffee#{next_entity.label_}> .
+                                    <http://www.semanticweb.org/qa_ontology/coffee#{obj_prop}> rdfs:range <http://www.semanticweb.org/qa_ontology/coffee#{next_entity.label_}> .
                                 """
                                 # Individual - Object Property - Individual
                                 ontology += f"""
-                                    <http://www.semanticweb.org/ariana/coffee#{prev_entity.text.replace(" ", "_")}> coffee:{obj_prop} <http://www.semanticweb.org/ariana/coffee#{next_entity.text.replace(" ", "_")}> .
+                                    <http://www.semanticweb.org/qa_ontology/coffee#{prev_entity.text.replace(" ", "_")}> coffee:{obj_prop} <http://www.semanticweb.org/qa_ontology/coffee#{next_entity.text.replace(" ", "_")}> .
                                 """
                         prev_entity = None  # Reset prev_entity
                     else:
@@ -474,7 +626,7 @@ class Ontology(models.Model):
                     if ent.label_ != 'VERB':
                         classes.add(ent.label_)
                         ontology += f"""
-                        <http://www.semanticweb.org/ariana/coffee#{individual_name}> rdf:type <http://www.semanticweb.org/ariana/coffee#{ent.label_}> .
+                        <http://www.semanticweb.org/qa_ontology/coffee#{individual_name}> rdf:type <http://www.semanticweb.org/qa_ontology/coffee#{ent.label_}> .
                         """
         return ontology
 
@@ -487,12 +639,12 @@ class Ontology(models.Model):
 
     @staticmethod
     def get_extra_information(answer):
-        COFFEE = Namespace("http://www.semanticweb.org/ariana/coffee#")
+        COFFEE = Namespace("http://www.semanticweb.org/qa_ontology/coffee#")
         g = Graph()
         g.bind("coffee", COFFEE)
 
         query = f"""
-        PREFIX coffee: <http://www.semanticweb.org/ariana/coffee#>
+        PREFIX coffee: <http://www.semanticweb.org/qa_ontology/coffee#>
         SELECT ?p ?o ?s WHERE {{
         {{ coffee:{answer} ?p ?o.
             FILTER (!CONTAINS(LCASE(STR(?p)), "type"))
@@ -536,7 +688,7 @@ class Ontology(models.Model):
 
     @staticmethod
     def get_annotation(question,annotation):
-        COFFEE = Namespace("http://www.semanticweb.org/ariana/coffee#")
+        COFFEE = Namespace("http://www.semanticweb.org/qa_ontology/coffee#")
         g = Graph()
         g.bind("coffee", COFFEE)
 
@@ -548,7 +700,7 @@ class Ontology(models.Model):
         response = ""
 
         query = f"""
-        PREFIX coffee: <http://www.semanticweb.org/ariana/coffee#>
+        PREFIX coffee: <http://www.semanticweb.org/qa_ontology/coffee#>
         PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
         SELECT ?s WHERE {{
         coffee:{noun} rdfs:{annotation} ?s
@@ -575,17 +727,10 @@ class Ontology(models.Model):
         return response, rdf_output
 
     @staticmethod
-    def get_instances(noun):
-        COFFEE = Namespace("http://www.semanticweb.org/ariana/coffee#")
-        g = Graph()
-        g.bind("coffee", COFFEE)
+    def get_instances(keyword_noun):
 
         onto_path.append(os.path.join(settings.BASE_DIR, 'kms_app/owl_file'))
-        onto = get_ontology("kopi_final.rdf").load()
-
-        # Noun sebagai class yang dicari
-        keyword_noun = " ".join(noun).replace(' ', '_')
-        print(f'INI KEYWORD NOUN: {keyword_noun}')
+        onto = get_ontology("coffee.rdf").load()
 
         # Mengaktifkan reasoner
         sync_reasoner()
@@ -600,44 +745,16 @@ class Ontology(models.Model):
         response = f"<br>These are the {keyword_noun.replace('_', ' ')}:"
 
         if instances:
-            # Mendapatkan properti yang sama pada setiap instance
-            common_properties = None
             for instance in instances:
-                instance_properties = set()
-                for prop in instance.get_properties():
-                    instance_properties.add(prop.name)
-
-                if common_properties is None:
-                    common_properties = instance_properties
-                else:
-                    common_properties = common_properties.intersection(instance_properties)
-                    
-            # Menampilkan instance - common_properties - value
-            if common_properties:
-                for prop_name in common_properties:
-                    for instance in instances:
-                        for prop in instance.get_properties():
-                            if prop.name == prop_name:
-                                for value in prop[instance]:
-                                    response += f"<br>- {instance.name.replace('_', ' ')} {prop.name} {value.name.replace('_', ' ')} "
-                                    g.add((COFFEE[instance.name], COFFEE[prop.name], COFFEE[value.name] ))
-            else:
-                
-                for instance in instances:
-                    response += f"<br>- {instance.name.replace('_', ' ')}"
-                    g.add((COFFEE[instance.name], RDF.type, COFFEE[keyword_noun] ))
+                response += f"<br>- {instance.name.replace('_', ' ')}"
         else:
             response += "Answer not found"
 
-        rdf_output = g.serialize(format='xml')
-        dom = parseString(rdf_output)
-        rdf_output = dom.toprettyxml()    
-
-        return response, rdf_output
+        return response
     
     @staticmethod
     def get_rdf_answer(predicate):
-        COFFEE = Namespace("http://www.semanticweb.org/ariana/coffee#")
+        COFFEE = Namespace("http://www.semanticweb.org/qa_ontology/coffee#")
         g = Graph()
         g.bind("coffee", COFFEE)
         
@@ -645,7 +762,7 @@ class Ontology(models.Model):
             predicate = predicate[0]
 
         query = f"""
-        PREFIX coffee: <http://www.semanticweb.org/ariana/coffee#>
+        PREFIX coffee: <http://www.semanticweb.org/qa_ontology/coffee#>
         SELECT ?s ?o WHERE {{
         ?s coffee:{predicate} ?o .
         }}
@@ -689,12 +806,12 @@ class Ontology(models.Model):
                 if i+1 < len(doc.ents) - 1:
                     subject = doc.ents[i+2].text.replace(' ', '_')
 
-        COFFEE = Namespace("http://www.semanticweb.org/ariana/coffee#")
+        COFFEE = Namespace("http://www.semanticweb.org/qa_ontology/coffee#")
         g = Graph()
         g.bind("coffee", COFFEE)
 
         query = f""" 
-        PREFIX coffee: <http://www.semanticweb.org/ariana/coffee#>
+        PREFIX coffee: <http://www.semanticweb.org/qa_ontology/coffee#>
         ASK WHERE {{
         coffee:{subject} coffee:{predicate} coffee:{object}.
         }}
@@ -707,7 +824,7 @@ class Ontology(models.Model):
             g.add((COFFEE[subject], COFFEE[predicate], COFFEE[object]))
         else:
             query_false = f""" 
-            PREFIX coffee: <http://www.semanticweb.org/ariana/coffee#>
+            PREFIX coffee: <http://www.semanticweb.org/qa_ontology/coffee#>
             SELECT ?s WHERE {{
             ?s coffee:{predicate} coffee:{object}.
             }}
@@ -729,63 +846,31 @@ class Ontology(models.Model):
         return result_text, rdf_output
     
     def get_answer_ontology(question, answer_type):
-        doc = merge_entities(nlp_custom(question))
-        rdf_output = None
-        keyword_noun = None
-        keyword_verb = None
         result_text = ""
-        extra_info = None
-        ents = [ent for ent in doc.ents if ent.label_ != 'VERB' or ent.text != '?']
+        keyword_verb = TextProcessing.pos_tagging_and_extract_verbs(question)
+        keyword_verb = keyword_verb[0]
+        keyword_noun = TextProcessing.pos_tagging_and_extract_nouns(question)
+        keyword_noun = "_".join(keyword_noun)
 
-        for i, ent in enumerate(ents):
-            if ent.label_ == "VERB":
-                keyword_verb = ent.text.replace(' ', '_')
-                # Determine Subject
-                if i > 0:
-                    keyword_noun = ents[i-1].text.replace(' ', '_')
-                # Determine Object
-                if i < len(ents) - 1:
-                    keyword_noun = ents[i+1].text.replace(' ', '_')
-
-        # If keywords are not found using spaCy, use NLTK
-        if keyword_verb is None or keyword_noun is None:
-            tokens = nltk.word_tokenize(question)
-            tagged = nltk.pos_tag(tokens)
-            
-            # Extract noun and verb using NLTK
-            for i, (word, tag) in enumerate(tagged):
-                if keyword_verb is None and tag.startswith('VB'):
-                    keyword_verb = word.replace(' ', '_')
-                if keyword_noun is None and tag.startswith('NN'):
-                    keyword_noun = word.replace(' ', '_')
-                if keyword_verb and keyword_noun:
-                    break
-
-        if keyword_verb is None or keyword_noun is None:
-            return "Unable to determine keywords from the question.", None, None
-
-        print(f"Keyword Noun: {keyword_noun}")
-        print(f"Keyword Verb: {keyword_verb}")
-        
-        COFFEE = Namespace("http://www.semanticweb.org/ariana/coffee#")
+        COFFEE = Namespace("http://www.semanticweb.org/qa_ontology/coffee#")
         g = Graph()
         g.bind("coffee", COFFEE)
         
         query = f"""
-            PREFIX coffee: <http://www.semanticweb.org/ariana/coffee#>
+            PREFIX coffee: <http://www.semanticweb.org/qa_ontology/coffee#>
             SELECT ?o ?s WHERE {{
             {{ coffee:{keyword_noun} coffee:{keyword_verb} ?o. }}
             UNION
             {{ ?s coffee:{keyword_verb} coffee:{keyword_noun}. }}
-            }}
+            }} 
         """
 
         results = Ontology.get_fuseki_data(query)
 
-        if not results:  # Check for both None and empty list
+        if not results:
             keyword_verb = f"{keyword_verb}_{answer_type}"
             query = f"""
-                PREFIX coffee: <http://www.semanticweb.org/ariana/coffee#>
+                PREFIX coffee: <http://www.semanticweb.org/qa_ontology/coffee#>
                 SELECT ?o ?s WHERE {{
                 {{ coffee:{keyword_noun} coffee:{keyword_verb} ?o. }}
                 UNION
@@ -800,21 +885,14 @@ class Ontology(models.Model):
                 subject_name = row.get('s', '').split('#')[-1].replace("_", " ") if row.get('s') else None
 
                 if object_name:
-                    g.add((COFFEE[keyword_noun], COFFEE[keyword_verb], COFFEE[object_name.replace(" ", "_")]))
                     result_text += f"{keyword_noun.replace('_', ' ')} {keyword_verb.replace('_', ' ')} {object_name.replace('_', ' ')}. "
-                    extra_info = Ontology.get_extra_information(object_name)
                 if subject_name:
-                    g.add((COFFEE[subject_name.replace(" ", "_")], COFFEE[keyword_verb], COFFEE[keyword_noun]))
                     result_text += f"{subject_name.replace('_', ' ')} {keyword_verb.replace('_', ' ')} {keyword_noun.replace('_', ' ')}. "
-                    extra_info = Ontology.get_extra_information(subject_name)
             
-            rdf_output = g.serialize(format='xml')
-            dom = parseString(rdf_output)
-            rdf_output = dom.toprettyxml()
         else:
             result_text += "Answer not found"
 
-        return result_text, rdf_output, extra_info
+        return result_text
 
 # Model NER Default
 nlp_default = spacy.load("en_core_web_sm")

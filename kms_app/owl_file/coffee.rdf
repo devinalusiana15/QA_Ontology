@@ -1,0 +1,2171 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/qa_ontology/coffee/"
+     xml:base="http://www.semanticweb.org/qa_ontology/coffee/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:coffee="http://www.semanticweb.org/qa_ontology/coffee#"
+     xmlns:untitled-ontology-77="http://www.semanticweb.org/hp/ontologies/2024/6/untitled-ontology-77#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/qa_ontology/coffee"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#definition -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#definition"/>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#direction -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#direction"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#appear_after -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/qa_ontology/coffee#appear_after">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#PRODUCT"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#DATE"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#appear_on -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/qa_ontology/coffee#appear_on">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#PRODUCT"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#PRODUCT"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#appears_after -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/qa_ontology/coffee#appears_after">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#PRODUCT"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#DATE"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#called -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/qa_ontology/coffee#called">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#VARIETY"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#VARIETY"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#comes_from -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/qa_ontology/coffee#comes_from">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#PERSON"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#GPE"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#containing -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/qa_ontology/coffee#containing">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#PRODUCT"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#PRODUCT"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#contains -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/qa_ontology/coffee#contains">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#PRODUCT"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#PRODUCT"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#develop_into -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/qa_ontology/coffee#develop_into"/>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#grow -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/qa_ontology/coffee#grow">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#VARIETY"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#ADJECTIVE"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#harvest -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/qa_ontology/coffee#harvest">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#PERSON"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#PRODUCT"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#harvests_in -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/qa_ontology/coffee#harvests_in">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#GPE"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#DATE"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#has -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/qa_ontology/coffee#has">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#PRODUCT"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#ADJECTIVE"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#has_benefit -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/qa_ontology/coffee#has_benefit">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#BEVERAGE"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#BENEFIT"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#has_color -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/qa_ontology/coffee#has_color">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#PRODUCT"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#ADJECTIVE"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#has_scent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/qa_ontology/coffee#has_scent">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#PRODUCT"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#ADJECTIVE"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#has_shape -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/qa_ontology/coffee#has_shape">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#PRODUCT"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#ADJECTIVE"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#has_type -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/qa_ontology/coffee#has_type"/>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#is_a -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/qa_ontology/coffee#is_a">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#VARIETY"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#ADJECTIVE"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#known_for -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/qa_ontology/coffee#known_for">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#VARIETY"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#ADJECTIVE"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#leaving -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/qa_ontology/coffee#leaving">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#JOB"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#PRODUCT"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#made -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/qa_ontology/coffee#made">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#PERSON"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#PRODUCT"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#mixed_with -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/qa_ontology/coffee#mixed_with">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#PRODUCT"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#PRODUCT"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#pick -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/qa_ontology/coffee#pick">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#JOB"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#PRODUCT"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#produces -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/qa_ontology/coffee#produces">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#PERSON"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#PRODUCT"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#production -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/qa_ontology/coffee#production"/>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#shared -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/qa_ontology/coffee#shared">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#PERSON"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#speaks_about -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/qa_ontology/coffee#speaks_about">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#PERSON"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#PRODUCT"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#spoke -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/qa_ontology/coffee#spoke">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#PERSON"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#PRODUCT"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#tastes -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/qa_ontology/coffee#tastes">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#PRODUCT"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#ADJECTIVE"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#uses -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/qa_ontology/coffee#uses"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#called -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/qa_ontology/coffee#called"/>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#color -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/qa_ontology/coffee#color"/>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#has_type -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/qa_ontology/coffee#has_type"/>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#known_for -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/qa_ontology/coffee#known_for"/>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#scent -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/qa_ontology/coffee#scent"/>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#shape -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/qa_ontology/coffee#shape"/>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#tastes -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/qa_ontology/coffee#tastes"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#ADJECTIVE -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/qa_ontology/coffee#ADJECTIVE"/>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#ADVERB -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/qa_ontology/coffee#ADVERB"/>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#BENEFIT -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/qa_ontology/coffee#BENEFIT"/>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#BEVERAGE -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/qa_ontology/coffee#BEVERAGE"/>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#Coffee -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/qa_ontology/coffee#Coffee">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#BEVERAGE"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#DATE -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/qa_ontology/coffee#DATE"/>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#GPE -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/qa_ontology/coffee#GPE"/>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#JOB -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/qa_ontology/coffee#JOB"/>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#LOC -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/qa_ontology/coffee#LOC"/>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#METHODS -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/qa_ontology/coffee#METHODS"/>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#NORP -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/qa_ontology/coffee#NORP"/>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#ORG -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/qa_ontology/coffee#ORG"/>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#PERSON -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/qa_ontology/coffee#PERSON"/>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#PRODUCT -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/qa_ontology/coffee#PRODUCT"/>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#TOOLS -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/qa_ontology/coffee#TOOLS"/>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#VARIETY -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/qa_ontology/coffee#VARIETY"/>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#harvests_date_Asia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/qa_ontology/coffee#harvests_date_Asia">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/qa_ontology/coffee#DATE"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty>
+                                    <rdf:Description>
+                                        <owl:inverseOf rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#harvests_in"/>
+                                    </rdf:Description>
+                                </owl:onProperty>
+                                <owl:hasValue rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#China"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty>
+                                    <rdf:Description>
+                                        <owl:inverseOf rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#harvests_in"/>
+                                    </rdf:Description>
+                                </owl:onProperty>
+                                <owl:hasValue rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#Indonesia"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty>
+                                    <rdf:Description>
+                                        <owl:inverseOf rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#harvests_in"/>
+                                    </rdf:Description>
+                                </owl:onProperty>
+                                <owl:hasValue rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#Papua_New_Guinea"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty>
+                                    <rdf:Description>
+                                        <owl:inverseOf rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#harvests_in"/>
+                                    </rdf:Description>
+                                </owl:onProperty>
+                                <owl:hasValue rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#Vietnam"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty>
+                                    <rdf:Description>
+                                        <owl:inverseOf rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#harvests_in"/>
+                                    </rdf:Description>
+                                </owl:onProperty>
+                                <owl:hasValue rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#Yemen"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#DATE"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#varieties_coffee_benefits_Cardiovascular -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/qa_ontology/coffee#varieties_coffee_benefits_Cardiovascular">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/qa_ontology/coffee#Coffee"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#has_benefit"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#aids_in_muscle_recovery"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#has_benefit"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#enhances_vascular_function"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#has_benefit"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#improves_blood_circulation"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#has_benefit"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#lowers_cholesterol_levels"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#has_benefit"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#promotes_gut_health"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#BENEFIT"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#varieties_coffee_benefits_General_Health -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/qa_ontology/coffee#varieties_coffee_benefits_General_Health">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/qa_ontology/coffee#Coffee"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#has_benefit"/>
+                                <owl:hasValue rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#aids_in_respiratory_health"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#has_benefit"/>
+                                <owl:hasValue rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#boosts_mood"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#has_benefit"/>
+                                <owl:hasValue rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#enhances_cognitive_function"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#has_benefit"/>
+                                <owl:hasValue rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#enhances_cognitive_performance"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#has_benefit"/>
+                                <owl:hasValue rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#enhances_mood"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#has_benefit"/>
+                                <owl:hasValue rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#improves_brain_function"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#has_benefit"/>
+                                <owl:hasValue rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#improves_memory"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#has_benefit"/>
+                                <owl:hasValue rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#improves_skin_health"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#has_benefit"/>
+                                <owl:hasValue rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#increases_energy"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#has_benefit"/>
+                                <owl:hasValue rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#lowers_blood_pressure"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#has_benefit"/>
+                                <owl:hasValue rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#prevents_gallstones"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#has_benefit"/>
+                                <owl:hasValue rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#promotes_weight_loss"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#has_benefit"/>
+                                <owl:hasValue rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#reduces_inflammation"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#has_benefit"/>
+                                <owl:hasValue rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#strengthens_the_immune_system"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#has_benefit"/>
+                                <owl:hasValue rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#supports_digestion"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#has_benefit"/>
+                                <owl:hasValue rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#supports_liver_function"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#BENEFIT"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#April -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#April">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#DATE"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#Arabica -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#Arabica">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#VARIETY"/>
+        <coffee:has_type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#Bourbon"/>
+        <coffee:has_type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#Catuai"/>
+        <coffee:has_type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#Caturra"/>
+        <coffee:has_type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#Typica"/>
+        <coffee:known_for>quality, sweetness, complexity, fruitness</coffee:known_for>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#Arabica_coffee -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#Arabica_coffee">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#BEVERAGE"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#Coffee"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#boosts_metabolism"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#enhances_mood"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#improves_memory"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#increases_energy"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#reduces_inflammation"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#strengthens_the_immune_system"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#supports_digestion"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#August -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#August">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#DATE"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#Bolivian_coffee -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#Bolivian_coffee">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#BEVERAGE"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#Coffee"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#boosts_energy"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#enhances_liver_function"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#improves_brain_function"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#promotes_digestive_health"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#reduces_the_risk_of_diabetes"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#strengthens_the_immune_system"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#supports_cardiovascular_health"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#Bourbon -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#Bourbon">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#VARIETY"/>
+        <rdfs:definition>Bourbon is a lower-yielding coffee. It’s tougher to grow but has led to subspecies like Caturra.</rdfs:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#Brazil -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#Brazil">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#GPE"/>
+        <coffee:harvests_in rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#July"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#Brazilian_coffee -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#Brazilian_coffee">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#BEVERAGE"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#Coffee"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#aids_in_muscle_recovery"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#enhances_physical_performance"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#improves_eye_health"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#lowers_cholesterol_levels"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#promotes_gut_health"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#reduces_the_risk_of_stroke"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#supports_kidney_function"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#Burundian_coffee -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#Burundian_coffee">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#Coffee"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#boosts_mood"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#enhances_cognitive_performance"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#improves_brain_function"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#reduces_inflammation"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#strengthens_the_immune_system"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#supports_digestion"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#supports_liver_function"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#Carlos_Bartes -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#Carlos_Bartes">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#PERSON"/>
+        <coffee:comes_from rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#El_Salvador"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#Catuai -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#Catuai">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#VARIETY"/>
+        <rdfs:definition>Catuai is also high yield coffee and sturdy with compact trees.</rdfs:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#Caturra -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#Caturra">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#VARIETY"/>
+        <rdfs:definition>Caturra is a high-yield coffee with a unique compact tree, making management and harvesting easier.</rdfs:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#Central_Peru -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#Central_Peru">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#GPE"/>
+        <coffee:harvests_in rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#July"/>
+        <coffee:harvests_in rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#June"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#China -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#China">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#GPE"/>
+        <coffee:harvests_in rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#December"/>
+        <coffee:harvests_in rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#January"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#Colombia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#Colombia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#GPE"/>
+        <coffee:harvests_in rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#June"/>
+        <coffee:harvests_in rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#November"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#Colombian_coffee -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#Colombian_coffee">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#BEVERAGE"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#Coffee"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#aids_in_muscle_recovery"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#enhances_cardiovascular_health"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#improves_blood_circulation"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#lowers_blood_pressure"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#promotes_gut_health"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#reduces_cholesterol_levels"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#supports_arterial_health"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#Costa_Rica -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#Costa_Rica">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#GPE"/>
+        <coffee:harvests_in rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#December"/>
+        <coffee:harvests_in rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#January"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#Costa_Rican_coffee -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#Costa_Rican_coffee">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#BEVERAGE"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#Coffee"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#aids_in_muscle_recovery"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#enhances_blood_circulation"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#improves_vascular_function"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#lowers_cholesterol_levels"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#promotes_gut_health"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#reduces_the_risk_of_stroke"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#supports_heart_health"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#December -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#December">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#DATE"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#Ecuador -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#Ecuador">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#GPE"/>
+        <coffee:harvests_in rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#June"/>
+        <coffee:harvests_in rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#May"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#Ecuadorian_coffee -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#Ecuadorian_coffee">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#BEVERAGE"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#Coffee"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#aids_in_muscle_recovery"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#enhances_vascular_function"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#improves_blood_circulation"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#lowers_cholesterol_levels"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#promotes_gut_health"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#reduces_the_risk_of_stroke"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#supports_heart_health"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#El_Salvador -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#El_Salvador">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#GPE"/>
+        <coffee:harvests_in rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#February"/>
+        <coffee:harvests_in rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#January"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#Ethiopia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#Ethiopia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#GPE"/>
+        <coffee:harvests_in rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#December"/>
+        <coffee:harvests_in rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#November"/>
+        <coffee:harvests_in rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#September"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#Ethiopian_Yirgacheffe_coffee -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#Ethiopian_Yirgacheffe_coffee">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#Coffee"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#boosts_mood"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#enhances_cognitive_performance"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#improves_brain_function"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#improves_memory"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#reduces_inflammation"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#supports_digestion"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#supports_liver_function"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#Ethiopian_coffee -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#Ethiopian_coffee">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#BEVERAGE"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#Coffee"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#aids_in_muscle_recovery"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#enhances_vascular_function"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#improves_blood_circulation"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#lowers_cholesterol_levels"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#promotes_gut_health"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#reduces_the_risk_of_stroke"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#supports_heart_health"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#February -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#February">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#DATE"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#Guatemala -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#Guatemala">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#GPE"/>
+        <coffee:harvests_in rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#February"/>
+        <coffee:harvests_in rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#January"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#Guatemalan_coffee -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#Guatemalan_coffee">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#BEVERAGE"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#Coffee"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#aids_in_muscle_recovery"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#enhances_blood_circulation"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#lowers_blood_pressure"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#promotes_cardiovascular_health"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#promotes_gut_health"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#reduces_cholesterol_levels"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#supports_arterial_health"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#Hawaiian_Kona_coffee -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#Hawaiian_Kona_coffee">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#BEVERAGE"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#Coffee"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#aids_in_weight_management"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#boosts_mood"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#enhances_cognitive_performance"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#improves_skin_elasticity"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#promotes_respiratory_health"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#reduces_the_risk_of_heart_disease"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#supports_liver_health"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#Honduran_coffee -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#Honduran_coffee">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#Coffee"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#enhances_cognitive_function"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#improves_skin_health"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#increases_energy"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#lowers_blood_pressure"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#prevents_gallstones"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#reduces_inflammation"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#supports_liver_function"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#Indonesia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#Indonesia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#GPE"/>
+        <coffee:harvests_in rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#April"/>
+        <coffee:harvests_in rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#November"/>
+        <coffee:harvests_in rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#October"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#Jamaica -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#Jamaica">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#GPE"/>
+        <coffee:harvests_in rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#December"/>
+        <coffee:harvests_in rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#November"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#Jamaican_Blue_Mountain_coffee -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#Jamaican_Blue_Mountain_coffee">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#BEVERAGE"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#Coffee"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#aids_in_muscle_recovery"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#enhances_vascular_function"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#improves_blood_circulation"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#lowers_cholesterol_levels"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#promotes_gut_health"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#reduces_the_risk_of_stroke"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#supports_heart_health"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#January -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#January">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#DATE"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#Javanese_coffee -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#Javanese_coffee">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#BEVERAGE"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#Coffee"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#aids_in_weight_management"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#boosts_mood"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#enhances_cognitive_performance"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#improves_skin_elasticity"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#promotes_respiratory_health"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#reduces_the_risk_of_heart_disease"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#supports_liver_health"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#July -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#July">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#DATE"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#June -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#June">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#DATE"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#Kenya -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#Kenya">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#GPE"/>
+        <coffee:harvests_in rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#November"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#Kenyan_coffee -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#Kenyan_coffee">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#BEVERAGE"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#Coffee"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#aids_in_muscle_recovery"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#enhances_vascular_function"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#improves_blood_circulation"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#lowers_cholesterol_levels"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#promotes_gut_health"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#reduces_the_risk_of_stroke"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#Laotian_coffee -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#Laotian_coffee">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#Coffee"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#aids_in_muscle_recovery"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#enhances_vascular_function"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#improves_blood_circulation"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#improves_brain_function"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#improves_skin_health"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#lowers_cholesterol_levels"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#promotes_gut_health"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#Marry_Williams -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#Marry_Williams">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#PERSON"/>
+        <coffee:spoke rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#coffee_trees"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#May -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#May">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#DATE"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#Mexican_coffee -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#Mexican_coffee">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#BEVERAGE"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#Coffee"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#aids_in_muscle_recovery"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#enhances_blood_circulation"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#lowers_blood_pressure"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#promotes_cardiovascular_health"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#promotes_gut_health"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#reduces_cholesterol_levels"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#supports_arterial_health"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#Mexico -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#Mexico">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#GPE"/>
+        <coffee:harvests_in rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#December"/>
+        <coffee:harvests_in rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#January"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#Nicaragua -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#Nicaragua">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#GPE"/>
+        <coffee:harvests_in rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#December"/>
+        <coffee:harvests_in rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#January"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#Nicaraguan_coffee -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#Nicaraguan_coffee">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#Coffee"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#boosts_mood"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#enhances_cognitive_function"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#improves_memory"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#improves_skin_health"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#increases_energy"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#supports_digestion"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#supports_liver_function"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#Northern_Colombia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#Northern_Colombia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#GPE"/>
+        <coffee:harvests_in rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#April"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#Northern_DR_Congo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#Northern_DR_Congo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#GPE"/>
+        <coffee:harvests_in rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#October"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#Northern_Peru -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#Northern_Peru">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#GPE"/>
+        <coffee:harvests_in rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#August"/>
+        <coffee:harvests_in rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#September"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#November -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#November">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#DATE"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#October -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#October">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#DATE"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#Panama -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#Panama">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#GPE"/>
+        <coffee:harvests_in rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#February"/>
+        <coffee:harvests_in rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#January"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#Panamanian_coffee -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#Panamanian_coffee">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#BEVERAGE"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#Coffee"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#aids_in_muscle_recovery"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#enhances_physical_performance"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#improves_eye_health"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#lowers_cholesterol_levels"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#promotes_gut_health"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#reduces_the_risk_of_stroke"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#supports_kidney_function"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#Papua_New_Guinea -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#Papua_New_Guinea">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#GPE"/>
+        <coffee:harvests_in rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#December"/>
+        <coffee:harvests_in rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#June"/>
+        <coffee:harvests_in rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#May"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#Papua_New_Guinean_coffee -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#Papua_New_Guinean_coffee">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#Coffee"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#boosts_mood"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#enhances_cognitive_function"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#improves_skin_health"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#increases_energy"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#prevents_gallstones"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#reduces_inflammation"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#supports_liver_function"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#Peruvian_coffee -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#Peruvian_coffee">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#BEVERAGE"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#Coffee"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#aids_in_muscle_recovery"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#enhances_cardiovascular_health"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#improves_blood_circulation"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#lowers_blood_pressure"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#promotes_gut_health"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#reduces_cholesterol_levels"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#supports_arterial_health"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#Robusta -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#Robusta">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#VARIETY"/>
+        <coffee:called>Canephora</coffee:called>
+        <coffee:tastes>harsher</coffee:tastes>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#Robusta_coffee -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#Robusta_coffee">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#BEVERAGE"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#Coffee"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#aids_in_respiratory_health"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#enhances_cognitive_function"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#improves_skin_health"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#prevents_gallstones"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#promotes_weight_loss"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#reduces_the_risk_of_diabetes"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#supports_liver_function"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#Rwanda -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#Rwanda">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#GPE"/>
+        <coffee:harvests_in rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#June"/>
+        <coffee:harvests_in rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#May"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#Rwandan_coffee -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#Rwandan_coffee">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#Coffee"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#boosts_mood"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#enhances_cognitive_performance"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#improves_brain_function"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#improves_memory"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#reduces_inflammation"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#strengthens_the_immune_system"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#supports_liver_function"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#September -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#September">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#DATE"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#Southern_Brazil -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#Southern_Brazil">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#GPE"/>
+        <coffee:harvests_in rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#June"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#Southern_DR_Congo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#Southern_DR_Congo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#GPE"/>
+        <coffee:harvests_in rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#April"/>
+        <coffee:harvests_in rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#May"/>
+        <coffee:harvests_in rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#September"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#Sumatra_coffee -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#Sumatra_coffee">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#BEVERAGE"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#Coffee"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#aids_in_muscle_recovery"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#enhances_blood_circulation"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#improves_vascular_function"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#lowers_cholesterol_levels"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#promotes_gut_health"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#reduces_the_risk_of_stroke"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#supports_heart_health"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#Swanda -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#Swanda">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#GPE"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#Tanzania -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#Tanzania">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#GPE"/>
+        <coffee:harvests_in rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#August"/>
+        <coffee:harvests_in rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#September"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#Tanzanian_Peaberry_coffee -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#Tanzanian_Peaberry_coffee">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#Coffee"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#boosts_mood"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#enhances_cognitive_performance"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#improves_brain_function"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#improves_memory"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#reduces_inflammation"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#strengthens_the_immune_system"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#supports_digestion"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#Turkish_coffee -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#Turkish_coffee">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#BEVERAGE"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#Coffee"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#boosts_mood"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#enhances_cognitive_performance"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#improves_memory"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#increases_energy"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#reduces_inflammation"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#strengthens_the_immune_system"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#supports_digestion"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#Typica -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#Typica">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#VARIETY"/>
+        <rdfs:definition>Typica is the most prominent and is the genetic parent to many of the common Arabicas. It’s high yield and generally has excellent cup profiles or tastes. Even better, it’s quite susceptible to pests and disease.</rdfs:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#Uganda -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#Uganda">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#GPE"/>
+        <coffee:harvests_in rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#December"/>
+        <coffee:harvests_in rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#November"/>
+        <coffee:harvests_in rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#September"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#Ugandan_coffee -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#Ugandan_coffee">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#Coffee"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#boosts_mood"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#enhances_cognitive_function"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#improves_skin_health"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#increases_energy"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#prevents_gallstones"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#reduces_inflammation"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#supports_digestion"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#Vietnam -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#Vietnam">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#GPE"/>
+        <coffee:harvests_in rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#December"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#Vietnamese_coffee -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#Vietnamese_coffee">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#BEVERAGE"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#Coffee"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#aids_in_respiratory_health"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#enhances_cognitive_function"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#improves_skin_health"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#prevents_gallstones"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#promotes_weight_loss"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#reduces_the_risk_of_diabetes"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#supports_liver_function"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#Yemen -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#Yemen">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#GPE"/>
+        <coffee:harvests_in rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#November"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#Yemeni_coffee -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#Yemeni_coffee">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#BEVERAGE"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#Coffee"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#boosts_energy"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#enhances_liver_function"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#improves_brain_function"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#promotes_digestive_health"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#reduces_the_risk_of_diabetes"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#strengthens_the_immune_system"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#supports_cardiovascular_health"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#Zimbabwean_coffee -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#Zimbabwean_coffee">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#Coffee"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#_enhances_cognitive_function"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#aids_in_muscle_recovery"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#enhances_vascular_function"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#improves_blood_circulation"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#lowers_cholesterol_levels"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#promotes_gut_health"/>
+        <coffee:has_benefit rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#supports_liver_function"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#_enhances_cognitive_function -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#_enhances_cognitive_function">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#BENEFIT"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#aids_in_muscle_recovery -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#aids_in_muscle_recovery">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#BENEFIT"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#aids_in_respiratory_health -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#aids_in_respiratory_health">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#BENEFIT"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#aids_in_weight_management -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#aids_in_weight_management">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#BENEFIT"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#boosts_energy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#boosts_energy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#BENEFIT"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#boosts_metabolism -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#boosts_metabolism">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#BENEFIT"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#boosts_mood -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#boosts_mood">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#BENEFIT"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#cherries -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#cherries">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#PRODUCT"/>
+        <coffee:containing rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#coffee_beans"/>
+        <coffee:tastes>sweet</coffee:tastes>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#coffee -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#coffee">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#PRODUCT"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#coffee_beans -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#coffee_beans">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#PRODUCT"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#coffee_flower -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#coffee_flower">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#PRODUCT"/>
+        <coffee:appear_after rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#rainy_season"/>
+        <coffee:appear_on rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#coffee_tree_branches"/>
+        <coffee:develop_into rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#cherries"/>
+        <coffee:color>white color</coffee:color>
+        <coffee:scent>jasmine scent</coffee:scent>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#coffee_producers -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#coffee_producers">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#PERSON"/>
+        <coffee:made rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#171_million_bags_of_coffee"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#coffee_production -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#coffee_production">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#PRODUCT"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#coffee_tree_branches -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#coffee_tree_branches">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#PRODUCT"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#coffee_trees -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#coffee_trees">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#PRODUCT"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#enhances_blood_circulation -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#enhances_blood_circulation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#BENEFIT"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#enhances_cardiovascular_health -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#enhances_cardiovascular_health">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#BENEFIT"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#enhances_cognitive_function -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#enhances_cognitive_function">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#BENEFIT"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#enhances_cognitive_performance -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#enhances_cognitive_performance">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#BENEFIT"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#enhances_liver_function -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#enhances_liver_function">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#BENEFIT"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#enhances_mood -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#enhances_mood">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#BENEFIT"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#enhances_physical_performance -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#enhances_physical_performance">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#BENEFIT"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#enhances_vascular_function -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#enhances_vascular_function">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#BENEFIT"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#heavy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#heavy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#ADJECTIVE"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#improves_blood_circulation -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#improves_blood_circulation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#BENEFIT"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#improves_brain_function -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#improves_brain_function">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#BENEFIT"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#improves_eye_health -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#improves_eye_health">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#BENEFIT"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#improves_memory -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#improves_memory">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#BENEFIT"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#improves_skin_elasticity -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#improves_skin_elasticity">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#BENEFIT"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#improves_skin_health -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#improves_skin_health">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#BENEFIT"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#improves_vascular_function -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#improves_vascular_function">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#BENEFIT"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#increases_energy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#increases_energy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#BENEFIT"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#large_water -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#large_water">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#PRODUCT"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#less_ripe_cherries -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#less_ripe_cherries">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#PRODUCT"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#lowers_blood_pressure -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#lowers_blood_pressure">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#BENEFIT"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#lowers_cholesterol_levels -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#lowers_cholesterol_levels">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#BENEFIT"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#natural_processing -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#natural_processing">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#METHODS"/>
+        <coffee:uses rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#no_water"/>
+        <rdfs:direction>Steps in natural processing:
+1.The cherries go directly from harvesting to drying, and the outer layers aren’t removed until they have been dried out to the consistency of a raisin.
+2. The beans are laid out in the sun either on patios or drying tables, and they must be moved frequently to foster even drying.</rdfs:direction>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#no_water -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#no_water">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#PRODUCT"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#one_bean -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#one_bean">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#PRODUCT"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#pea_shaped -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#pea_shaped">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#ADJECTIVE"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#peaberry -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#peaberry">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#PRODUCT"/>
+        <coffee:containing rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#one_bean"/>
+        <coffee:mixed_with rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#regular_beans"/>
+        <coffee:shape>rounder and pea-shaped</coffee:shape>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#pickers -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#pickers">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#JOB"/>
+        <coffee:harvest rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#cherries"/>
+        <coffee:leaving rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#less_ripe_cherries"/>
+        <coffee:pick rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#ripe_cherries"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#prevents_gallstones -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#prevents_gallstones">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#BENEFIT"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#promotes_cardiovascular_health -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#promotes_cardiovascular_health">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#BENEFIT"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#promotes_digestive_health -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#promotes_digestive_health">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#BENEFIT"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#promotes_gut_health -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#promotes_gut_health">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#BENEFIT"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#promotes_respiratory_health -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#promotes_respiratory_health">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#BENEFIT"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#promotes_weight_loss -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#promotes_weight_loss">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#BENEFIT"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#rainy_season -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#rainy_season">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#DATE"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#reduces_cholesterol_levels -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#reduces_cholesterol_levels">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#BENEFIT"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#reduces_inflammation -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#reduces_inflammation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#BENEFIT"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#reduces_the_risk_of_diabetes -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#reduces_the_risk_of_diabetes">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#BENEFIT"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#reduces_the_risk_of_heart_disease -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#reduces_the_risk_of_heart_disease">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#BENEFIT"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#reduces_the_risk_of_stroke -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#reduces_the_risk_of_stroke">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#BENEFIT"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#regular_beans -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#regular_beans">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#PRODUCT"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#ripe_cherries -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#ripe_cherries">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#PRODUCT"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#semiwashed_processing -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#semiwashed_processing">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#METHODS"/>
+        <coffee:uses rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#some_water"/>
+        <rdfs:direction>Steps in semi-washed processing:
+1. The picked cherries are depulped immediately.
+2. The depulped beans are gently rinsed, often by hand in buckets.
+3. The beans are then partially dried overnight before they’re transported to a larger facility.
+4. The beans, still wet, are hulled, stripping off the parchment layer.
+5. The beans are then dried so that they can be stored and later shipped.</rdfs:direction>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#some_water -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#some_water">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#PRODUCT"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#strengthens_the_immune_system -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#strengthens_the_immune_system">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#BENEFIT"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#striking_white_color -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#striking_white_color">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#ADJECTIVE"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#supports_arterial_health -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#supports_arterial_health">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#BENEFIT"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#supports_cardiovascular_health -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#supports_cardiovascular_health">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#BENEFIT"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#supports_digestion -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#supports_digestion">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#BENEFIT"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#supports_heart_health -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#supports_heart_health">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#BENEFIT"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#supports_kidney_function -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#supports_kidney_function">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#BENEFIT"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#supports_liver_function -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#supports_liver_function">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#BENEFIT"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#supports_liver_health -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#supports_liver_health">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#BENEFIT"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#sweet -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#sweet">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#ADJECTIVE"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#test -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#test"/>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#varies -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#varies">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#ADVERB"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#washed_processing -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#washed_processing">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#METHODS"/>
+        <coffee:uses rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#large_water"/>
+        <rdfs:direction>Steps in washed processing:
+1. Collected cherries are fed into a machine called a pulper or depulper. A pulper, or depulper (both terms describe the same machine and are used widely and synonymously), removes the skin, leaving thin layers of fruit/mucilage and the seed. The machine actually rips the layers off the underlying stronger layers and seed. Think of the layers of a seeded grape or Bing cherry to get an idea, although the skin and fleshy layers of coffee cherry are much thinner. The machines can vary a great deal in size and configuration and often large facilities like you might find at a large coffee cooperative mill will have multiple depulpers. The smallest facilities are often called micro mills. They’re often part of fully integrated farm operations where all steps prior to and after are carried out on an individual farm.
+2. After the pulped beans are skinless but with some thin layer of mucilage and the parchment skin layer, they’re carried in water channels to a tank where they rest for a time sitting in clean water. This fermentation step ensures that the remaining bits of material — the mucilage — are more thoroughly removed.
+3. The wet beans are then dried in the sun or in a mechanical dryer; sometimes a combination of a drying patio, table, and the mechanical dryer is used. They must be raked often to ensure even drying. Sometimes a mechanical dryer is used.
+4. The beans are stored for 6 to 10 weeks. The end result of this processing is also referred to as parchment dried because the cherries’ remaining layer on the bean is the parchment skin covering the underlying bean. The parchment skin provides a kind of protection or covering, and it remains on the bean for weeks as the beans are stored and rest, reposa in Spanish. This parchment will be dry milled off the rested green beans just prior to them being bagged and shipped.</rdfs:direction>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#171_million_bags_of_coffee -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#171_million_bags_of_coffee">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#PRODUCT"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/qa_ontology/coffee#2019_until_2020 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/qa_ontology/coffee#2019_until_2020">
+        <rdf:type rdf:resource="http://www.semanticweb.org/qa_ontology/coffee#DATE"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+

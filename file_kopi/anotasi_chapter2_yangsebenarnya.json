@@ -1,0 +1,822 @@
+{
+  "classes": [
+    "PRODUCT",
+    "VERB",
+    "METHOD",
+    "PERSON",
+    "LOC",
+    "ORG",
+    "DATE",
+    "VARIETY"
+  ],
+  "annotations": [
+    [
+      "Coffee taste influenced by the miracle of nature, the processing of the cherry into beans that will eventually go to the roaster, and the roasting of coffee.\r",
+      {
+        "entities": [
+          [0, 12, "PRODUCT"],
+          [13, 23, "VERB"]
+        ]
+      }
+    ],
+    [
+      "Coffee production varies.\r",
+      {
+        "entities": [
+          [0, 6, "PRODUCT"],
+          [7, 17, "VERB"]
+        ]
+      }
+    ],
+    [
+      "Coffee producers made 171 million bags of coffee, in 2019 until 2020.\r",
+      {
+        "entities": [
+          [0, 16, "PERSON"],
+          [17, 21, "VERB"]
+        ]
+      }
+    ],
+    [
+      "Coffee industry uses bags to measure coffee.\r",
+      {
+        "entities": [
+          [0, 15, "ORG"],
+          [16, 20, "VERB"]
+        ]
+      }
+    ],
+    [
+      "The flowers appear on coffee tree branches.\r",
+      { "entities": [[12, 18, "VERB"]] }
+    ],
+    [
+      "The flowers appear after heavy rainy season.\r",
+      {
+        "entities": [
+          [12, 18, "VERB"],
+          [25, 43, "DATE"]
+        ]
+      }
+    ],
+    [
+      "Coffee flowers has a jasmine scent.\r",
+      { "entities": [[15, 18, "VERB"]] }
+    ],
+    [
+      "Coffee flowers has a striking white color.\r",
+      { "entities": [[15, 18, "VERB"]] }
+    ],
+    [
+      "Mary Williams spoke about seeing the coffee trees.\r",
+      {
+        "entities": [
+          [0, 13, "PERSON"],
+          [14, 19, "VERB"]
+        ]
+      }
+    ],
+    [
+      "Carlos Batres comes from El Salvador.\r",
+      {
+        "entities": [
+          [0, 13, "PERSON"],
+          [14, 19, "VERB"],
+          [25, 36, "LOC"]
+        ]
+      }
+    ],
+    [
+      "Carlos Batres shared a memory of the aroma of coffee flowers.",
+      {
+        "entities": [
+          [0, 13, "PERSON"],
+          [14, 20, "VERB"]
+        ]
+      }
+    ],
+    [
+      "Flowers develop into Cherries.\r",
+      {
+        "entities": [
+          [8, 15, "VERB"],
+          [21, 29, "PRODUCT"]
+        ]
+      }
+    ],
+    [
+      "Cherries containing two beans.\r",
+      {
+        "entities": [
+          [0, 8, "PRODUCT"],
+          [9, 19, "VERB"]
+        ]
+      }
+    ],
+    [
+      "Cherries containing one beans called Peaberry.\r",
+      {
+        "entities": [
+          [0, 8, "PRODUCT"],
+          [9, 19, "VERB"],
+          [37, 45, "PRODUCT"]
+        ]
+      }
+    ],
+    [
+      "Peaberry containing one bean.\r",
+      {
+        "entities": [
+          [0, 8, "PRODUCT"],
+          [9, 19, "VERB"]
+        ]
+      }
+    ],
+    [
+      "Peaberry has rounder and pea-shaped. \r",
+      {
+        "entities": [
+          [0, 8, "PRODUCT"],
+          [9, 12, "VERB"]
+        ]
+      }
+    ],
+    [
+      "Coffee has a harvest calendar.\r",
+      {
+        "entities": [
+          [0, 6, "PRODUCT"],
+          [7, 10, "VERB"]
+        ]
+      }
+    ],
+    [
+      "Indonesia harvests coffee in October.\r",
+      {
+        "entities": [
+          [0, 9, "LOC"],
+          [10, 18, "VERB"],
+          [19, 25, "PRODUCT"]
+        ]
+      }
+    ],
+    [
+      "Northen DR Congo harvests coffee in October.\r",
+      {
+        "entities": [
+          [0, 16, "LOC"],
+          [17, 25, "VERB"],
+          [26, 32, "PRODUCT"]
+        ]
+      }
+    ],
+    [
+      "Colombia harvests coffee in November.\r",
+      {
+        "entities": [
+          [0, 8, "LOC"],
+          [9, 17, "VERB"],
+          [18, 24, "PRODUCT"]
+        ]
+      }
+    ],
+    [
+      "Jamaica harvests coffee in November.\r",
+      {
+        "entities": [
+          [0, 7, "LOC"],
+          [8, 16, "VERB"],
+          [17, 23, "PRODUCT"]
+        ]
+      }
+    ],
+    [
+      "Indonesia harvests coffee in November.\r",
+      {
+        "entities": [
+          [0, 9, "LOC"],
+          [10, 18, "VERB"],
+          [19, 25, "PRODUCT"]
+        ]
+      }
+    ],
+    [
+      "Yemen harvests coffee in November.\r",
+      {
+        "entities": [
+          [0, 5, "LOC"],
+          [6, 14, "VERB"],
+          [15, 21, "PRODUCT"]
+        ]
+      }
+    ],
+    [
+      "Ethiopia harvests coffee in November.\r",
+      {
+        "entities": [
+          [0, 8, "LOC"],
+          [9, 17, "VERB"],
+          [18, 24, "PRODUCT"]
+        ]
+      }
+    ],
+    [
+      "Kenya harvests coffee in November.\r",
+      {
+        "entities": [
+          [0, 5, "LOC"],
+          [6, 14, "VERB"],
+          [15, 21, "PRODUCT"]
+        ]
+      }
+    ],
+    [
+      "Uganda harvests coffee in November.\r",
+      {
+        "entities": [
+          [0, 6, "LOC"],
+          [7, 15, "VERB"],
+          [16, 22, "PRODUCT"]
+        ]
+      }
+    ],
+    [
+      "Costa Rica harvests coffee in December.\r",
+      {
+        "entities": [
+          [0, 10, "LOC"],
+          [11, 19, "VERB"],
+          [20, 26, "PRODUCT"]
+        ]
+      }
+    ],
+    [
+      "Jamaica harvests coffee in December.\r",
+      {
+        "entities": [
+          [0, 7, "LOC"],
+          [8, 16, "VERB"],
+          [17, 23, "PRODUCT"]
+        ]
+      }
+    ],
+    [
+      "Mexico harvests coffee in December.\r",
+      {
+        "entities": [
+          [0, 6, "LOC"],
+          [7, 15, "VERB"],
+          [16, 22, "PRODUCT"]
+        ]
+      }
+    ],
+    [
+      "Nicaragua harvests coffee in December.\r",
+      {
+        "entities": [
+          [0, 9, "LOC"],
+          [10, 18, "VERB"],
+          [19, 25, "PRODUCT"]
+        ]
+      }
+    ],
+    [
+      "China harvests coffee in December.\r",
+      {
+        "entities": [
+          [0, 5, "LOC"],
+          [6, 14, "VERB"],
+          [15, 21, "PRODUCT"]
+        ]
+      }
+    ],
+    [
+      "Papua New Guinea harvests coffee in December.\r",
+      {
+        "entities": [
+          [0, 16, "LOC"],
+          [17, 25, "VERB"],
+          [26, 32, "PRODUCT"]
+        ]
+      }
+    ],
+    [
+      "Vietnam harvests coffee in December.\r",
+      {
+        "entities": [
+          [0, 7, "LOC"],
+          [8, 16, "VERB"],
+          [17, 23, "PRODUCT"]
+        ]
+      }
+    ],
+    [
+      "Ethiopia harvests coffee in December.\r",
+      {
+        "entities": [
+          [0, 8, "LOC"],
+          [9, 17, "VERB"],
+          [18, 24, "PRODUCT"]
+        ]
+      }
+    ],
+    [
+      "Uganda harvests coffee in December.\r",
+      {
+        "entities": [
+          [0, 6, "LOC"],
+          [7, 15, "VERB"],
+          [16, 22, "PRODUCT"]
+        ]
+      }
+    ],
+    [
+      "Costa Rica harvests coffee in January.\r",
+      {
+        "entities": [
+          [0, 10, "LOC"],
+          [11, 19, "VERB"],
+          [20, 26, "PRODUCT"]
+        ]
+      }
+    ],
+    [
+      "El Salvador harvests coffee in January.\r",
+      {
+        "entities": [
+          [0, 11, "LOC"],
+          [12, 20, "VERB"],
+          [21, 27, "PRODUCT"]
+        ]
+      }
+    ],
+    [
+      "Guatemala harvests coffee in January.\r",
+      {
+        "entities": [
+          [0, 9, "LOC"],
+          [10, 18, "VERB"],
+          [19, 25, "PRODUCT"]
+        ]
+      }
+    ],
+    [
+      "Costa Rica harvests coffee in January.\r",
+      {
+        "entities": [
+          [0, 10, "LOC"],
+          [11, 19, "VERB"],
+          [20, 26, "PRODUCT"]
+        ]
+      }
+    ],
+    [
+      "Mexico harvests coffee in January.\r",
+      {
+        "entities": [
+          [0, 6, "LOC"],
+          [7, 15, "VERB"],
+          [16, 22, "PRODUCT"]
+        ]
+      }
+    ],
+    [
+      "Nicaragua harvests coffee in January.\r",
+      {
+        "entities": [
+          [0, 9, "LOC"],
+          [10, 18, "VERB"],
+          [19, 25, "PRODUCT"]
+        ]
+      }
+    ],
+    [
+      "Panama harvests coffee in January.\r",
+      {
+        "entities": [
+          [0, 6, "LOC"],
+          [7, 15, "VERB"],
+          [16, 22, "PRODUCT"]
+        ]
+      }
+    ],
+    [
+      "China harvests coffee in January.\r",
+      {
+        "entities": [
+          [0, 5, "LOC"],
+          [6, 14, "VERB"],
+          [15, 21, "PRODUCT"]
+        ]
+      }
+    ],
+    [
+      "El Salvador harvests coffee in February.\r",
+      {
+        "entities": [
+          [0, 11, "LOC"],
+          [12, 20, "VERB"],
+          [21, 27, "PRODUCT"]
+        ]
+      }
+    ],
+    [
+      "Guatemala harvests coffee in February.\r",
+      {
+        "entities": [
+          [0, 9, "LOC"],
+          [10, 18, "VERB"],
+          [19, 25, "PRODUCT"]
+        ]
+      }
+    ],
+    [
+      "Panama harvests coffee in February.\r",
+      {
+        "entities": [
+          [0, 6, "LOC"],
+          [7, 15, "VERB"],
+          [16, 22, "PRODUCT"]
+        ]
+      }
+    ],
+    [
+      "Northen Colombia harvests coffee in April.\r",
+      {
+        "entities": [
+          [0, 16, "LOC"],
+          [17, 25, "VERB"],
+          [26, 32, "PRODUCT"]
+        ]
+      }
+    ],
+    [
+      "Indonesia harvests coffee in April.\r",
+      {
+        "entities": [
+          [0, 9, "LOC"],
+          [10, 18, "VERB"],
+          [19, 25, "PRODUCT"]
+        ]
+      }
+    ],
+    [
+      "Southern DR Congo harvests coffee in April.\r",
+      {
+        "entities": [
+          [0, 17, "LOC"],
+          [18, 26, "VERB"],
+          [27, 33, "PRODUCT"]
+        ]
+      }
+    ],
+    [
+      "Ecuador harvests coffee in May.\r",
+      {
+        "entities": [
+          [0, 7, "LOC"],
+          [8, 16, "VERB"],
+          [17, 23, "PRODUCT"]
+        ]
+      }
+    ],
+    [
+      "Papua New Guinea harvests coffee in May.\r",
+      {
+        "entities": [
+          [0, 16, "LOC"],
+          [17, 25, "VERB"],
+          [26, 32, "PRODUCT"]
+        ]
+      }
+    ],
+    [
+      "Southern DR Congo harvests coffee in May.\r",
+      {
+        "entities": [
+          [0, 17, "LOC"],
+          [18, 26, "VERB"],
+          [27, 33, "PRODUCT"]
+        ]
+      }
+    ],
+    [
+      "Swanda harvests coffee in May.\r",
+      {
+        "entities": [
+          [0, 6, "LOC"],
+          [7, 15, "VERB"],
+          [16, 22, "PRODUCT"]
+        ]
+      }
+    ],
+    [
+      "Southern Brazil harvests coffee in June.\r",
+      {
+        "entities": [
+          [0, 15, "LOC"],
+          [16, 24, "VERB"],
+          [25, 31, "PRODUCT"]
+        ]
+      }
+    ],
+    [
+      "Colombia harvests coffee in June.\r",
+      {
+        "entities": [
+          [0, 8, "LOC"],
+          [9, 17, "VERB"],
+          [18, 24, "PRODUCT"]
+        ]
+      }
+    ],
+    [
+      "Ecuador harvests coffee in June.\r",
+      {
+        "entities": [
+          [0, 7, "LOC"],
+          [8, 16, "VERB"],
+          [17, 23, "PRODUCT"]
+        ]
+      }
+    ],
+    [
+      "Papua New Guinea harvests coffee in June.\r",
+      {
+        "entities": [
+          [0, 16, "LOC"],
+          [17, 25, "VERB"],
+          [26, 32, "PRODUCT"]
+        ]
+      }
+    ],
+    [
+      "Rwanda harvests coffee in June.\r",
+      {
+        "entities": [
+          [0, 6, "LOC"],
+          [7, 15, "VERB"],
+          [16, 22, "PRODUCT"]
+        ]
+      }
+    ],
+    [
+      "Central Peru harvests coffee in July.\r",
+      {
+        "entities": [
+          [0, 12, "LOC"],
+          [13, 21, "VERB"],
+          [22, 28, "PRODUCT"]
+        ]
+      }
+    ],
+    [
+      "Brazil harvests coffee in July.\r",
+      {
+        "entities": [
+          [0, 6, "LOC"],
+          [7, 15, "VERB"],
+          [16, 22, "PRODUCT"]
+        ]
+      }
+    ],
+    [
+      "Northen Peru harvests coffee in August.\r",
+      {
+        "entities": [
+          [0, 12, "LOC"],
+          [13, 21, "VERB"],
+          [22, 28, "PRODUCT"]
+        ]
+      }
+    ],
+    [
+      "Tanzania harvests coffee in August.\r",
+      {
+        "entities": [
+          [0, 8, "LOC"],
+          [9, 17, "VERB"],
+          [18, 24, "PRODUCT"]
+        ]
+      }
+    ],
+    [
+      "Northen Peru harvests coffee in September.\r",
+      {
+        "entities": [
+          [0, 12, "LOC"],
+          [13, 21, "VERB"],
+          [22, 28, "PRODUCT"]
+        ]
+      }
+    ],
+    [
+      "Southern DR Congo harvests coffee in September.\r",
+      {
+        "entities": [
+          [0, 17, "LOC"],
+          [18, 26, "VERB"],
+          [27, 33, "PRODUCT"]
+        ]
+      }
+    ],
+    [
+      "Ethiopia harvests coffee in September.\r",
+      {
+        "entities": [
+          [0, 8, "LOC"],
+          [9, 17, "VERB"],
+          [18, 24, "PRODUCT"]
+        ]
+      }
+    ],
+    [
+      "Tanzania harvests coffee in September.\r",
+      {
+        "entities": [
+          [0, 8, "LOC"],
+          [9, 17, "VERB"],
+          [18, 24, "PRODUCT"]
+        ]
+      }
+    ],
+    [
+      "Uganda harvests coffee in September.\r",
+      {
+        "entities": [
+          [0, 6, "LOC"],
+          [7, 15, "VERB"],
+          [16, 22, "PRODUCT"]
+        ]
+      }
+    ],
+    [
+      "Pickers harvest cherries.\r",
+      {
+        "entities": [
+          [0, 7, "PERSON"],
+          [8, 15, "VERB"],
+          [16, 24, "PRODUCT"]
+        ]
+      }
+    ],
+    [
+      "Cherries harvest at peak ripeness.\r",
+      { "entities": [[0, 8, "PRODUCT"]] }
+    ],
+    [
+      "Pickers identify the ripe cherries.\r",
+      {
+        "entities": [
+          [0, 7, "PERSON"],
+          [8, 16, "VERB"],
+          [21, 34, "PRODUCT"]
+        ]
+      }
+    ],
+    [
+      "Pickers pick the ripe cherries.\r",
+      {
+        "entities": [
+          [0, 7, "PERSON"],
+          [8, 12, "VERB"],
+          [17, 30, "PRODUCT"]
+        ]
+      }
+    ],
+    [
+      "Pickers leaving the less ripe ones for later.\r",
+      {
+        "entities": [
+          [0, 7, "PERSON"],
+          [8, 15, "VERB"]
+        ]
+      }
+    ],
+    ["Cherry tastes sweet.\r", { "entities": [[7, 13, "VERB"]] }],
+    [
+      "Coffee has two main species, namely Arabica and Robusta.\r",
+      {
+        "entities": [
+          [0, 6, "PRODUCT"],
+          [7, 10, "VERB"],
+          [36, 43, "VARIETY"],
+          [48, 55, "VARIETY"]
+        ]
+      }
+    ],
+    [
+      "Arabica named in the 17th century when it crossed from Ethiopia to Yemen and Arabia.\r",
+      {
+        "entities": [
+          [0, 7, "VARIETY"],
+          [8, 13, "VERB"]
+        ]
+      }
+    ],
+    [
+      "Arabica represents 70 to 75 percent of world coffee production.\r",
+      {
+        "entities": [
+          [0, 7, "VARIETY"],
+          [8, 18, "VERB"]
+        ]
+      }
+    ],
+    [
+      "Arabica known for quality, sweetness, complexity, and fruitiness.\r",
+      {
+        "entities": [
+          [0, 7, "VARIETY"],
+          [8, 13, "VERB"]
+        ]
+      }
+    ],
+    [
+      "Robusta also called Canephora.\r",
+      {
+        "entities": [
+          [0, 7, "VARIETY"],
+          [13, 19, "VERB"]
+        ]
+      }
+    ],
+    ["Robusta easier to grow.\r", { "entities": [[0, 7, "VARIETY"]] }],
+    ["Robusta is a hardy plant.\r", { "entities": [[0, 7, "VARIETY"]] }],
+    [
+      "Robusta represents 25 to 30 percent of world coffee production.\r",
+      {
+        "entities": [
+          [0, 7, "VARIETY"],
+          [8, 18, "VERB"]
+        ]
+      }
+    ],
+    [
+      "Robusta tastes harsher.\r",
+      {
+        "entities": [
+          [0, 7, "VARIETY"],
+          [8, 14, "VERB"]
+        ]
+      }
+    ],
+    [
+      "Robusta less susceptible to insects.\r",
+      { "entities": [[0, 7, "VARIETY"]] }
+    ],
+    [
+      "Robusta less susceptible to climate anomalies.\r",
+      { "entities": [[0, 7, "VARIETY"]] }
+    ],
+    [
+      "Robusta has a bigger yield per tree per season.\r",
+      {
+        "entities": [
+          [0, 7, "VARIETY"],
+          [8, 11, "VERB"]
+        ]
+      }
+    ],
+    [
+      "Arabica has a type, namely Typica, Bourbon, Caturra, Catuai.\r",
+      {
+        "entities": [
+          [0, 7, "VARIETY"],
+          [8, 11, "VERB"],
+          [27, 33, "VARIETY"],
+          [35, 42, "VARIETY"],
+          [44, 51, "VARIETY"],
+          [53, 59, "VARIETY"]
+        ]
+      }
+    ],
+    [
+      "Washed processing uses large quantities of water.\r",
+      {
+        "entities": [
+          [0, 17, "METHOD"],
+          [18, 22, "VERB"]
+        ]
+      }
+    ],
+    [
+      "Semi-washed processing uses some water.\r",
+      {
+        "entities": [
+          [0, 22, "METHOD"],
+          [23, 27, "VERB"]
+        ]
+      }
+    ],
+    [
+      "Natural processing uses no water.",
+      {
+        "entities": [
+          [0, 18, "METHOD"],
+          [19, 23, "VERB"]
+        ]
+      }
+    ]
+  ]
+}

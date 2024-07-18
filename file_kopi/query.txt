@@ -1,0 +1,5 @@
+TRUNCATE TABLE kms_app_docdetails;
+TRUNCATE TABLE kms_app_documents;
+TRUNCATE TABLE kms_app_postinglists;
+TRUNCATE TABLE kms_app_refinements;
+TRUNCATE TABLE kms_app_terms;
